@@ -1,0 +1,62 @@
+.footer
+    color: $black
+    background-color: $white
+    &__row
+        @media ($max1023)
+            display: block
+            padding: 32px 0 40px
+        @media ($min1024)
+            display: grid
+            grid-template-columns: 1fr pct-s(500,1280)
+            grid-template-areas: "head body" "bottom body"
+            gap: 8px
+            padding: 40px 0
+        @media ($min1440)
+            gap: 20px
+
+    &__head
+        max-width: 500px
+        width: 100%
+        @media ($max1439)
+            max-width: 443px
+        @media ($min1024)
+            grid-area: head
+
+
+    &__body
+        @media ($max1023)
+            width: 100%
+            max-width: 434px
+            margin-top: 40px
+        @media ($max767)
+            margin-top: 24px
+        @media ($min1024)
+            grid-area: body
+
+
+    &__bottom
+        @media ($max1023)
+            margin-top: 60px
+        @media ($max767)
+            margin-top: 48px
+        @media ($min1024)
+            grid-area: bottom
+            align-self: end
+
+
+    &__links
+        ul
+            display: flex
+            flex-wrap: wrap
+            @media ($max1023)
+                gap: 8px
+        li
+            @media ($min1024)
+                width: 32%
+        a
+            padding: 11px 4px
+
+    &__logo
+        display: block
+
+

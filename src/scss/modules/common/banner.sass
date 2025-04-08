@@ -1,0 +1,55 @@
+.banner
+    overflow: hidden
+    .js-video
+        &._playing
+            ~ .banner
+                &__title
+                    opacity: 0
+                    pointer-events: none
+    &__item
+        position: relative
+        z-index: 1
+        overflow: hidden
+        background-color: $gray900
+        border: solid 2px $gray650
+        border-radius: 36px
+        margin: 0 auto
+        @media ($max1439)
+            border-radius: 24px
+        @media ($max767)
+            margin-right: -16px
+            margin-left: -16px
+            border-width: 1px
+            border-radius: 20px
+        @media ($min768)
+            width: 100%
+            max-width: 1131px
+        &:before
+            padding-bottom: pct-s(633,1127)
+
+    &__title
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 200px
+        color: $brand500
+        background-color: $gray900
+        border-radius: inherit
+        transition: opacity $time03
+        @media ($max1439)
+            font-size: vw-s(150,1024)
+
+
+    &__decor
+        font-size: 84px
+        opacity: 0.6
+        text-align: center
+        transform: translateY(-33%)
+        @media ($max767)
+            font-size: 48px

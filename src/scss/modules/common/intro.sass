@@ -1,0 +1,64 @@
+.intro
+
+    &__row
+        @media ($max767)
+            padding-top: 44px
+        @media ($min1024)
+            display: flex
+
+    &__head
+        @media ($min1024)
+            flex: 1 1 auto
+            width: 100%
+    &__title
+        @media ($max767)
+            display: flex
+            flex-direction: column
+
+    &__decor
+        @media ($max767)
+            order: 1
+            text-align: center
+
+        span
+            @media ($hover)
+                &:hover
+                    color: $white
+                    
+
+    &__body
+        display: flex
+        justify-content: space-between
+
+        @media ($max1023)
+            align-items: center
+            gap: 60px
+            margin-top: 24px
+
+        @media ($max767)
+            flex-direction: column
+            align-items: flex-start
+            gap: 24px
+            margin-top: 16px
+        
+
+        @media ($min1024)
+            flex-shrink: 0
+            flex-direction: column
+            width: pct-s(500,1280)
+
+    &__text
+        @media ($max1023)
+            max-width: 381px
+    &__list
+        display: flex
+        gap: 70px
+        @media ($max767)
+            gap: 0
+        @media ($min1024)
+            margin-top: 20px
+
+
+    &__list-col
+        @media ($max767)
+            max-width: 115px

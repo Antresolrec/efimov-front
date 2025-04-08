@@ -1,0 +1,34 @@
+.services
+
+    &__row
+        display: flex
+        justify-content: space-between
+        gap: 16px
+
+        @media ($max767)
+            flex-direction: column
+            gap: 24px
+
+    &__col
+        @media ($min768)
+            min-width: 230px
+
+        ul
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 20px
+
+            @media ($max767)
+                gap: 8px
+        a
+            display: inline-flex
+            align-items: center
+            gap: 4px
+            padding: 10px 0
+            transition: color $time03
+            @media ($hover)
+                &:hover
+                    color: $brand550
+            &:active
+                color: $brand900

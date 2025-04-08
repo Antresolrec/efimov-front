@@ -1,0 +1,413 @@
+.form
+    &__items
+        margin-bottom: 20px
+        @media ($max767)
+            margin-bottom: 24px 
+        &:last-child
+            margin-bottom: 0
+    &__item
+        margin-bottom: 16px
+        @media ($max767)
+            margin-bottom: 24px
+        &:last-child
+            margin-bottom: 0
+    &__bottom
+        margin-top: 30px
+
+.js-input
+    &:not(._error)
+        .field
+            &__error-text
+                display: none
+            &__icon--error
+                opacity: 0
+    &._error
+        .field
+            &__input,
+            &__textarea
+                border-color: $red500
+        .select
+            &.ss-main
+                border-color: $red500
+        .checkbox
+            &__body
+                border-color: $red500
+.field
+    &__box
+        position: relative
+    &__icon,
+    &__count
+        position: absolute
+        z-index: 1
+    &__icon
+        top: 10px
+        right: 11px
+        width: 22px
+        height: 22px
+        &--error
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS4wMDA0IDAuODQzMzIzQzEwLjA1OTQgMC44NDMzMjMgOS4zNzk0MSAxLjQyMTU5IDguODAxNjUgMi4xNjk1N0M4LjIzNDggMi45MDM0MyA3LjYzMzM3IDMuOTc3NDcgNi44ODgwNyA1LjMwODQyTDYuODU1OTYgNS4zNjU3NkwyLjAxMzc5IDE0LjAxMjVMMS45ODE5OCAxNC4wNjkzQzEuMjY2NTkgMTUuMzQ2NyAwLjY4NzY3NSAxNi4zODA0IDAuMzY5MTE4IDE3LjIxOUMwLjA0MzA3NzYgMTguMDc3MiAtMC4wOTAwOTggMTguOTMzMSAwLjM3MzQzOSAxOS43MjM5QzAuODM2OTc3IDIwLjUxNDggMS42NDg3OSAyMC44MTY4IDIuNTU2OTEgMjAuOTUxNkMzLjQ0NDE4IDIxLjA4MzQgNC42Mjg5NSAyMS4wODM0IDYuMDkzMDIgMjEuMDgzNEg2LjA5MzA4SDYuMTU4MkgxNS44NDI1SDE1LjkwNzdIMTUuOTA3N0MxNy4zNzE4IDIxLjA4MzQgMTguNTU2NSAyMS4wODM0IDE5LjQ0MzggMjAuOTUxNkMyMC4zNTE5IDIwLjgxNjggMjEuMTYzNyAyMC41MTQ4IDIxLjYyNzMgMTkuNzIzOUMyMi4wOTA4IDE4LjkzMzEgMjEuOTU3NiAxOC4wNzcyIDIxLjYzMTYgMTcuMjE5QzIxLjMxMzEgMTYuMzgwNSAyMC43MzQyIDE1LjM0NjggMjAuMDE4OCAxNC4wNjk0TDIwLjAxODggMTQuMDY5M0wxOS45ODY5IDE0LjAxMjVMMTUuMTQ0OCA1LjM2NTc2TDE1LjExMjYgNS4zMDgzOEMxNC4zNjczIDMuOTc3NDQgMTMuNzY1OSAyLjkwMzQzIDEzLjE5OTEgMi4xNjk1N0MxMi42MjEzIDEuNDIxNTkgMTEuOTQxMyAwLjg0MzMyMyAxMS4wMDA0IDAuODQzMzIzWk0xMS43NTA0IDkuNTAwMDNDMTEuNzUwNCA5LjA4NTgxIDExLjQxNDYgOC43NTAwMyAxMS4wMDA0IDguNzUwMDNDMTAuNTg2MiA4Ljc1MDAzIDEwLjI1MDQgOS4wODU4MSAxMC4yNTA0IDkuNTAwMDNWMTIuODMzNEMxMC4yNTA0IDEzLjI0NzYgMTAuNTg2MiAxMy41ODM0IDExLjAwMDQgMTMuNTgzNEMxMS40MTQ2IDEzLjU4MzQgMTEuNzUwNCAxMy4yNDc2IDExLjc1MDQgMTIuODMzNFY5LjUwMDAzWk0xMS44MzM3IDE1LjMzMzRDMTEuODMzNyAxNS43OTM2IDExLjQ2MDYgMTYuMTY2NyAxMS4wMDA0IDE2LjE2NjdDMTAuNTQwMSAxNi4xNjY3IDEwLjE2NyAxNS43OTM2IDEwLjE2NyAxNS4zMzM0QzEwLjE2NyAxNC44NzMxIDEwLjU0MDEgMTQuNSAxMS4wMDA0IDE0LjVDMTEuNDYwNiAxNC41IDExLjgzMzcgMTQuODczMSAxMS44MzM3IDE1LjMzMzRaIiBmaWxsPSIjQjExOTMyIi8+Cjwvc3ZnPgo=")
+            background-size: 100% 100%
+            background-repeat: no-repeat
+            pointer-events: none
+            transition: opacity $time03
+    &__count
+        right: 10px
+        bottom: 10px
+        font-size: 14px
+        color: $gray450
+    &__input,
+    &__textarea
+        display: block
+        width: 100%
+        background-color: $gray100
+        padding-left: 20px
+        border: solid 1px $gray100
+        transition: border-color $time03
+
+        &:focus-visible
+            border-color: $gray500
+
+        @media ($hover)
+            &:hover
+                border-color: $gray500
+
+        &::placeholder
+            font: inherit
+            color: $gray600
+    &__input
+        height: 42px
+        padding-right: 11px
+        border-radius: 10em
+    &__textarea
+        height: 125px
+        padding-top: 10px
+        padding-right: 72px
+        padding-bottom: 10px
+        border-radius: 22px
+    &__error-text
+        font-size: 14px
+        color: $red750
+
+.checkbox
+    display: inline-flex
+    cursor: pointer
+    @media ($hover)
+        &:hover
+            .checkbox
+                &__input
+                    &:checked
+                        ~ .checkbox__body
+                            background-color: $brand650
+                            border-color: $brand650
+                &__body
+                    border-color: $gray550
+    &__input
+        position: absolute
+        pointer-events: 0
+        opacity: 0
+        &:focus-visible
+            ~ .checkbox__body
+                border-color: $brand550
+        &:checked
+            ~ .checkbox__body
+                background-color: $brand550
+                border-color: $brand550
+                svg
+                    opacity: 1
+            &:focus-visible
+                ~ .checkbox__body
+                    background-color: $brand750
+                    border-color: $brand750
+    &__body
+        flex-shrink: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 20px
+        height: 20px
+        background-color: $gray100
+        border: solid 1px $gray400
+        border-radius: 4px
+        transition: all $time03
+
+        svg
+            width: 16px
+            height: 13px
+            opacity: 0
+            transition: opacity $time03
+
+
+    &__text
+        display: block
+        padding-left: 8px
+
+        a
+            display: inline
+            color: $brand550
+            text-decoration: underline
+            transition: color $time03
+
+            &:focus-visible
+                color: $brand750
+                text-decoration: none
+
+            @media ($hover)
+                &:hover
+                    color: $brand750
+                    text-decoration: none
+
+            &:active
+                color: $brand900
+                    
+.chips
+    &__row
+        display: flex
+        flex-wrap: wrap
+        gap: 8px
+    &__label
+        display: block
+    &__input
+        position: absolute
+        pointer-events: 0
+        opacity: 0
+        &:focus-visible
+            ~ .chips__body
+                border-color: $gray500
+        &:checked
+            ~ .chips__body
+                color: $white
+                background-color: $brand550
+                border-color: $brand550
+                .chips__body-ico-white
+                    color: $brand550
+
+    &__body
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        height: 32px
+        padding: 0 12px
+        border-radius: 10em
+        color: $gray600
+        background-color: $gray100
+        border: solid 1px $gray100
+        cursor: pointer
+        transition: all $time03
+        @media ($hover)
+            &:hover
+                border-color: $gray500
+        svg
+            flex-shrink: 0
+            width: 20px
+            height: 20px
+        span
+            display: block
+        &-ico-white
+            color: $white
+            transition: color $time03
+
+select
+    width: 100%
+    height: 44px
+    background: $gray100
+    padding: 0 20px
+    border-radius: 10em
+
+.select
+    outline: none
+    min-height: 44px
+
+.ss
+    &-main
+        position: relative
+        display: flex
+        background: $gray100
+        border-radius: 10em
+        border: solid 1px $gray100
+        transition: border-color $time03
+
+
+        &.ss-open-below,
+        &.ss-open-above
+            border-color: $gray650
+            &:after
+                transform: scaleY(-1)
+
+        &:not(.ss-disabled)
+            cursor: pointer
+            &:focus-visible
+                border-color: $gray500
+
+        &.ss-disabled
+            opacity: 0.5
+
+        @media ($hover)
+            &:hover
+                &:not(.ss-disabled)
+                    border-color: $gray500
+
+        &:after
+            content: ""
+            display: block
+            position: absolute
+            align-self: center
+            right: 20px
+            width: 24px
+            height: 24px
+            color: $gray600
+            background-color: currentColor
+            background-size: 100% 100%
+            mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjMwMjcgMTQuMzAyOUw5LjA5Njg0IDEzLjA5NzFDNy44MTE3MSAxMS44MTE5IDcuMTY5MTQgMTEuMTY5NCA3LjEyNTczIDEwLjYxNzdDNy4wODgwNSAxMC4xMzkgNy4yODE4MiA5LjY3MTIzIDcuNjQ2OTMgOS4zNTkzOUM4LjA2NzcyIDkgOC45NzY0NSA5IDEwLjc5MzkgOUgxMy4yMDU3QzE1LjAyMzEgOSAxNS45MzE4IDkgMTYuMzUyNiA5LjM1OTM5QzE2LjcxNzcgOS42NzEyMyAxNi45MTE1IDEwLjEzOSAxNi44NzM4IDEwLjYxNzdDMTYuODMwNCAxMS4xNjk0IDE2LjE4NzkgMTEuODExOSAxNC45MDI3IDEzLjA5NzFMMTMuNjk2OCAxNC4zMDI5TDEzLjY5NjggMTQuMzAyOUMxMy4xMDI4IDE0Ljg5NyAxMi44MDU4IDE1LjE5NCAxMi40NjMzIDE1LjMwNTNDMTIuMTYyIDE1LjQwMzIgMTEuODM3NSAxNS40MDMyIDExLjUzNjMgMTUuMzA1M0MxMS4xOTM4IDE1LjE5NCAxMC44OTY4IDE0Ljg5NyAxMC4zMDI3IDE0LjMwMjlaIiBmaWxsPSIjOEM4QzhDIi8+Cjwvc3ZnPgo=")
+            transition: transform 0.3s
+
+    &-content
+        position: absolute
+        display: flex
+        height: auto
+        flex-direction: column
+        width: auto
+        transition: transform 0.3s, opacity 0.3s
+        opacity: 0
+        transform: scaleY(0)
+        transform-origin: center top
+        z-index: 10000
+
+        &.ss-open-above
+            flex-direction: column-reverse
+            opacity: 1
+            transform: scaleY(1) translateY(-9px)
+            transform-origin: center bottom
+
+        &.ss-open-below
+            opacity: 1
+            transform: scaleY(1) translateY(9px)
+            transform-origin: center top
+
+    &-values
+        overflow: hidden
+        display: flex
+        align-items: center
+        padding-left: 20px
+        padding-right: 50px
+
+    &-placeholder
+        color: $gray650
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+    &-single
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+    &-arrow
+        display: none
+
+    &-list
+        overflow-x: hidden
+        overflow-y: auto
+        flex: 1 1 auto
+        height: auto
+        max-height: 220px
+        color: $gray650
+        background-color: $gray100
+        border-radius: 22px
+
+    &-option
+        position: relative
+        display: flex
+        color: $gray650
+        padding: 10px 20px
+        cursor: pointer
+        user-select: none
+        transition: all $time03
+
+
+        @media ($hover)
+            &:hover
+                &:not(.ss-disabled)
+                    color: $white
+                    background-color: $brand550
+
+        &.ss-highlighted,
+        &:not(.ss-disabled).ss-selected
+            color: $white
+            background-color: $brand550
+
+        &.ss-disabled
+            cursor: default
+            opacity: 0.5
+
+    &-hide
+        display: none
+
+    .ss-hide
+        display: none !important
+
+.js-file-uploader
+    &._loaded
+        .uploader
+            &__button
+                display: none
+.uploader
+    position: relative
+    &__files
+
+    &__file
+        display: flex
+        align-items: center
+        height: 40px
+    &__file-ico
+        margin-right: 8px
+    &__file-name
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+    &__file-size
+        flex-shrink: 0
+        margin-left: 4px
+    &__file-delete
+        margin-left: 4px
+        svg
+            pointer-events: none
+
+    &__row
+
+    &__label
+        display: inline-block
+
+    &__button
+        display: inline-flex
+        align-items: center
+        gap: 8px
+        cursor: pointer
+        height: 40px
+
+
+    &__input
+        position: absolute
+        pointer-events: none
+        opacity: 0
+
+
+    &__error
+        display: flex
+        align-items: center
+        &:before
+            content: ''
+            flex-shrink: 0
+            display: block
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS4wMDA0IDAuODQzMzIzQzEwLjA1OTQgMC44NDMzMjMgOS4zNzk0MSAxLjQyMTU5IDguODAxNjUgMi4xNjk1N0M4LjIzNDggMi45MDM0MyA3LjYzMzM3IDMuOTc3NDcgNi44ODgwNyA1LjMwODQyTDYuODU1OTYgNS4zNjU3NkwyLjAxMzc5IDE0LjAxMjVMMS45ODE5OCAxNC4wNjkzQzEuMjY2NTkgMTUuMzQ2NyAwLjY4NzY3NSAxNi4zODA0IDAuMzY5MTE4IDE3LjIxOUMwLjA0MzA3NzYgMTguMDc3MiAtMC4wOTAwOTggMTguOTMzMSAwLjM3MzQzOSAxOS43MjM5QzAuODM2OTc3IDIwLjUxNDggMS42NDg3OSAyMC44MTY4IDIuNTU2OTEgMjAuOTUxNkMzLjQ0NDE4IDIxLjA4MzQgNC42Mjg5NSAyMS4wODM0IDYuMDkzMDIgMjEuMDgzNEg2LjA5MzA4SDYuMTU4MkgxNS44NDI1SDE1LjkwNzdIMTUuOTA3N0MxNy4zNzE4IDIxLjA4MzQgMTguNTU2NSAyMS4wODM0IDE5LjQ0MzggMjAuOTUxNkMyMC4zNTE5IDIwLjgxNjggMjEuMTYzNyAyMC41MTQ4IDIxLjYyNzMgMTkuNzIzOUMyMi4wOTA4IDE4LjkzMzEgMjEuOTU3NiAxOC4wNzcyIDIxLjYzMTYgMTcuMjE5QzIxLjMxMzEgMTYuMzgwNSAyMC43MzQyIDE1LjM0NjggMjAuMDE4OCAxNC4wNjk0TDIwLjAxODggMTQuMDY5M0wxOS45ODY5IDE0LjAxMjVMMTUuMTQ0OCA1LjM2NTc2TDE1LjExMjYgNS4zMDgzOEMxNC4zNjczIDMuOTc3NDQgMTMuNzY1OSAyLjkwMzQzIDEzLjE5OTEgMi4xNjk1N0MxMi42MjEzIDEuNDIxNTkgMTEuOTQxMyAwLjg0MzMyMyAxMS4wMDA0IDAuODQzMzIzWk0xMS43NTA0IDkuNTAwMDNDMTEuNzUwNCA5LjA4NTgxIDExLjQxNDYgOC43NTAwMyAxMS4wMDA0IDguNzUwMDNDMTAuNTg2MiA4Ljc1MDAzIDEwLjI1MDQgOS4wODU4MSAxMC4yNTA0IDkuNTAwMDNWMTIuODMzNEMxMC4yNTA0IDEzLjI0NzYgMTAuNTg2MiAxMy41ODM0IDExLjAwMDQgMTMuNTgzNEMxMS40MTQ2IDEzLjU4MzQgMTEuNzUwNCAxMy4yNDc2IDExLjc1MDQgMTIuODMzNFY5LjUwMDAzWk0xMS44MzM3IDE1LjMzMzRDMTEuODMzNyAxNS43OTM2IDExLjQ2MDYgMTYuMTY2NyAxMS4wMDA0IDE2LjE2NjdDMTAuNTQwMSAxNi4xNjY3IDEwLjE2NyAxNS43OTM2IDEwLjE2NyAxNS4zMzM0QzEwLjE2NyAxNC44NzMxIDEwLjU0MDEgMTQuNSAxMS4wMDA0IDE0LjVDMTEuNDYwNiAxNC41IDExLjgzMzcgMTQuODczMSAxMS44MzM3IDE1LjMzMzRaIiBmaWxsPSIjQjExOTMyIi8+Cjwvc3ZnPgo=")
+            background-size: 100% 100%
+            background-repeat: no-repeat
+            pointer-events: none
+        &:empty
+            &:after
+                content: attr(data-text-default)
+            
+

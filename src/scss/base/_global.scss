@@ -1,0 +1,46 @@
+body {
+	background: $black;
+	color: $white;
+	font-family: $ff;
+	font-size: 16px;
+	line-height: (21/16);
+	font-weight: 500;
+	overflow-x: hidden;
+	overflow-y: auto;
+	@media ($max1023) {
+		font-size: 14px;
+	}
+	&._lock {
+		overflow: hidden;
+		touch-action: none;
+	}
+}
+.page {
+	flex: 1 1 auto;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100%;
+}
+.container {
+	max-width: 1440px;
+	width: 100%;
+	padding: 0 80px;
+	margin: 0 auto;
+
+	@media ($max1439) {
+		padding-right: 32px;
+		padding-left: 32px;
+	}
+	@media ($max1023) {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	@media ($max767) {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+}

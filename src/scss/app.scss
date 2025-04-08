@@ -1,0 +1,20 @@
+@import 'base/fonts';
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/reset';
+@import 'base/print';
+@import 'base/global';
+@import 'base/ui-kit';
+
+@import 'modules/vendor/swiper.scss';
+
+@import 'modules/common/header.sass';
+@import 'modules/common/footer.sass';
+@import 'modules/common/form.sass';
+@import 'modules/common/intro.sass';
+@import 'modules/common/services.sass';
+@import 'modules/common/projects-slider.sass';
+@import 'modules/common/clients.sass';
+@import 'modules/common/partners.sass';
+@import 'modules/common/boss.sass';
+@import 'modules/common/banner.sass';

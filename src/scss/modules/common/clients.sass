@@ -1,0 +1,96 @@
+.clients__row:before,
+.clients__title,
+.clients__col 
+    width: 20%
+    @media ($max1439)
+        width: 25%
+    @media ($max767)
+        width: 50%
+.clients
+
+    &__title
+        display: inline-block
+        position: relative 
+        transform: translateY(100%)
+
+
+
+    &__row
+        display: flex
+        flex-wrap: wrap
+
+        &:before
+            content: ''
+            display: block
+            pointer-events: none
+
+    &__col
+
+.card-clients
+    display: flex
+    flex-direction: column
+    height: 100%
+    min-height: 256px
+    padding: 16px
+    border-radius: 12px
+    border: solid 1px $gray750
+    transition-duration: $time03
+    transition-property: color, background-color, border-color
+
+    @media ($max1023)
+        min-height: 150px
+        padding: 8px
+
+    @media ($hover)
+        &:hover
+            color: $white
+            background-color: $brand550
+            border-color: $brand550
+            .card-clients
+                &__tag
+                    color: $white
+    &__head
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        gap: 14px
+
+        @media ($max1023)
+            gap: 8px
+        @media ($max767)
+            gap: 4px
+
+
+    &__logo
+        flex-shrink: 0
+        width: pct-s(178,222)
+        max-width: 178px
+        &:before
+            padding-bottom: pct-s(60,178)
+            
+
+
+    &__body
+        flex: 1 1 auto
+        margin-top: 20px
+
+
+    &__tag
+        display: flex
+        align-items: center
+        gap: 4px
+        color: $gray650
+        transition: color $time03
+
+
+    &__bottom
+        margin-top: 20px
+
+        ul
+            li
+                margin-bottom: 8px
+                @media ($max1023)
+                    margin-bottom: 4px
+                &:last-child
+                    margin-bottom: 0
+

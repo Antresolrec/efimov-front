@@ -16,7 +16,7 @@
 <link rel="icon" href="favicon.ico"><link href="css/app.css" rel="stylesheet"></head>
 <body>
 <div class="wrapper">
-	<header class="header js-header js-fixed-element">
+	<header class="header text-lowercase js-header js-fixed-element">
 		<div class="container">
 			<div class="header__row">
 				<a href="#" class="header__logo img-wh" aria-label="Логотип Efimov">
@@ -32,7 +32,7 @@
 				<div class="header__menu">
 					<div class="header__menu-wrapper">
 						<div class="header__decor-menu ff-third show-mob">privet</div>
-						<nav class="header__nav links fs-16">
+						<nav class="header__nav links fs-16 c-gray-300">
 							<ul>
 								<li class="_active"><span>проекты</span></li>
 								<li><a href="#">услуги</a></li>
@@ -67,7 +67,7 @@
 		</div>
 	</header>
     <main class="page">
-        <div class="intro first-section-from-header">
+        <div class="intro text-lowercase first-section-from-header">
             <div class="container">
                 <div class="intro__row pv-100 pv-80-laptop pv-50-tablet">
                     <div class="intro__head">
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <div class="projects-slider pv-100 pv-60-laptop pv-32-tablet pv-24-mob js-auto-width-slider">
+        <div class="projects-slider text-lowercase pv-100 pv-60-laptop pv-32-tablet pv-24-mob">
             <div class="container">
                 <div>
                     <a href="#" class="btn btn--secondary btn--full">
@@ -103,85 +103,44 @@
                         </svg>
                     </a>
                 </div>
-                <div class="projects-slider__wrapper">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="projects-slider__card _small">
-                                    <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                        <img src="images/content/projects-slider-01.jpg" alt="">
-                                    </a>
-                                    <div class="projects-slider__body links">
-                                        <a href="#" class="title fs-24 mb-4">Avito Авто</a>
-                                        <div class="c-gray-300">
-                                            <p>Большая дилерская конференция «Высшая Передача». Создали лендинг для «Avito Авто» за 2 дня</p>
-                                        </div>
-                                    </div>
+            </div>
+            <div class="projects-slider__wrapper js-tickers">
+                <div class="projects-slider__row js-ticker js-ticker--projects">
+                    <div data-item-ticker class="projects-slider__col">
+                        <div class="projects-slider__card _small">
+                            <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
+                                <img src="images/content/projects-slider-01.jpg" alt="">
+                            </a>
+                            <div class="projects-slider__body links">
+                                <a href="#" class="title fs-24 mb-4">Avito Авто</a>
+                                <div class="c-gray-300">
+                                    <p>Большая дилерская конференция «Высшая Передача». Создали лендинг для «Avito Авто» за 2 дня</p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="projects-slider__card _medium">
-                                    <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                        <img src="images/content/projects-slider-02.jpg" alt="">
-                                    </a>
-                                    <div class="projects-slider__body links">
-                                        <a href="#" class="title fs-24 mb-4">УНПК МФТИ</a>
-                                        <div class="c-gray-300">
-                                            <p>Учебно-научный пропедевтический комплекс Московского физико-технического института. </p>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <div data-item-ticker class="projects-slider__col">
+                        <div class="projects-slider__card _medium">
+                            <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
+                                <img src="images/content/projects-slider-02.jpg" alt="">
+                            </a>
+                            <div class="projects-slider__body links">
+                                <a href="#" class="title fs-24 mb-4">УНПК МФТИ</a>
+                                <div class="c-gray-300">
+                                    <p>Учебно-научный пропедевтический комплекс Московского физико-технического института. </p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="projects-slider__card _big">
-                                    <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                        <img src="images/content/projects-slider-03.jpg" alt="">
-                                    </a>
-                                    <div class="projects-slider__body links">
-                                        <a href="#" class="title fs-24 mb-4">Avito Авто</a>
-                                        <div class="c-gray-300">
-                                            Большая дилерская конференция «Высшая Передача». Создали лендинг для «Avito Авто» за 2 дня
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="projects-slider__card _small">
-                                    <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                        <img src="images/content/projects-slider-01.jpg" alt="">
-                                    </a>
-                                    <div class="projects-slider__body links">
-                                        <a href="#" class="title fs-24 mb-4">Avito Авто</a>
-                                        <div class="c-gray-300">
-                                            <p>Большая дилерская конференция «Высшая Передача». Создали лендинг для «Avito Авто» за 2 дня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="projects-slider__card _medium">
-                                    <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                        <img src="images/content/projects-slider-02.jpg" alt="">
-                                    </a>
-                                    <div class="projects-slider__body links">
-                                        <a href="#" class="title fs-24 mb-4">УНПК МФТИ</a>
-                                        <div class="c-gray-300">
-                                            <p>Учебно-научный пропедевтический комплекс Московского физико-технического института. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="projects-slider__card _big">
-                                    <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                        <img src="images/content/projects-slider-03.jpg" alt="">
-                                    </a>
-                                    <div class="projects-slider__body links">
-                                        <a href="#" class="title fs-24 mb-4">Avito Авто</a>
-                                        <div class="c-gray-300">
-                                            Большая дилерская конференция «Высшая Передача». Создали лендинг для «Avito Авто» за 2 дня
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <div data-item-ticker class="projects-slider__col">
+                        <div class="projects-slider__card _big">
+                            <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
+                                <img src="images/content/projects-slider-03.jpg" alt="">
+                            </a>
+                            <div class="projects-slider__body links">
+                                <a href="#" class="title fs-24 mb-4">Avito Авто</a>
+                                <div class="c-gray-300">
+                                    Большая дилерская конференция «Высшая Передача». Создали лендинг для «Avito Авто» за 2 дня
                                 </div>
                             </div>
                         </div>
@@ -189,7 +148,7 @@
                 </div>
             </div>
         </div>
-        <div class="clients pv-100 pv-60-laptop pv-40-tablet pv-24-mob">
+        <div class="clients text-lowercase pv-100 pv-60-laptop pv-40-tablet pv-24-mob">
             <div class="container">
                 <h2 class="clients__title fs-16 fs-14-mob c-gray-600">клиенты</h2>
                 <div class="clients__row">
@@ -311,15 +270,10 @@
                         </a>
                     </div>
                     <div class="clients__col">
-                        <a href="#" class="card-clients">
+                        <div class="card-clients">
                             <div class="card-clients__head">
                                 <div class="card-clients__logo item-response">
                                     <img src="images/content/clients/06.png" alt="">
-                                </div>
-                                <div class="ico ico-24 ico-12-tablet">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96644 1.25H10H14H14.0336H14.0336C15.4053 1.25 16.4807 1.24999 17.3451 1.32061C18.2252 1.39252 18.9523 1.54138 19.6104 1.87671C20.6924 2.42798 21.572 3.30762 22.1233 4.38955C22.4586 5.04769 22.6075 5.77479 22.6794 6.65494C22.75 7.51926 22.75 8.59466 22.75 9.96632V9.96637V9.96642V10V14V14.0336V14.0336V14.0337C22.75 15.4053 22.75 16.4807 22.6794 17.3451C22.6075 18.2252 22.4586 18.9523 22.1233 19.6104C21.572 20.6924 20.6924 21.572 19.6104 22.1233C18.9523 22.4586 18.2252 22.6075 17.3451 22.6794C16.4807 22.75 15.4053 22.75 14.0337 22.75H14.0336H14.0336H14H10H9.96642H9.96637H9.96632C8.59466 22.75 7.51926 22.75 6.65494 22.6794C5.77479 22.6075 5.04769 22.4586 4.38955 22.1233C3.30762 21.572 2.42798 20.6924 1.87671 19.6104C1.54138 18.9523 1.39252 18.2252 1.32061 17.3451C1.24999 16.4807 1.25 15.4053 1.25 14.0336V14V10V9.96644C1.25 8.59472 1.24999 7.51929 1.32061 6.65494C1.39252 5.77479 1.54138 5.04769 1.87671 4.38955C2.42798 3.30762 3.30762 2.42798 4.38955 1.87671C5.04769 1.54138 5.77479 1.39252 6.65494 1.32061C7.51928 1.24999 8.59472 1.25 9.96643 1.25H9.96644ZM10 7.25C9.58579 7.25 9.25 7.58579 9.25 8C9.25 8.41421 9.58579 8.75 10 8.75H14.1893L7.46967 15.4697C7.17678 15.7626 7.17678 16.2374 7.46967 16.5303C7.76256 16.8232 8.23744 16.8232 8.53033 16.5303L15.25 9.81066V14C15.25 14.4142 15.5858 14.75 16 14.75C16.4142 14.75 16.75 14.4142 16.75 14V8C16.75 7.58579 16.4142 7.25 16 7.25H10Z" fill="white"/>
-                                    </svg>
                                 </div>
                             </div>
                             <div class="card-clients__body">
@@ -335,7 +289,7 @@
                                 <li>разработка mobile</li>
                                 </ul>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="clients__col">
                         <a href="#" class="card-clients">
@@ -409,15 +363,10 @@
                         </a>
                     </div>
                     <div class="clients__col">
-                        <a href="#" class="card-clients">
+                        <div class="card-clients">
                             <div class="card-clients__head">
                                 <div class="card-clients__logo item-response">
                                     <img src="images/content/clients/10.png" alt="">
-                                </div>
-                                <div class="ico ico-24 ico-12-tablet">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96644 1.25H10H14H14.0336H14.0336C15.4053 1.25 16.4807 1.24999 17.3451 1.32061C18.2252 1.39252 18.9523 1.54138 19.6104 1.87671C20.6924 2.42798 21.572 3.30762 22.1233 4.38955C22.4586 5.04769 22.6075 5.77479 22.6794 6.65494C22.75 7.51926 22.75 8.59466 22.75 9.96632V9.96637V9.96642V10V14V14.0336V14.0336V14.0337C22.75 15.4053 22.75 16.4807 22.6794 17.3451C22.6075 18.2252 22.4586 18.9523 22.1233 19.6104C21.572 20.6924 20.6924 21.572 19.6104 22.1233C18.9523 22.4586 18.2252 22.6075 17.3451 22.6794C16.4807 22.75 15.4053 22.75 14.0337 22.75H14.0336H14.0336H14H10H9.96642H9.96637H9.96632C8.59466 22.75 7.51926 22.75 6.65494 22.6794C5.77479 22.6075 5.04769 22.4586 4.38955 22.1233C3.30762 21.572 2.42798 20.6924 1.87671 19.6104C1.54138 18.9523 1.39252 18.2252 1.32061 17.3451C1.24999 16.4807 1.25 15.4053 1.25 14.0336V14V10V9.96644C1.25 8.59472 1.24999 7.51929 1.32061 6.65494C1.39252 5.77479 1.54138 5.04769 1.87671 4.38955C2.42798 3.30762 3.30762 2.42798 4.38955 1.87671C5.04769 1.54138 5.77479 1.39252 6.65494 1.32061C7.51928 1.24999 8.59472 1.25 9.96643 1.25H9.96644ZM10 7.25C9.58579 7.25 9.25 7.58579 9.25 8C9.25 8.41421 9.58579 8.75 10 8.75H14.1893L7.46967 15.4697C7.17678 15.7626 7.17678 16.2374 7.46967 16.5303C7.76256 16.8232 8.23744 16.8232 8.53033 16.5303L15.25 9.81066V14C15.25 14.4142 15.5858 14.75 16 14.75C16.4142 14.75 16.75 14.4142 16.75 14V8C16.75 7.58579 16.4142 7.25 16 7.25H10Z" fill="white"/>
-                                    </svg>
                                 </div>
                             </div>
                             <div class="card-clients__body">
@@ -433,7 +382,7 @@
                                 <li>брендинг</li>
                                 </ul>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="clients__col">
                         <a href="#" class="card-clients">
@@ -485,7 +434,7 @@
                 </div>
             </div>
         </div>
-        <div class="boss">
+        <div class="boss text-lowercase">
             <div class="container">
                 <div class="boss__row">
                     <div class="boss__decor ff-third js-decor">boss</div>
@@ -527,7 +476,7 @@
                 </div>
             </div>
         </div>
-        <div class="partners pv-100 pv-60-laptop pv-24-mob">
+        <div class="partners text-lowercase pv-100 pv-60-laptop pv-24-mob">
             <div class="container">
                 <div class="partners__title fs-16 fs-14-mob c-gray-600">партнеры</div>
                 <div class="partners__row">
@@ -535,91 +484,91 @@
 
                     </div>
                     <div class="partners__col _bg">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/01.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/02.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col _bg-second">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/03.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col _bg">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/04.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/05.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/06.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col _empty">
 
                     </div>
                     <div class="partners__col _bg">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/07.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/08.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/09.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col _bg-second">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/10.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col _bg-second">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/11.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="partners__col">
-                        <a href="#" class="card-partners" aria-label="Логотип партнера">
+                        <div class="card-partners">
                             <div class="card-partners__img item-response">
                                 <img loading="lazy" src="images/content/partners/12.png" alt="">
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
                 <div class="partners__banner">
@@ -642,7 +591,7 @@
                 <div class="banner__decor ff-third js-decor">Showreel</div>
             </div>
         </div>
-        <div class="services pv-100 pv-60-laptop pv-40-tablet pv-24-mob">
+        <div class="services text-lowercase pv-100 pv-60-laptop pv-40-tablet pv-24-mob">
             <div class="container">
                 <div class="text-center mb-40 mb-32-laptop mb-24-tablet">
                     <h2 class="fs-16 fs-14-mob c-gray-600">Услуги</h2>
@@ -686,7 +635,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="services__col">
+                        <div class="services__col links">
                             <div class="title fs-24 mb-30 mb-16-mob">аналитика</div>
                             <ul>
                                 <li>
@@ -723,7 +672,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="services__col">
+                        <div class="services__col links">
                             <div class="title fs-24 mb-30 mb-16-mob">Дизайн</div>
                             <ul>
                                 <li>
@@ -775,7 +724,7 @@
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer text-lowercase">
         <div class="container">
             <div class="footer__row">
                 <div class="footer__head">
@@ -790,51 +739,54 @@
                                     <div class="field js-input">
                                         <div class="field__box">
                                             <input type="text" placeholder="имя" class="field__input" data-required="text">
-                                            <div class="field__icon field__icon--error"></div>
+                                            <div class="field__icon field__icon--error">
+                                                <img src="images/content/form-error-triangle.svg" alt="">
+                                            </div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <div class="field js-input">
                                         <div class="field__box">
                                             <input type="text" placeholder="электронная почта*" class="field__input" data-required="email">
-                                            <div class="field__icon field__icon--error"></div>
+                                            <div class="field__icon field__icon--error">
+                                                <img src="images/content/form-error-triangle.svg" alt="">
+                                            </div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <div class="field js-input">
                                         <div class="field__box">
                                             <input type="text" placeholder="номер телефона" class="field__input js-mask-phone" data-mask="+7 000 000 00 00" data-required="tel-mask">
-                                            <div class="field__icon field__icon--error"></div>
+                                            <div class="field__icon field__icon--error">
+                                                <img src="images/content/form-error-triangle.svg" alt="">
+                                            </div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <div class="field js-input">
                                         <div class="field__box">
                                             <input type="text" placeholder="название компании" class="field__input" data-required="text">
-                                            <div class="field__icon field__icon--error"></div>
+                                            <div class="field__icon field__icon--error">
+                                                <img src="images/content/form-error-triangle.svg" alt="">
+                                            </div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <div class="field js-input">
                                         <div class="field__box">
-                                            <select class="select js-select" data-required="select">
+                                            <select class="select text-lowercase js-select" data-required="select">
                                                 <option data-placeholder="true">выберите услугу</option>
-                                                <option>Услуга 1</option>
-                                                <option>Услуга 2</option>
-                                                <option>Услуга 3</option>
-                                                <option>Услуга 4</option>
-                                                <option>Услуга 5</option>
+                                                <option>услуга 1</option>
+                                                <option>услуга 2</option>
+                                                <option>услуга 3</option>
+                                                <option>услуга 4</option>
+                                                <option>услуга 5</option>
                                             </select>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                             </div>
@@ -932,7 +884,6 @@
                                             <span class="field__count js-count-textarea">0/270</span>
                                             <div class="field__icon field__icon--error"></div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
@@ -945,7 +896,7 @@
                                                 data-required="file" 
                                                 type="file" 
                                                 id="file-uploader" 
-                                                accept="image/png, image/jpeg, image/gif, image/tiff, .tif, .pdf" 
+                                                accept="image/png, image/jpeg, image/gif, image/tiff, .tif, .pdf, .doc, docx" 
                                                 data-max-count="1" 
                                                 data-max-size-mb="10"
                                                 />
@@ -956,8 +907,10 @@
                                                     прикрепить файл
                                                 </span>
                                             </label>
-                                            <div class="uploader__error field__error-text js-file-uploader-error" data-text-default="Прикрепите файл"></div>
-                                            <!-- <div class="field__error-text--back">Текст ошибки под бек</div> -->
+                                            <div class="uploader__error field__error-text js-file-uploader-error">
+                                                <img class="ico ico-20" src="images/content/form-error-triangle.svg" alt="">
+                                                <div data-text-default="Прикрепите файл"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -984,6 +937,14 @@
                                     <path d="M10.668 16.501H21.3346M21.3346 16.501L17.3346 12.501M21.3346 16.501L17.3346 20.501" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
+                            <div class="form__error">
+                                <div class="form__error-item">
+                                    <div class="ico ico-20">
+                                        <img src="images/content/form-error-triangle.svg" alt="">
+                                    </div>
+                                    <div>Не заполнены обязательные поля</div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>

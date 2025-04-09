@@ -26,9 +26,8 @@
             align-items: center
             gap: 4px
             padding: 10px 0
-            transition: color $time03
+            transition-property: gap, color
+
             @media ($hover)
                 &:hover
-                    color: $brand550
-            &:active
-                color: $brand900
+                    gap: 12px

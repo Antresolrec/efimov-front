@@ -155,10 +155,10 @@ export default class FileUploader {
 	init(el) {
 		const container = el;
 		const input = container.querySelector('.uploader__input');
-		const errorText = container.querySelector('.js-file-uploader-error');
+		const errorText = container.querySelector('.js-file-uploader-error div');
 		const maxCount = Number(input.getAttribute('data-max-count'));
 		const maxSizeMb = Number(input.getAttribute('data-max-size-mb'));
-		const extensions = ['jpg', 'jpeg', 'png','pdf','tif','gif'];
+		const extensions = ['jpg', 'jpeg', 'png','pdf','doc','docx','tif','gif'];
 		if (!input.filesArray) {
 			input.filesArray = [];
 		}

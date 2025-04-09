@@ -10,11 +10,13 @@ import { initCountTextareas } from './modules/textarea';
 import { initForm } from './modules/form-validator';
 import { initVideo } from './modules/video';
 import { initFileUploader } from './modules/fileUploader';
+import { initTicker } from './modules/ticker';
 
 function initModules() {
     initBodyLock();
     initHeader();
     initDecor();
+    initTicker();
     initSelects();
     initSliders();
     initPhoneMasks();

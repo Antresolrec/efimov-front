@@ -1,0 +1,20 @@
+.js-tickers
+    &._go
+        .js-ticker
+            animation-name: ticker
+            &[data-reverse]
+                animation-name: ticker-reverse
+.js-ticker
+    animation: 25s linear infinite
+    will-change: transform
+
+@keyframes ticker
+    from
+        transform: translate3d(0, 0, 0)
+    to
+        transform: translate3d(-100%, 0, 0)
+@keyframes ticker-reverse
+    from
+        transform: translate3d(0, 0, 0)
+    to
+        transform: translate3d(100%, 0, 0)

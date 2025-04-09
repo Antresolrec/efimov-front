@@ -1,4 +1,4 @@
-    <footer class="footer">
+    <footer class="footer text-lowercase">
         <div class="container">
             <div class="footer__row">
                 <div class="footer__head">
@@ -13,51 +13,54 @@
                                     <div class="field js-input">
                                         <div class="field__box">
                                             <input type="text" placeholder="имя" class="field__input" data-required="text">
-                                            <div class="field__icon field__icon--error"></div>
+                                            <div class="field__icon field__icon--error">
+                                                <img src="images/content/form-error-triangle.svg" alt="">
+                                            </div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <div class="field js-input">
                                         <div class="field__box">
                                             <input type="text" placeholder="электронная почта*" class="field__input" data-required="email">
-                                            <div class="field__icon field__icon--error"></div>
+                                            <div class="field__icon field__icon--error">
+                                                <img src="images/content/form-error-triangle.svg" alt="">
+                                            </div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <div class="field js-input">
                                         <div class="field__box">
                                             <input type="text" placeholder="номер телефона" class="field__input js-mask-phone" data-mask="+7 000 000 00 00" data-required="tel-mask">
-                                            <div class="field__icon field__icon--error"></div>
+                                            <div class="field__icon field__icon--error">
+                                                <img src="images/content/form-error-triangle.svg" alt="">
+                                            </div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <div class="field js-input">
                                         <div class="field__box">
                                             <input type="text" placeholder="название компании" class="field__input" data-required="text">
-                                            <div class="field__icon field__icon--error"></div>
+                                            <div class="field__icon field__icon--error">
+                                                <img src="images/content/form-error-triangle.svg" alt="">
+                                            </div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <div class="field js-input">
                                         <div class="field__box">
-                                            <select class="select js-select" data-required="select">
+                                            <select class="select text-lowercase js-select" data-required="select">
                                                 <option data-placeholder="true">выберите услугу</option>
-                                                <option>Услуга 1</option>
-                                                <option>Услуга 2</option>
-                                                <option>Услуга 3</option>
-                                                <option>Услуга 4</option>
-                                                <option>Услуга 5</option>
+                                                <option>услуга 1</option>
+                                                <option>услуга 2</option>
+                                                <option>услуга 3</option>
+                                                <option>услуга 4</option>
+                                                <option>услуга 5</option>
                                             </select>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +158,6 @@
                                             <span class="field__count js-count-textarea">0/270</span>
                                             <div class="field__icon field__icon--error"></div>
                                         </div>
-                                        <div class="field__error-text">Текст ошибки</div>
                                     </div>
                                 </div>
                                 <div class="form__item">
@@ -168,7 +170,7 @@
                                                 data-required="file" 
                                                 type="file" 
                                                 id="file-uploader" 
-                                                accept="image/png, image/jpeg, image/gif, image/tiff, .tif, .pdf" 
+                                                accept="image/png, image/jpeg, image/gif, image/tiff, .tif, .pdf, .doc, docx" 
                                                 data-max-count="1" 
                                                 data-max-size-mb="10"
                                                 />
@@ -179,8 +181,10 @@
                                                     прикрепить файл
                                                 </span>
                                             </label>
-                                            <div class="uploader__error field__error-text js-file-uploader-error" data-text-default="Прикрепите файл"></div>
-                                            <!-- <div class="field__error-text--back">Текст ошибки под бек</div> -->
+                                            <div class="uploader__error field__error-text js-file-uploader-error">
+                                                <img class="ico ico-20" src="images/content/form-error-triangle.svg" alt="">
+                                                <div data-text-default="Прикрепите файл"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -207,6 +211,14 @@
                                     <path d="M10.668 16.501H21.3346M21.3346 16.501L17.3346 12.501M21.3346 16.501L17.3346 20.501" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
+                            <div class="form__error">
+                                <div class="form__error-item">
+                                    <div class="ico ico-20">
+                                        <img src="images/content/form-error-triangle.svg" alt="">
+                                    </div>
+                                    <div>Не заполнены обязательные поля</div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>

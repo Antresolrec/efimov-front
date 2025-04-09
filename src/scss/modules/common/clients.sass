@@ -24,6 +24,15 @@
 
     &__col
 
+a.card-clients
+    @media ($hover)
+        &:hover
+            color: $white
+            background-color: $brand550
+            border-color: $brand550
+            .card-clients
+                &__tag
+                    color: $white
 .card-clients
     display: flex
     flex-direction: column
@@ -39,14 +48,6 @@
         min-height: 150px
         padding: 8px
 
-    @media ($hover)
-        &:hover
-            color: $white
-            background-color: $brand550
-            border-color: $brand550
-            .card-clients
-                &__tag
-                    color: $white
     &__head
         display: flex
         justify-content: space-between

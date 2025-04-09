@@ -76,6 +76,7 @@
             left: 50%
             transform: translateX(-50%)
             min-width: 396px
+            margin: 0
         &:before
             padding-bottom: pct-s(523,592)
             
@@ -117,3 +118,8 @@
         &:nth-child(odd)
             @media ($max767)
                 padding-left: 0
+
+        p
+            @media ($max767)
+                max-width: 160px
+                color: $gray500

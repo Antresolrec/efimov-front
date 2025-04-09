@@ -45,18 +45,30 @@
 
 
     &__links
+        @media ($max767)
+            margin-bottom: 10px
         ul
             display: flex
             flex-wrap: wrap
             @media ($max1023)
                 gap: 8px
+            @media ($max767)
+                flex-direction: column
         li
             @media ($min1024)
                 width: 32%
         a
             padding: 11px 4px
+            @media ($max767)
+                padding-top: 13px
+                padding-bottom: 13px
 
     &__logo
         display: block
 
 
+a.footer__logo
+    transition: color $time03
+    @media ($hover)
+        &:hover
+            color: $brand550

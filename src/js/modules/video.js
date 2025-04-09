@@ -6,7 +6,7 @@ export default class Video {
             playing: '_playing',
         }
 
-        this.offsetTop = -50;
+        this.offsetTop = -30;
         this.delayCheckLoad = 500;
 
         this.selectors = document.querySelectorAll('.js-video');

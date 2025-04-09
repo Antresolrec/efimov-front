@@ -20,6 +20,7 @@ export default class Header {
 		this.bindMethods();
 		this.addListeners();
 		this.onResize();
+		this.onScroll();
 	}
 
 	bindMethods() {

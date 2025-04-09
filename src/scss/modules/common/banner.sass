@@ -21,9 +21,8 @@
             margin-left: -16px
             border-width: 1px
             border-radius: 20px
-        @media ($min768)
-            width: 100%
-            max-width: 1131px
+        @media ($min1024)
+            width: pct-s(1131,1280)
         &:before
             padding-bottom: pct-s(633,1127)
 
@@ -47,9 +46,10 @@
 
 
     &__decor
+        text-align: center
         font-size: 84px
         opacity: 0.6
-        text-align: center
-        transform: translateY(-33%)
+        margin-top: -37px
         @media ($max767)
             font-size: 48px
+            margin-top: -20px

@@ -9,10 +9,17 @@
         margin-bottom: 16px
         @media ($max767)
             margin-bottom: 24px
+        &--small-outer
+            margin-bottom: 8px
         &:last-child
             margin-bottom: 0
     &__bottom
         margin-top: 30px
+        @media ($max767)
+            margin-top: 24px
+        .form__item
+            @media ($max767)
+                margin-bottom: 16px
 
 .js-input
     &:not(._error)
@@ -55,6 +62,8 @@
         bottom: 10px
         font-size: 14px
         color: $gray450
+        @media ($max767)
+            font-size: 12px
     &__input,
     &__textarea
         display: block
@@ -75,18 +84,28 @@
             font: inherit
             color: $gray600
     &__input
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
         height: 42px
-        padding-right: 11px
+        padding-right: 36px
         border-radius: 10em
+        &::placeholder
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
     &__textarea
         height: 125px
         padding-top: 10px
         padding-right: 72px
         padding-bottom: 10px
         border-radius: 22px
+        @media ($max767)
+            padding-right: 60px
     &__error-text
         font-size: 14px
         color: $red750
+        margin-top: 8px
 
 .checkbox
     display: inline-flex
@@ -105,6 +124,8 @@
         position: absolute
         pointer-events: 0
         opacity: 0
+        width: 0
+        height: 0
         &:focus-visible
             ~ .checkbox__body
                 border-color: $brand550
@@ -349,7 +370,9 @@ select
 .js-file-uploader
     &._loaded
         .uploader
-            &__button
+            &__label
+                display: none
+            &__input
                 display: none
 .uploader
     position: relative
@@ -370,6 +393,10 @@ select
         margin-left: 4px
     &__file-delete
         margin-left: 4px
+        transition: transform $time03
+        @media ($hover)
+            &:hover
+                transform: rotate(90deg)
         svg
             pointer-events: none
 
@@ -384,17 +411,32 @@ select
         gap: 8px
         cursor: pointer
         height: 40px
+        transition: color $time03
+
+        @media ($hover)
+            &:hover
+                color: $brand550
+        &:active
+            transition-property: $time01
+            color: $brand900
 
 
     &__input
         position: absolute
         pointer-events: none
         opacity: 0
+        width: 0
+        height: 0
+
+        &:focus-visible
+            ~ .uploader__button
+                color: $brand550
 
 
     &__error
         display: flex
         align-items: center
+        margin-top: 4px
         &:before
             content: ''
             flex-shrink: 0

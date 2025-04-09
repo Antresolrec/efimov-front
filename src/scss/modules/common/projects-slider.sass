@@ -33,6 +33,14 @@
         overflow: hidden
         border-radius: 12px
 
+        img
+            transition: transform $time03
+
+        @media ($hover)
+            &:hover
+                img
+                    transform: scale(1.1)
+
 
     &__body
         margin-top: 16px

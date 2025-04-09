@@ -10,6 +10,11 @@ body {
 	@media ($max1023) {
 		font-size: 14px;
 	}
+	// &._loaded{
+	// 	.wrapper{
+	// 		opacity: 1;
+	// 	}
+	// }
 	&._lock {
 		overflow: hidden;
 		touch-action: none;
@@ -23,6 +28,8 @@ body {
 	flex-direction: column;
 	width: 100%;
 	min-height: 100%;
+	// opacity: 0;
+	// transition: opacity $time03;
 }
 .container {
 	max-width: 1440px;

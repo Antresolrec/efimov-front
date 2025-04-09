@@ -1,2 +1,130 @@
 .popup
-    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 101
+    background-color: $black
+    opacity: 0
+    pointer-events: none
+    transition-property: opacity 
+    transition-duration: $time03 
+    transition-delay: $time03
+    &:not(._not-first-open)
+        &:not(._open-popup)
+            .popup__bg
+                display: none
+    &._open-popup
+        opacity: 1
+        pointer-events: auto
+        transition-delay: 0s
+        .popup
+            &__scroll-container
+                opacity: 1
+                transform: none
+                transition-delay: $time03
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+    &__close
+        position: absolute
+        z-index: 1
+        top: 16px
+        right: 16px
+        width: 48px
+        height: 48px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        @media ($max1023)
+            top: 40px
+            right: 20px
+        @media ($max767)
+            top: 24px
+            right: 16px
+
+        @media ($hover)
+            &:hover
+                .popup__close-cross
+                    transform: rotate(90deg)
+        svg 
+            width: 32px
+            height: 32px
+    &__close-cross
+        transform-origin: center
+        transition: transform $time03
+    &__container
+        height: 100%
+        display: flex
+    &__wrapper
+        display: flex
+        align-items: center
+        width: 100%
+        padding: 20px 60px 20px 0
+        @media ($max1023)
+            padding: 0
+    &__scroll-container
+        overflow-x: hidden
+        overflow-y: auto
+        display: flex
+        min-width: 100%
+        max-height: 100%
+        opacity: 0
+        transform: scale(0.8)
+        transition-property: all
+        transition-duration: $time03
+        transition-delay: 0s
+
+        @media ($max1023)
+            display: block
+            padding: 40px 0
+            padding-right: 20px
+            margin-right: -20px
+        @media ($max767)
+            padding: 24px 0
+            padding-right: 16px
+            margin-right: -16px
+    &__form
+        display: flex
+        flex-direction: column
+        max-height: 100%
+        background-color: $gray850
+        padding: 40px
+        border-radius: 22px
+        @media ($max1023)
+            padding: 24px
+        @media ($max767)
+            padding: 16px
+        .form
+            &__body
+                overflow-x: hidden
+                overflow-y: auto
+                padding-right: 20px
+                margin-right: -20px
+            &__bottom
+                margin-top: 16px
+.popup-request
+    .footer
+        &__row
+            padding: 0
+            grid-template-columns: 1fr pct-s(580,1220)
+            @media ($max1439)
+                gap: 50px
+                grid-template-columns: 1fr minmax(459px, pct-s(580,1220))
+        &__body
+            min-height: 0
+        &__links
+            @media ($max1439)
+                font-size: 14px
+            ul
+                @media ($min1024) and ($max1439)
+                    gap: 4px
+            li
+                @media ($max1439)
+                    width: auto

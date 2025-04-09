@@ -1,8 +1,25 @@
+// Форма
 .form
     &:not(._error)
         .form
             &__error
                 display: none
+    &._dark
+        .field__input, 
+        .field__textarea,
+        .chips__body
+            background-color: $gray800
+            border-color: $gray800
+            @media ($hover)
+                &:hover
+                    border-color: $gray500
+        .chips__body-ico-white
+            color: $gray900
+        .field__count
+            color: $gray700
+        .checkbox__body
+            background-color: $gray800
+            border-color: $gray750
     &__items
         margin-bottom: 20px
         @media ($max767)
@@ -25,14 +42,15 @@
             @media ($max767)
                 margin-bottom: 16px
     &__error
-        margin-top: 16px
+        margin-top: 10px
 
     &__error-item
         display: flex
         align-items: center
         gap: 8px
-        color: $red750
+        color: $red500
 
+// Поле ввода
 .js-input
     &:not(._error)
         .field
@@ -51,6 +69,7 @@
         .checkbox
             &__body
                 border-color: $red500
+
 .field
     &__box
         position: relative
@@ -112,9 +131,10 @@
         @media ($max767)
             padding-right: 60px
     &__error-text
-        color: $red750
+        color: $red500
         margin-top: 8px
 
+// Чекбокс
 .checkbox
     display: inline-flex
     cursor: pointer
@@ -187,7 +207,8 @@
 
             &:active
                 color: $brand900
-                    
+
+// Чипсы
 .chips
     &__row
         display: flex
@@ -236,6 +257,7 @@
             color: $white
             transition: color $time03
 
+// Селект
 select
     width: 100%
     height: 44px
@@ -246,6 +268,13 @@ select
 .select
     outline: none
     min-height: 44px
+    &._dark
+        &.ss-main
+            background-color: $gray800
+            border-color: $gray800
+        &.ss-content
+            .ss-list
+                background-color: $gray800
 
 .ss
     &-main
@@ -375,13 +404,20 @@ select
     .ss-hide
         display: none !important
 
+
+// Загрузка файла
 .js-file-uploader
+    &._error
+        .uploader
+            &__button
+                display: none
     &._loaded
         .uploader
             &__label
                 display: none
             &__input
                 display: none
+
 .uploader
     position: relative
     &__files
@@ -445,8 +481,11 @@ select
         display: flex
         align-items: center
         gap: 8px
-        margin-top: 4px
-        div
+        min-height: 40px
+        margin-top: 0
+        cursor: pointer
+        span
+            display: block
             &:empty
                 &:after
                     content: attr(data-text-default)

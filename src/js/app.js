@@ -11,6 +11,7 @@ import { initForm } from './modules/form-validator';
 import { initVideo } from './modules/video';
 import { initFileUploader } from './modules/fileUploader';
 import { initTicker } from './modules/ticker';
+import initPopups from './modules/popups';
 
 function initModules() {
     initBodyLock();
@@ -24,6 +25,7 @@ function initModules() {
     initFileUploader();
     initForm();
     initVideo();
+    initPopups();
 
     document.body.classList.add('_loaded');
 };

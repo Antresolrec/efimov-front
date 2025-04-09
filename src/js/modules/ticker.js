@@ -27,7 +27,6 @@ export default class Ticker {
 
 	checkItemsCount() {
 		if (this.isTickerProjects) {
-			console.log(this.items.length);
 			if (this.items.length < 4) {
 				this.addItems();
 			} 
@@ -43,7 +42,6 @@ export default class Ticker {
 			this.selector.appendChild(item);
 		}
 		this.items = this.selector.querySelectorAll('[data-item-ticker]');
-		console.log(this.items.length);
 	}
 
 	checkReverse() {

@@ -288,6 +288,7 @@ h1,h2,h3,h4,h5,h6 {
     text-transform: lowercase;
 }
 .js-decor {
+    font-family: $ffThird;
     cursor: default;
     span {
         transition: color $time03;

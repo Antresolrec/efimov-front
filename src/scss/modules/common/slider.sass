@@ -1,0 +1,30 @@
+.nav-slider
+    display: flex
+    gap: 12px
+    background-color: $gray800
+    padding: 6px
+    border-radius: 10em
+    &__btn
+        flex-shrink: 0
+        width: 32px
+        height: 32px
+        transition: color $time03
+
+        @media ($hover) 
+            &:hover:not(:disabled)
+                color: $brand550
+            
+        
+        &:active:not(:disabled)
+            transition-duration: $time01
+            color: $brand900
+
+        &.swiper-button-disabled
+            color: $black
+            .nav-slider__ico-arrow
+                color: $white
+        &.swiper-button-lock
+            display: none
+    &__ico-arrow
+        color: $black
+        transition: color $time03

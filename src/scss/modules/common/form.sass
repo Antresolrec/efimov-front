@@ -10,6 +10,8 @@
         .chips__body
             background-color: $gray800
             border-color: $gray800
+            &:focus-visible
+                border-color: $gray500
             @media ($hover)
                 &:hover
                     border-color: $gray500
@@ -150,7 +152,7 @@
                     border-color: $gray550
     &__input
         position: absolute
-        pointer-events: 0
+        pointer-events: none
         opacity: 0
         width: 0
         height: 0
@@ -210,6 +212,26 @@
 
 // Чипсы
 .chips
+    &--second
+        .chips
+            &__input
+                &:focus-visible
+                    ~ .chips__body
+                        border-color: $gray750
+                &:checked
+                    ~ .chips__body
+                        color: $white
+                        background-color: $gray750
+                        border-color: $gray750
+            &__body
+                color: $white
+                background-color: transparent
+                border-color: transparent
+                padding-right: 16px
+                padding-left: 16px
+                @media ($hover)
+                    &:hover
+                        border-color: $gray750
     &__row
         display: flex
         flex-wrap: wrap
@@ -218,7 +240,7 @@
         display: block
     &__input
         position: absolute
-        pointer-events: 0
+        pointer-events: none
         opacity: 0
         &:focus-visible
             ~ .chips__body
@@ -252,7 +274,13 @@
             width: 20px
             height: 20px
         span
-            display: block
+            display: flex
+            align-items: center
+            span
+                display: block
+                font-size: 12px
+                color: $brand550
+                margin-left: 8px
         &-ico-white
             color: $white
             transition: color $time03

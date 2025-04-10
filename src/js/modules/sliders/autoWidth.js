@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 
 export default class AutoWidthSlider {
 	constructor(container) {
@@ -9,6 +10,8 @@ export default class AutoWidthSlider {
 		this.container = container;
 
 		this.slider = this.container.querySelector('.swiper');
+		this.prev = this.container.querySelector('.js-btn-prev');
+        this.next = this.container.querySelector('.js-btn-next');
 
 		this.swiperSlider = null;
 
@@ -25,8 +28,13 @@ export default class AutoWidthSlider {
 
 	get options() {
 		return {
+			modules: [Navigation],
 			speed: 500,
 			slidesPerView: 'auto',
+            navigation: {
+                nextEl: this.next,
+                prevEl: this.prev,
+            },
 		};
 	}
 }

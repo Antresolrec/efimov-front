@@ -32,6 +32,7 @@ export default class Header {
 	addListeners() {
 		this.addListenerTriggerClick();
 		this.addListenerResize();
+		this.addListenerScroll();
 	}
 
 	addListenerTriggerClick() {
@@ -44,10 +45,6 @@ export default class Header {
 
 	addListenerScroll() {
 		document.addEventListener('scroll', this.scrollHanlder);
-	}
-
-	removeListenerScroll() {
-		document.removeEventListener('scroll', this.scrollHanlder);
 	}
 
 	clickHandler(e) {
@@ -77,12 +74,13 @@ export default class Header {
 
 	onResize(e) {
 		if (this.media.matches) {
-			this.removeListenerScroll();
+
 		} else {
-			this.addListenerScroll();
-			this.header.classList.remove(this.data.menuOpen);
-			document.body.classList.remove(this.data.menuOpen);
-			bodyLock.unlock();
+			if (window.popups && !window.popups.getOpenedPopup()) {
+				this.header.classList.remove(this.data.menuOpen);
+				document.body.classList.remove(this.data.menuOpen);
+				bodyLock.unlock();
+			}
 		}
 	}
 

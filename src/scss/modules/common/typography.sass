@@ -1,0 +1,160 @@
+.typography
+    time
+        img
+            width: 20px
+            height: 20px
+            margin-right: 8px
+        + time 
+            margin-left: 32px
+    h1
+        font-family: $ffSecond
+        font-size: 46px
+        font-weight: 400
+        text-transform: uppercase
+        margin-bottom: 20px
+        @media ($max1439)
+            font-size: 24px
+        @media ($max1279)
+            br
+                display: none
+    h2
+        font-family: $ffSecond
+        font-size: 24px
+        font-weight: 400
+        text-transform: uppercase
+    h3
+        font-size: 16px
+        color: $gray650
+
+    p
+        margin-bottom: 24px
+        &:last-child
+            margin-bottom: 0
+    &__head
+        padding-top: 60px
+        @media ($max1023)
+            padding-top: 40px
+        @media ($max767)
+            padding-top: 12px
+
+    &__tags
+        display: flex
+        flex-wrap: wrap
+        gap: 0 20px
+        color: $gray500
+        margin-bottom: 20px
+        > *
+            padding: 5px 16px 5px 0
+
+
+    &__banner
+        overflow: hidden
+        border-radius: 12px
+        @media ($max767)
+            margin-right: -16px
+            margin-left: -16px
+        &:before
+            padding-bottom: pct-s(568,1280)
+            @media ($max767)
+                padding-bottom: pct-s(205,360)
+            
+
+    &__container
+        width: 100%
+        max-width: 797px
+        margin: 0 auto
+        padding-top: 60px
+        @media ($max1279)
+            max-width: 766px
+            margin-right: 0
+        @media ($max1023)
+            max-width: 581px
+            padding-top: 32px
+        @media ($max767)
+            padding-top: 22px
+
+
+    &__info
+        margin-bottom: 60px
+        @media ($max767)
+            margin-bottom: 44px
+        @media ($min768)
+            display: flex
+            justify-content: space-between
+            align-items: center
+        + .typography__row
+            + .typography__row
+                @media ($max1023)
+                    display: block
+                    > *:first-child
+                        max-width: 100%
+                        margin-bottom: 8px
+
+    &__share
+        display: flex
+        align-items: center
+        gap: 8px
+
+        @media ($max767)
+            margin-top: 20px
+
+        p
+            margin-bottom: 0
+
+
+    &__share-links
+        display: flex
+        gap: 8px
+
+        a
+            flex-shrink: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            img,svg
+                width: 20px
+                height: 20px
+
+    &__rows
+        margin-bottom: 60px
+        @media ($max767)
+            margin-bottom: 44px
+        &:last-child
+            margin-bottom: 0
+        .typography__row
+            margin-bottom: 24px
+            @media ($max1279)
+                margin-bottom: 8px
+            @media ($max767)
+                margin-bottom: 32px
+            &:last-child
+                margin-bottom: 0
+    &__row
+        display: flex
+        gap: 63px
+        margin-bottom: 60px
+        @media ($max1279)
+            gap: 8px
+        @media ($max767)
+            display: block
+            margin-bottom: 44px
+        &:last-child
+            margin-bottom: 0
+        > *
+            &:first-child
+                flex-shrink: 0
+                width: 100%
+                max-width: 234px
+                @media ($max1279)
+                    max-width: 185px
+                @media ($max1023)
+                    max-width: 139px
+                @media ($max767)
+                    max-width: 100%
+                    margin-bottom: 16px
+            &:last-child
+                flex: 1 1 auto
+            &:first-child:last-child
+                max-width: 100%

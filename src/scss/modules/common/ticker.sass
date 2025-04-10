@@ -5,8 +5,11 @@
             &[data-reverse]
                 animation-name: ticker-reverse
 .js-ticker
-    animation: 25s linear infinite
     will-change: transform
+    animation: linear infinite
+
+    // ключевое значение скорости анимации. в зависимости от кол-ва элементов, скрипт будет стараться подстроить скорость под это значение
+    animation-duration: 40s
 
 @keyframes ticker
     from

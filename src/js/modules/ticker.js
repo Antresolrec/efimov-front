@@ -15,6 +15,11 @@ export default class Ticker {
 		this.container = this.selector.closest('.js-tickers');
 		this.items = this.selector.querySelectorAll('[data-item-ticker]');
 
+		/**
+		 * @see ticker.sass
+		 */
+		this.speed = +window.getComputedStyle(this.selector).animationDuration.replace('s','') || 40;
+
 		this.init();
 	}
 
@@ -22,20 +27,14 @@ export default class Ticker {
 		this.checkItemsCount();
 		this.checkReverse();
 		this.makeClone();
+		this.setSpeed();
 		this.start();
 	}
 
-	checkItemsCount() {
-		if (this.isTickerProjects) {
-			if (this.items.length < 4) {
-				this.addItems();
-			} 
-			if (this.items.length < 6) {
-				this.addItems();
-			}
-		}
+	start() {
+		this.container.classList.add(this.data.go);
 	}
-	
+
 	addItems() {
 		for (const el of this.items) {
 			const item = el.cloneNode(true);
@@ -44,25 +43,49 @@ export default class Ticker {
 		this.items = this.selector.querySelectorAll('[data-item-ticker]');
 	}
 
+	makeClone() {
+		const clone = this.selector.cloneNode(true);
+		this.container.appendChild(clone);
+	}
+
+	checkItemsCount() {
+		if (this.isTickerProjects) {
+			if (this.items.length < 2) {
+				this.addItems();
+			} 
+			if (this.items.length < 4) {
+				this.addItems();
+			} 
+			if (this.items.length < 6) {
+				this.addItems();
+			}
+		}
+	}
+
 	checkReverse() {
 		if (this.selector.hasAttribute('data-reverse')) {
 			this.container.style.flexDirection = 'row-reverse';
 		}
 	}
 
-	makeClone() {
-		const clone = this.selector.cloneNode(true);
-		this.container.appendChild(clone);
+	setSpeed() {
+		const speed = this.getSpeed();
+
+		if (speed > this.speed) {
+			const selectors = this.container.querySelectorAll('.js-ticker');
+
+			for (const el of selectors) {
+				el.style.animationDuration = speed + 's';
+			}
+		}
 	}
 
-	start() {
-		if (this.container.hasAttribute('data-delay')) {
-			setTimeout(() => {
-				this.container.classList.add(this.data.go);
-			}, this.container.dataset.delay);
-		} else {
-			this.container.classList.add(this.data.go);
-		}
+	getSpeed() {
+		const oneItem = this.speed / this.items.length;
+		const oneItemSpeed = this.speed / oneItem;
+		const speed = this.speed + oneItemSpeed * (this.items.length - 6);
+
+		return +speed;
 	}
 
 	get isTickerProjects() {

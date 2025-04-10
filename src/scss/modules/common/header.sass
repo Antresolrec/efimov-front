@@ -4,9 +4,10 @@
     top: 0
     left: 0
     width: 100%
-    background-color: $black
+    transition: background-color $time03
 
     &._scroll
+        background-color: $black
         .header
             &__row
                 @media ($min768)
@@ -157,3 +158,6 @@ a.header__logo
     @media ($hover)
         &:hover
             color: $brand550
+    &:active
+        transition-duration: $time01
+        color: $brand900

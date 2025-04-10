@@ -3,6 +3,7 @@ import '../scss/app.scss';
 import { initBodyLock } from './modules/bodyLock';
 import { initHeader } from './modules/header';
 import { initDecor } from './modules/decor';
+import { initCounter } from './modules/counter';
 import { initSelects } from './modules/select';
 import initSliders from './modules/sliders';
 import { initPhoneMasks } from './modules/inputMask';
@@ -17,6 +18,7 @@ function initModules() {
     initBodyLock();
     initHeader();
     initDecor();
+    initCounter()
     initTicker();
     initSelects();
     initSliders();
@@ -25,7 +27,7 @@ function initModules() {
     initFileUploader();
     initForm();
     initVideo();
-    initPopups();
+    initPopups();;
 
     document.body.classList.add('_loaded');
 };

@@ -1,0 +1,193 @@
+.news
+    padding-bottom: 100px
+    @media ($max767)
+        padding-bottom: 44px
+    &__head
+        padding: 44px 0
+        @media ($min768)
+            display: flex
+            align-items: center
+            gap: 30px
+            padding: 40px 0
+
+        .chips
+            @media ($max767)
+                margin-top: 16px
+
+    &__body
+
+
+    &__row
+        @media ($min768)
+            display: grid
+            gap: 32px
+            grid-template-columns: 1fr pct-s(480,1280)
+            grid-template-areas: "one two" "one two" "one three" "four three" "four five" "four five"
+        @media ($min1440)
+            gap: 60px
+            
+
+
+    &__col
+        @media ($max767)
+            margin-bottom: 32px
+            &:last-child
+                margin-bottom: 0
+        @media ($min768)
+            &:nth-child(1)
+                grid-area: one
+            &:nth-child(2)
+                grid-area: two
+            &:nth-child(3)
+                grid-area: three
+            &:nth-child(4)
+                grid-area: four
+            &:nth-child(5)
+                grid-area: five
+            
+        &:nth-child(1),
+        &:nth-child(4)
+            .card-news
+                &__img
+                    @media ($hover)
+                        &:hover
+                            img
+                                transform: scale(1.05)
+                    &:before
+                        padding-bottom: pct-s(516,740)
+
+
+.card-news
+    display: block
+    
+
+    &__img
+        display: block
+        overflow: hidden
+        border-radius: 12px
+
+        @media ($hover)
+            &:hover
+                img
+                    transform: scale(1.1)
+        &:before
+            padding-bottom: pct-s(270,480)
+
+        img
+            transition: transform $time03
+
+
+    &__body
+        margin-top: 16px
+        padding-right: 12px
+        padding-left: 12px
+        @media ($max1023)
+            margin-top: 8px
+        @media ($max767)
+            margin-top: 0
+
+
+    &__row
+        display: flex
+        justify-content: space-between
+        gap: 4px
+
+
+    &__tags
+        display: flex
+        flex-wrap: wrap
+
+
+    &__tag
+         
+        padding: 6px 8px
+
+
+    &__ico
+        margin-top: 4px
+        @media ($max767)
+            margin-top: 8px
+
+
+    &__title
+        margin-top: 12px
+        @media ($max1023)
+            margin-top: 8px
+        @media ($max767)
+            margin-top: 4px
+
+
+.other-news
+    overflow: hidden
+    &__head
+        display: flex
+        gap: 20px
+        margin-top: 40px
+
+    &__slider
+        margin-top: 40px
+        margin-right: -10px
+        margin-left: -10px
+        @media ($min768) and ($max1023)
+            margin-right: -4px
+            margin-left: -4px
+        .swiper
+            overflow: visible
+        .swiper-slide
+            width: 33.333%
+            padding-right: 10px
+            padding-left: 10px
+            @media ($min768) and ($max1023)
+                padding-right: 4px
+                padding-left: 4px
+            @media ($max1023)
+                width: 221px
+            @media ($max767)
+                width: 257px
+
+.card-other-news
+    &__img
+        display: block
+        border-radius: 12px
+        overflow: hidden
+
+        @media ($hover)
+            &:hover
+                img
+                    transform: scale(1.1)
+
+        &:before
+            padding-bottom: pct-s(270,414)
+
+        img
+            transition: transform $time03
+
+    &__body
+        margin-top: 8px
+        padding-right: 12px
+        padding-left: 12px
+        @media ($max1439)
+            padding-right: 8px
+            padding-left: 8px
+
+    &__row
+        display: flex
+        justify-content: space-between
+        gap: 4px
+
+    &__tags
+        display: flex
+        flex-wrap: wrap
+
+    &__tag
+        color: $gray500
+        padding: 8px
+
+    &__ico
+        margin-top: 4px
+
+    &__title
+        display: block
+        @media ($max1023)
+            margin-top: 8px
+

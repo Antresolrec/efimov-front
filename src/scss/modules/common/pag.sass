@@ -1,0 +1,23 @@
+.pag
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        gap: 18px
+        @media ($max767)
+            justify-content: space-between
+            gap: 12px
+        li
+            > *
+                display: block
+                @media ($min768)
+                    width: 62px
+                &.pag__arrow
+                    flex-shrink: 0
+                    width: 32px
+                    height: 32px
+                &._active
+                    color: $brand550
+                &._disabled
+                    color: $gray700

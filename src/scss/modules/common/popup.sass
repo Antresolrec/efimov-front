@@ -5,12 +5,13 @@ body
     
 .popup
     position: fixed
+    z-index: 101
     top: 0
     left: 0
     width: 100%
     height: 100%
-    z-index: 101
-    background-color: $black
+    display: flex
+    flex-direction: column
     opacity: 0
     pointer-events: none
     transition-property: opacity 
@@ -29,6 +30,23 @@ body
                 opacity: 1
                 transform: none
                 transition-delay: $time03
+    &:before,
+    &:after
+        content: ''
+        display: block
+        flex: 1 1 auto
+        pointer-events: none
+        
+        
+    &__surface
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        background-color: $black
+        opacity: 0.8
     &__bg
         position: absolute
         top: 0
@@ -65,8 +83,12 @@ body
         transform-origin: center
         transition: transform $time03
     &__container
-        height: 100%
+        position: relative
+        z-index: 0
+        max-width: 1440px
+        max-height: 100%
         display: flex
+        background-color: $black
     &__wrapper
         display: flex
         align-items: center

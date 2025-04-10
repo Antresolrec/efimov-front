@@ -7,6 +7,9 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 400;
     text-transform: uppercase;
 }
+.fs-14 {
+    font-size: 14px;
+}
 .fs-16 {
     font-size: 16px;
 }
@@ -27,12 +30,22 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 36px;
     }
 }
-.fs-32-tablet{
+.fs-20-tablet{
     @media ($max1023) {
-        font-size: 36px;
+        font-size: 20px;
+    }
+}
+.fs-24-tablet{
+    @media ($max1023) {
+        font-size: 24px;
     }
 }
 .fs-32-tablet{
+    @media ($max1023) {
+        font-size: 32px;
+    }
+}
+.fs-36-tablet{
     @media ($max1023) {
         font-size: 36px;
     }
@@ -151,6 +164,14 @@ h1,h2,h3,h4,h5,h6 {
 .mb-16-mob{
     @media ($max767) {
         margin-bottom: 16px;
+    }
+}
+.mt-60{
+    margin-top: 60px; 
+}
+.mt-44-mob{
+    @media ($max767) {
+        margin-top: 44px;
     }
 }
 .btn {
@@ -302,6 +323,13 @@ h1,h2,h3,h4,h5,h6 {
         }
     }
 }
+.js-counter {
+    opacity: 0;
+    transition: opacity $time03;
+    &._go{
+        opacity: 1;
+    }
+}
 .item-response {
     position: relative;
     &:before{
@@ -351,6 +379,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 .show-mob {
     @media ($min768) {
+        display: none !important;
+    }
+}
+.hide-tablet {
+    @media ($max1023) {
         display: none !important;
     }
 }

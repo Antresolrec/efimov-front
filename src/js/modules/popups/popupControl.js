@@ -41,4 +41,10 @@ export default class Popups {
             current.close();
         }
     }
+
+    getOpenedPopup() {
+        const current = this.popups.filter((control) => control.isOpen)[0];
+
+        return current;
+    }
 }

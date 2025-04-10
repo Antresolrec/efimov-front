@@ -1,0 +1,105 @@
+.contacts
+    overflow: hidden
+    z-index: 0
+    padding-bottom: 100px
+    @media ($max1439)
+        padding-bottom: 70px
+    @media ($max1023)
+        padding-bottom: 60px
+    @media ($max767)
+        padding-bottom: 40px
+    .container
+        position: relative
+    &__decor
+        position: absolute
+        top: 16px
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 300px
+        line-height: 0.88
+        color: $gray750
+        @media ($max1439)
+            top: 24px
+            font-size: vw-s(210,1024)
+        @media ($max767)
+            top: 42px
+
+    &__wrapper
+        padding-top: 20px
+
+
+    &__head
+
+    &__title
+        display: inline-block
+        position: relative
+        z-index: 1
+
+
+    &__body
+        position: relative
+        z-index: 1
+        margin-top: 246px
+        @media ($max1439)
+            margin-top: 218px
+        @media ($max1023)
+            margin-top: 148px
+        @media ($max767)
+            margin-top: 105px
+
+
+    &__row
+        @media ($min768)
+            display: flex
+
+        > div
+            width: 50%
+            @media ($max1439)
+                width: auto
+                flex-grow: 1
+            &:last-child
+                @media ($max1439)
+                    flex-shrink: 0
+
+
+    &__text
+        display: flex
+        gap: 20px
+        @media ($max1023)
+            gap: 8px
+        @media ($max767)
+            display: block
+        > div
+            width: 100%
+            max-width: 240px
+            @media ($max1439)
+                max-width: 186px
+            @media ($max767)
+                min-width: auto216px
+                margin-top: 16px
+            &:first-child
+                @media ($max1439)
+                    max-width: 379px
+                @media ($max1023)
+                    max-width: 286px
+                @media ($max767)
+                    max-width: 328px
+                    margin-top: 0
+
+
+    &__links
+        @media ($max767)
+            margin-top: 36px
+        ul
+            display: flex
+            gap: 24px
+            @media ($max1439)
+                flex-direction: column
+                align-items: flex-end
+                text-align: right
+                gap: 0
+            @media ($max767)
+                align-items: flex-start
+                text-align: left
+        a
+            padding: 11px 4px

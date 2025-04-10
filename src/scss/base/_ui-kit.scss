@@ -27,7 +27,12 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 36px;
     }
 }
-.fs-36-tablet{
+.fs-32-tablet{
+    @media ($max1023) {
+        font-size: 36px;
+    }
+}
+.fs-32-tablet{
     @media ($max1023) {
         font-size: 36px;
     }
@@ -63,6 +68,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 .c-gray-500{
     color: $gray500;
+}
+.c-gray-550{
+    color: $gray550;
 }
 .c-gray-600{
     color: $gray600;

@@ -1,0 +1,40 @@
+<%
+const header = require('./layouts/basic/header.ejs');
+const footer = require('./layouts/basic/footer.ejs');
+%>
+<%- header() -%>
+
+    <main class="page">
+        <div class="contacts text-lowercase first-section-from-header">
+            <div class="container">
+                <div class="contacts__decor ff-third js-decor">contacts</div>
+                <div class="contacts__wrapper">
+                    <div class="contacts__head">
+                        <h1 class="contacts__title title fs-46 fs-32-tablet fs-24-mob">контакты</h1>
+                    </div>
+                    <div class="contacts__body">
+                        <div class="contacts__row">
+                            <div class="contacts__text fs-16 fs-14-mob c-gray-550">
+                                <div>
+                                    <p>Мы&nbsp;не&nbsp;хотим работать с&nbsp;заказчиками, которые Считают, что знают всё лучше нас. Хотят &laquo;как у&nbsp;конкурента, но&nbsp;дешевле&raquo;. Не&nbsp;уважают наше время, требуя ответов ночью или правки &laquo;на&nbsp;вчера&raquo;. Не&nbsp;понимают, что качество стоит денег, и&nbsp;спрашивают: &laquo;Почему так дорого?&raquo;</p>
+                                </div>
+                                <div>
+                                    <p>Мы&nbsp;любим своих клиентов, но&nbsp;если вы&nbsp;узнали себя в&nbsp;этом тексте, нам лучше не&nbsp;начинать. Мы&nbsp;не&nbsp;для всех, и&nbsp;это нормально.</p>
+                                </div>
+                            </div>
+                            <div class="contacts__links links fs-16">
+                                <ul>
+                                    <li><a href="#">+7 960 650 1144</a></li>
+                                    <li><a href="#">sale@efimov.tech</a></li>
+                                    <li><a href="#">telegram</a></li>
+                                    <li><a href="#">whatsapp</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<%- footer() -%>

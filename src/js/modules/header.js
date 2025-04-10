@@ -66,6 +66,7 @@ export default class Header {
 
 	onTriggerClick() {
 		this.header.classList.toggle(this.data.menuOpen);
+		document.body.classList.toggle(this.data.menuOpen);
 
 		if (this.isOpen) {
 			window.bodyLock.lock();
@@ -80,6 +81,7 @@ export default class Header {
 		} else {
 			this.addListenerScroll();
 			this.header.classList.remove(this.data.menuOpen);
+			document.body.classList.remove(this.data.menuOpen);
 			bodyLock.unlock();
 		}
 	}

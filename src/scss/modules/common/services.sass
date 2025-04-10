@@ -31,3 +31,107 @@
             @media ($hover)
                 &:hover
                     gap: 12px
+
+
+.head-services
+    &__wrapper
+        padding-top: 60px
+        padding-bottom: 100px
+        @media ($max1439)
+            padding-bottom: 60px
+        @media ($max1023)
+            padding-top: 40px
+            padding-bottom: 40px
+    &__text
+        width: 100%
+        max-width: 260px
+        margin: 0 auto
+        opacity: 0.7
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-top: 75px
+        @media ($max1439)
+            margin-top: 60px
+        @media ($max767)
+            margin-top: 40px
+    &__col
+        width: 100%
+        max-width: 200px
+        &:nth-child(2)
+            padding: 0 10px
+
+.cards-services
+    &__row
+        display: flex
+        flex-wrap: wrap
+        margin: -10px
+        @media ($max1439)
+            margin: -8px
+        @media ($max1023)
+            margin: -4px
+    &__col
+        width: 50%
+        padding: 10px
+        @media ($max1439)
+            padding: 8px
+        @media ($max1023)
+            padding: 4px
+
+.card-services
+    display: flex
+    flex-direction: column
+    height: 100%
+    min-height: 300px
+    padding: 20px
+    border-radius: 8px
+    border: solid 1px $gray750
+    transition: background-color $time03
+
+    @media ($max1439)
+        min-height: 340px
+
+    @media ($hover)
+        &:hover
+            background-color: $brand550
+            .card-services
+                &__tags
+                    color: $brand300
+                &__bottom
+                    color: $brand300
+                    border-color: $brand500
+        &:active
+            transition-duration: $time01
+            background-color: $brand900
+    &__head
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__tags
+        flex: 1 1 auto
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+        gap: 0 16px
+        margin-top: 20px
+        transition: color $time03
+        @media ($max1439)
+            margin-top: 8px
+    &__tag
+        padding: 5px 0
+    &__body
+        margin-top: 20px
+    &__bottom
+        display: flex
+        justify-content: space-between
+        padding-top: 16px
+        margin-top: 16px
+        border-top: solid 1px $gray750
+        transition-duration: $time03
+        transition-property: color, border-color
+        @media ($max1439)
+            flex-direction: column
+            padding-top: 8px
+            margin-top: 8px
+        > div
+            padding: 5px 0

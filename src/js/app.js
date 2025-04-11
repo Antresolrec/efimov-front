@@ -13,6 +13,7 @@ import { initVideo } from './modules/video';
 import { initFileUploader } from './modules/fileUploader';
 import { initTicker } from './modules/ticker';
 import initPopups from './modules/popups';
+import { initStickySection } from './modules/stickySection';
 
 function initModules() {
     initBodyLock();
@@ -27,7 +28,8 @@ function initModules() {
     initFileUploader();
     initForm();
     initVideo();
-    initPopups();;
+    initPopups();
+    initStickySection();
 
     document.body.classList.add('_loaded');
 };

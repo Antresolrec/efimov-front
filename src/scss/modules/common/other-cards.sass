@@ -1,0 +1,29 @@
+.other-cards
+    overflow: hidden
+    &__title
+        margin-bottom: 40px
+    &__head
+        display: flex
+        gap: 20px
+
+    &__slider
+        margin-top: 40px
+        margin-right: -10px
+        margin-left: -10px
+        @media ($max1023)
+            margin-right: -4px
+            margin-left: -4px
+        @media ($max767)
+            margin-right: -10px
+            margin-left: -10px
+        .swiper
+            overflow: visible
+        .swiper-slide
+            padding-right: 10px
+            padding-left: 10px
+            @media ($max1023)
+                padding-right: 4px
+                padding-left: 4px
+            @media ($max767)
+                padding-right: 10px
+                padding-left: 10px

@@ -2,6 +2,7 @@
 const header = require('./layouts/basic/header.ejs');
 const footer = require('./layouts/basic/footer.ejs');
 const clients = require('./layouts/components/clients.ejs');
+const partners = require('./layouts/components/partners.ejs');
 %>
 <%- header() -%>
 
@@ -20,13 +21,13 @@ const clients = require('./layouts/components/clients.ejs');
                         <div class="intro__list">
                             <div class="intro__list-col">
                                 <div class="title fs-24 mb-4">
-                                    <span data-duration="3000" data-start="599" class="js-counter">875 +</span>
+                                    <span data-duration="3000" data-start="599" data-start-immediately class="js-counter">875 +</span>
                                 </div>
                                 <p class="c-gray-500">выполнено проектов</p>
                             </div>
                             <div class="intro__list-col">
                                 <div class="title fs-24 mb-4">
-                                    <span data-duration="3000" data-start="299" class="js-counter">430</span>
+                                    <span data-duration="3000" data-start="299" data-start-immediately class="js-counter">430</span>
                                 </div>
                                 <p class="c-gray-500">лучших  подрядчиков РФ</p>
                             </div>
@@ -52,7 +53,7 @@ const clients = require('./layouts/components/clients.ejs');
                     <div data-item-ticker class="projects-slider__col">
                         <div class="projects-slider__card _small">
                             <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                <img src="images/content/projects-slider-01.jpg" alt="">
+                                <img src="images/projects-slider-01.jpg" alt="">
                             </a>
                             <div class="projects-slider__body links">
                                 <a href="#" class="title fs-24 mb-4">Avito Авто</a>
@@ -65,7 +66,7 @@ const clients = require('./layouts/components/clients.ejs');
                     <div data-item-ticker class="projects-slider__col">
                         <div class="projects-slider__card _medium">
                             <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                <img src="images/content/projects-slider-02.jpg" alt="">
+                                <img src="images//projects-slider-02.jpg" alt="">
                             </a>
                             <div class="projects-slider__body links">
                                 <a href="#" class="title fs-24 mb-4">УНПК МФТИ</a>
@@ -78,7 +79,7 @@ const clients = require('./layouts/components/clients.ejs');
                     <div data-item-ticker class="projects-slider__col">
                         <div class="projects-slider__card _big">
                             <a href="#" class="projects-slider__img item-response" aria-label="Страница проекта">
-                                <img src="images/content/projects-slider-03.jpg" alt="">
+                                <img src="images//projects-slider-03.jpg" alt="">
                             </a>
                             <div class="projects-slider__body links">
                                 <a href="#" class="title fs-24 mb-4">Avito Авто</a>
@@ -106,7 +107,7 @@ const clients = require('./layouts/components/clients.ejs');
                     </div>
                     <div class="boss__img-wrapper">
                         <div class="boss__img item-response">
-                            <img loading="lazy" src="images/content/boss.png" alt="">
+                            <img loading="lazy" src="images//boss.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -115,15 +116,15 @@ const clients = require('./layouts/components/clients.ejs');
                 <div class="container">
                     <div class="boss__list-row">
                         <div class="boss__list-col">
-                            <div class="title fs-64 fs-40-mob mb-10">2349</div>
+                            <div class="title fs-64 fs-40-mob mb-10 js-counter" data-duration="3000" data-start="1800">2349</div>
                             <p>реализованных проектов в различных сферах</p>
                         </div>
                         <div class="boss__list-col">
-                            <div class="title fs-64 fs-40-mob mb-10">67+</div>
+                            <div class="title fs-64 fs-40-mob mb-10 js-counter" data-duration="3000" data-start="1">67+</div>
                             <p>Реализовал федеральных проектов для компаний  ТОП-200 Forbes</p>
                         </div>
                         <div class="boss__list-col">
-                            <div class="title fs-64 fs-40-mob mb-10">7+</div>
+                            <div class="title fs-64 fs-40-mob mb-10 js-counter" data-duration="3000" data-start="0">7+</div>
                             <p>Построил 7+ отделов продаж с ростом выручки х2 год к году</p>
                         </div>
                         <div class="boss__list-col">
@@ -134,111 +135,8 @@ const clients = require('./layouts/components/clients.ejs');
                 </div>
             </div>
         </div>
-        <div class="partners text-lowercase pv-100 pv-60-laptop pv-24-mob">
-            <div class="container">
-                <div class="partners__title fs-16 fs-14-mob c-gray-600">партнеры</div>
-                <div class="partners__row">
-                    <div class="partners__col _empty">
-
-                    </div>
-                    <div class="partners__col _bg">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/01.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/02.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col _bg-second">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/03.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col _bg">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/04.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/05.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/06.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col _empty">
-
-                    </div>
-                    <div class="partners__col _bg">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/07.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/08.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/09.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col _bg-second">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/10.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col _bg-second">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/11.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__col">
-                        <div class="card-partners">
-                            <div class="card-partners__img item-response">
-                                <img loading="lazy" src="images/content/partners/12.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="partners__banner">
-                    <div class="partners__banner-decor js-decor">BEST FRIENDS</div>
-                    <div class="partners__banner-text">
-                        <div class="ff-second fs-24 c-brand-550">430+</div>
-                        <p>партнеров</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="banner pv-100 pv-60-laptop pv-32-tablet pv-24-mob">
+        <%- partners() -%>
+        <div class="banner text-lowercase pv-100 pv-60-laptop pv-32-tablet pv-24-mob">
             <div class="container">
                 <div class="banner__item item-response">
                     <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="js-video">

@@ -1,50 +1,101 @@
 import anime from "animejs";
 
 export default class Counter {
-    constructor(selector) {
-        if (!selector) {
-            return;
-        }
+    constructor() {
+        this.selectors = document.querySelectorAll('.js-counter');
 
         this.data = {
             go: '_go',
         }
 
-        this.selector = selector;
+        this.offsetTop = -50;
 
-        this.el = null;
+        if (this.selectors.length > 0) {
+            this.init();
+        }
+
     }
 
-    startAnimation() {
-        this.selector.classList.add(this.data.go);
-
-        this.el = anime(this.options);
+    init() {
+        this.bindMethods();
+        this.addListenerScroll();
+        this.onScroll();
+    }
+    
+    bindMethods() {
+        this.scrollHandler = this.scrollHandler.bind(this);
     }
 
-    get options() {
+    addListenerScroll() {
+        document.addEventListener('scroll', this.scrollHandler)
+    }
+
+    scrollHandler(e) {
+        this.onScroll();
+    }
+
+    onScroll() {
+        for (const el of this.selectors) {
+            if (!el.classList.contains(this.data.go)) {
+                if (Counter.isStartImmediately(el)) {
+                    this.startAnimation(el);
+                }
+                else if (this.canStart(el)) {
+                    this.startAnimation(el);
+                }
+            }
+        }
+    }
+
+    startAnimation(el) {
+        el.classList.add(this.data.go);
+        
+        const options = Counter.getOptions(el);
+        anime(options);
+    }
+
+    canStart(el) {
+        return this.getPos(el).bottom - window.innerHeight < 0;
+    }
+
+    getPos(el) {
+        const { top, bottom } = el.getBoundingClientRect();
+        const pointTop = top - this.offsetTop;
+        const pointBottom = bottom - this.offsetTop;
+
         return {
-            targets: this.selector,
-            innerHTML: [this.startFrom , this.selector.innerHTML],
-            duration: this.duration,
+            top: pointTop,
+            bottom: pointBottom,
+        };
+    }
+
+    static isStartImmediately(el) {
+        return el.dataset.startImmediately;
+    }
+
+
+    static getOptions(el) {
+        const startFrom = Counter.getStartFrom(el);
+        const duration = Counter.getDuration(el);
+
+        return {
+            targets: el,
+            innerHTML: [startFrom , el.innerHTML],
+            duration: duration,
             round: 1,
             easing: 'linear',
         }
     }
 
-    get duration() {
-        return this.selector.dataset.duration || 3000;
+    static getDuration(el) {
+        return el.dataset.duration || 3000;
     }
 
-    get startFrom() {
-        return this.selector.dataset.start || 0;
+    static getStartFrom(el) {
+        return el.dataset.start || 0;
     }
 }
 
 export function initCounter() {
-    const selectors = document.querySelectorAll('.js-counter');
-
-    for (const el of selectors) {
-        const instance = new Counter(el);
-        instance.startAnimation();
-    }
+    new Counter();
 }

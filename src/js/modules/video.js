@@ -71,14 +71,6 @@ export default class Video {
         }
     }
 
-    isBlockInWindow(el) {
-        const { top, bottom } = el.getBoundingClientRect();
-        const pointTop = top - this.offsetTop;
-        const pointBottom = bottom - this.offsetTop;
-
-        return pointTop < 0 && pointBottom > 0;
-    }
-
     getPos(el) {
         const { top, bottom } = el.getBoundingClientRect();
         const pointTop = top - this.offsetTop;

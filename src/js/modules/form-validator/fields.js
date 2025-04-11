@@ -113,7 +113,8 @@ class Field {
 					}
 					break;
 				case 'file':
-					if (this.field.value || this.field.filesArray.length > 0) {
+					// if (this.field.value || this.field.filesArray.length > 0) {
+					if (!this.container.classList.contains(this.names.error)) {
 						this.removeError();
 						return true;
 					}

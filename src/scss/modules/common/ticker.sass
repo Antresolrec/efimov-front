@@ -4,6 +4,10 @@
             animation-name: ticker
             &[data-reverse]
                 animation-name: ticker-reverse
+    @media ($hover)
+        &:hover
+            .js-ticker
+                animation-play-state: paused
 .js-ticker
     will-change: transform
     animation: linear infinite

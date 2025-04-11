@@ -1,0 +1,244 @@
+<%
+const header = require('./layouts/basic/header.ejs');
+const footer = require('./layouts/basic/footer.ejs');
+const pag = require('./layouts/components/pag.ejs');
+%>
+<%- header() -%>
+
+    <main class="page">
+        <div class="projects text-lowercase first-section-from-header">
+            <div class="container">
+                <div class="head-with-filters">
+                    <h1 class="title fs-46">проекты</h1>
+                    <div class="chips chips--second fs-16 fs-14-mob">
+                        <div class="chips__row">
+                            <label class="chips__label">
+                                <input type="radio" class="chips__input" name="type-projects">
+                                <span class="chips__body">
+                                    <span>все <span>25</span></span>
+                                </span>
+                            </label>
+                            <label class="chips__label">
+                                <input type="radio" class="chips__input" name="type-projects" checked>
+                                <span class="chips__body">
+                                    <span>дизайн <span>36</span></span>
+                                </span>
+                            </label>
+                            <label class="chips__label">
+                                <input type="radio" class="chips__input" name="type-projects">
+                                <span class="chips__body">
+                                    <span>аналитика <span>15</span></span>
+                                </span>
+                            </label>
+                            <label class="chips__label">
+                                <input type="radio" class="chips__input" name="type-projects">
+                                <span class="chips__body">
+                                    <span>разработка <span>15</span></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__body">
+                    <div class="projects__row">
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-01.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Aurus</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">проектирование</div>
+                                        <div class="card-projects__tag">автомобили</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-02.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Астория</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">разработка</div>
+                                        <div class="card-projects__tag">кейтеринг</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-03.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Беш арча</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">ux-ui дизайн</div>
+                                        <div class="card-projects__tag">проектирование</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-02.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">астория</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">разработка</div>
+                                        <div class="card-projects__tag">кейтеринг</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-01.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Aurus</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">проектирование</div>
+                                        <div class="card-projects__tag">автомобили</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-03.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Беш арча</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">ux-ui дизайн</div>
+                                        <div class="card-projects__tag">проектирование</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <div class="card-projects__decor js-decor">Ahuenno</div>
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-04.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Мир На Ладони</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">дизайн</div>
+                                        <div class="card-projects__tag">аналитика</div>
+                                        <div class="card-projects__tag">B2b</div>
+                                        <div class="card-projects__tag">кафе и рестораны</div>
+                                    </div>
+                                </div>
+                                <div class="card-projects__bottom">
+                                    <div class="card-projects__decor js-decor">y</div>
+                                    <div>
+                                        <p>разработка продающего сайта для Туристического агентства, организующего незабываемые путешествия по&nbsp;всему миру</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-01.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Aurus</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">проектирование</div>
+                                        <div class="card-projects__tag">автомобили</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-02.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Астория</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">разработка</div>
+                                        <div class="card-projects__tag">кейтеринг</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-03.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Беш арча</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">ux-ui дизайн</div>
+                                        <div class="card-projects__tag">проектирование</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-02.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">астория</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">разработка</div>
+                                        <div class="card-projects__tag">кейтеринг</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-01.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Aurus</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">проектирование</div>
+                                        <div class="card-projects__tag">автомобили</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects__col">
+                            <div class="card-projects">
+                                <a href="#" class="card-projects__img item-response" aria-label="Страница проекта">
+                                    <img src="images//card-projects-03.jpg" alt="">
+                                </a>
+                                <div class="card-projects__body links">
+                                    <a href="#" class="title fs-24">Беш арча</a>
+                                    <div class="card-projects__tags">
+                                        <div class="card-projects__tag">ux-ui дизайн</div>
+                                        <div class="card-projects__tag">проектирование</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-60 mt-44-mob">
+                    <%- pag() -%>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<%- footer() -%>

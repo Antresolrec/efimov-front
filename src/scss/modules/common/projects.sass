@@ -1,0 +1,284 @@
+.projects
+    overflow: hidden
+    padding-bottom: 100px
+    @media ($max767)
+        padding-bottom: 44px
+    &__body
+
+    &__row
+        display: flex
+        flex-wrap: wrap
+        margin: -20px -10px
+        @media ($max1439)
+            margin-right: -8px
+            margin-left: -8px
+        @media ($max1023)
+            margin-right: -4px
+            margin-left: -4px
+        @media ($max1439)
+            display: block
+            margin-right: 0
+            margin-left: 0
+
+    &__col
+        width: pct-s(520,1300)
+        padding: 20px 10px
+        @media ($max1439)
+            padding-right: 8px
+            padding-left: 8px
+        @media ($max1023)
+            padding-right: 4px
+            padding-left: 4px
+        @media ($max767)
+            width: 100%
+            padding-right: 0
+            padding-left: 0
+        &:nth-child(1),
+        &:nth-child(5),
+        &:nth-child(7n + 1),
+        &:nth-child(7n + 5)
+            width: pct-s(260,1300)
+            @media ($max767)
+                width: 100%
+            .card-projects
+                &__img
+                    &:before
+                        padding-bottom: pct-s(240,240)
+                        @media ($max767)
+                            padding-bottom: pct-s(200,328)
+                &__body
+                    flex-direction: column
+                    @media ($max767)
+                        flex-direction: row
+                &__tags
+                    flex-direction: column
+        &:nth-child(3),
+        &:nth-child(6),
+        &:nth-child(7n + 3),
+        &:nth-child(7n + 6)
+            .card-projects
+                &__img
+                    &:before
+                        padding-bottom: pct-s(360,500)
+                        @media ($max767)
+                            padding-bottom: pct-s(200,328)
+        &:nth-child(7)
+        &:nth-child(7n + 7)
+            width: 100%
+            .card-projects
+                display: flex
+                gap: 10px 20px
+                @media ($max1023)
+                    display: grid
+                    grid-template-columns: pct-s(442,764) 1fr
+                @media ($max767)
+                    display: block
+                &__img
+                    width: pct-s(760,1300)
+                    @media ($max1023)
+                        grid-row: span 2
+                        width: 100%
+                    &:before
+                        padding-bottom: pct-s(462,760)
+                        @media ($max767)
+                            padding-bottom: pct-s(264,328)
+                &__body
+                    flex: 1
+                    flex-direction: column
+                    max-width: 240px
+                    margin-top: 0
+                    @media ($max767)
+                        max-width: 100%
+                        margin-top: 40px
+                &__tags
+                    flex-direction: column
+                    gap: 2px
+                    @media ($max1023)
+                        gap: 0
+                    @media ($max767)
+                        flex-direction: row
+                        gap: 0 8px
+
+
+.card-projects
+    position: relative
+    &__img
+        align-self: flex-start
+        display: block
+        overflow: hidden
+        border-radius: 12px
+
+        @media ($hover)
+            &:hover
+                img
+                    transform: scale(1.1)
+
+        &:before
+            padding-bottom: pct-s(442,500)
+            @media ($max767)
+                padding-bottom: pct-s(200,328)
+
+        img
+            transition: transform $time03
+
+
+    &__body
+        display: flex
+        align-items: flex-start
+        gap: 8px 20px
+        margin-top: 20px
+        @media ($max1023)
+            gap: 8px
+        @media ($max767)
+            margin-top: 8px
+
+        .title
+            flex-shrink: 0
+
+
+    &__tags
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+        gap: 0 10px
+        color: $gray300
+        opacity: 0.5
+        @media ($max767)
+            flex-direction: column
+
+
+    &__tag
+
+
+    &__decor
+        position: absolute
+        z-index: 1
+        right: 0
+        bottom: 0
+        font-size: 128px
+        color: $brand550
+        transform: rotate(4.5deg)
+        margin-right: 26px
+
+        @media ($max1439)
+            font-size: 96px
+            margin-right: 0
+        @media ($max1023)
+            font-size: 64px
+            margin-bottom: -20px
+        @media ($max767)
+            display: flex
+            align-items: flex-end
+            top: 0
+            bottom: auto
+            left: 16px
+            width: 100%
+            margin-top: 40px
+            margin-bottom: 0
+            pointer-events: none
+            &:before
+                content: ''
+                padding-bottom: pct-s(264,328)
+                
+
+        span
+            @media ($hover)
+                &:hover
+                    color: $white
+
+
+    &__bottom
+        align-self: flex-start
+        position: relative
+        flex: 1
+        max-width: 240px
+        margin-bottom: 215px
+        @media ($max1439)
+            padding-top: 30px
+            margin-bottom: 100px
+        @media ($max1023)
+            position: static
+            max-width: 100%
+            padding-top: 0
+            margin-bottom: 71px
+        @media ($max767)
+            margin-top: 20px
+            margin-bottom: 0
+
+        .card-projects__decor
+            top: 100%
+            bottom: auto
+            transform: rotate(35deg) scaleX(-1)
+            font-size: 95px
+            margin-top: -12px
+            margin-right: 0
+            @media ($max1439)
+                top: 0
+                font-size: 48px
+                margin-top: -30px
+            @media ($max1023)
+                margin-top: 0
+            @media ($max767)
+                width: auto
+                right: 16px
+                left: auto
+                &:before
+                    display: none
+
+
+.projects-slider
+    overflow: hidden
+    &__wrapper
+        display: flex
+        margin-top: 40px
+    &__row
+        flex-shrink: 0
+        display: flex
+    &__col
+        flex-shrink: 0
+        width: 412px
+        padding-right: 6px
+        padding-left: 6px
+        @media ($max767)
+            width: 232px
+    &__card
+        &._small
+            .projects-slider__img:before
+                padding-bottom: pct-s(207,400)
+                @media ($max767)
+                    padding-bottom: pct-s(207,220)
+        &._medium
+            .projects-slider__img:before
+                padding-bottom: pct-s(287,400)
+                @media ($max767)
+                    padding-bottom: pct-s(287,220)
+        &._big
+            .projects-slider__img:before
+                padding-bottom: pct-s(331,400)
+                @media ($max767)
+                    padding-bottom: pct-s(331,220)
+    &__img
+        display: block
+        overflow: hidden
+        border-radius: 12px
+
+        img
+            transition: transform $time03
+
+        @media ($hover)
+            &:hover
+                img
+                    transform: scale(1.1)
+    &__body
+        margin-top: 16px
+
+
+.other-projects
+    .swiper-slide
+        width: auto
+    .projects-slider__card
+        width: 420px
+        @media ($max1439)
+            width: 408px
+        @media ($max767)
+            width: 240px

@@ -20,6 +20,7 @@
 		"mini-css-extract-plugin": "^2.4.4",
 		"postcss": "^8.3.11",
 		"postcss-loader": "^6.2.0",
+		"group-css-media-queries-loader": "^4.3.0",
 		"sass": "^1.50.1",
 		"sass-loader": "^12.3.0",
 		"terser-webpack-plugin": "^5.2.5",
@@ -42,11 +43,11 @@
 	},
 	"target": "web",
 	"dependencies": {
+		"animejs": "^3.2.1",
 		"gh-pages": "^6.2.0",
 		"imask": "^7.6.0",
 		"lightningcss": "^1.29.3",
 		"slim-select": "^2.4.5",
-		"swiper": "^11.1.15",
-		"animejs": "^3.2.1"
+		"swiper": "^11.1.15"
 	}
 }

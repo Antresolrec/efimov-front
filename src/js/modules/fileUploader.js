@@ -248,7 +248,7 @@ export default class FileUploader {
 			input.setAttribute('data-size', sizeInMB)
 			this.renderFilesList(input);
 
-			input.value = '';
+			// input.value = '';
 		});
 	}
 }

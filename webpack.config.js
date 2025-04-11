@@ -44,7 +44,8 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.((c|sa|sc)ss)$/i,
+				test: /\.((sa|sc)ss)$/i,
+				exclude: /node_modules/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
@@ -54,6 +55,12 @@ module.exports = {
 						},
 					},
 					'postcss-loader',
+					{
+						loader: 'group-css-media-queries-loader',
+						options: { 
+							sourceMap: false,
+						},
+					},
 					'sass-loader',
 				],
 			},
@@ -103,8 +110,8 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: [
 				{
-					from: path.resolve(environment.paths.source, 'images', 'content'),
-					to: path.resolve(environment.paths.output, 'images', 'content'),
+					from: path.resolve(environment.paths.source, 'images'),
+					to: path.resolve(environment.paths.output, 'images'),
 					toType: 'dir',
 					globOptions: {
 						ignore: ['*.DS_Store', 'Thumbs.db'],

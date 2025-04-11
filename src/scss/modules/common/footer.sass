@@ -54,6 +54,7 @@
                 gap: 8px
             @media ($max767)
                 flex-direction: column
+                gap: 0
         li
             @media ($min1024)
                 width: 32%
@@ -70,7 +71,7 @@
 a.footer__logo
     transition: color $time03
     @media ($hover)
-        &:hover
+        &:hover:not(:active)
             color: $brand550
     &:active
         transition-duration: $time01

@@ -116,10 +116,10 @@
             gap: 80px
 
             @media ($max1439)
-                gap: 60px
+                gap: 50px
 
             @media ($max1023)
-                gap: 20px
+                gap: 10px
 
             @media ($max767)
                 display: flex
@@ -156,7 +156,7 @@
 a.header__logo
     transition: color $time03
     @media ($hover)
-        &:hover
+        &:hover:not(:active)
             color: $brand550
     &:active
         transition-duration: $time01

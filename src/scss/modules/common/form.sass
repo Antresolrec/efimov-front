@@ -118,7 +118,7 @@
         white-space: nowrap
         text-overflow: ellipsis
         height: 42px
-        padding-right: 36px
+        padding-right: 40px
         border-radius: 10em
         &::placeholder
             overflow: hidden
@@ -203,7 +203,7 @@
                 text-decoration: none
 
             @media ($hover)
-                &:hover
+                &:hover:not(:active)
                     color: $brand750
                     text-decoration: none
 
@@ -486,7 +486,7 @@ select
         transition: color $time03
 
         @media ($hover)
-            &:hover
+            &:hover:not(:active)
                 color: $brand550
         &:active
             transition-property: $time01

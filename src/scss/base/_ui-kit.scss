@@ -146,6 +146,9 @@ h1,h2,h3,h4,h5,h6 {
 .mb-12{
     margin-bottom: 12px;
 }
+.mb-16{
+    margin-bottom: 16px;
+}
 .mb-30{
     margin-bottom: 30px;
 }
@@ -155,6 +158,11 @@ h1,h2,h3,h4,h5,h6 {
 .mb-32-laptop {
     @media ($max1439) {
         margin-bottom: 32px;
+    }
+}
+.mb-8-tablet{
+    @media ($max1023) {
+        margin-bottom: 8px;
     }
 }
 .mb-20-tablet{
@@ -170,6 +178,11 @@ h1,h2,h3,h4,h5,h6 {
 .mb-16-mob{
     @media ($max767) {
         margin-bottom: 16px;
+    }
+}
+.mb-20-mob{
+    @media ($max767) {
+        margin-bottom: 20px;
     }
 }
 .mt-60{
@@ -221,7 +234,7 @@ h1,h2,h3,h4,h5,h6 {
         }
 
         @media ($hover) {
-            &:hover{
+            &:hover:not(:active){
                 background-color: $brand750;
             }
         }
@@ -239,7 +252,7 @@ h1,h2,h3,h4,h5,h6 {
         }
 
         @media ($hover) {
-            &:hover{
+            &:hover:not(:active){
                 background-color: $gray750;
             }
         }
@@ -269,7 +282,7 @@ h1,h2,h3,h4,h5,h6 {
     a {
         transition: color $time03;
         @media ($hover) {
-            &:hover{
+            &:hover:not(:active){
                 color: $brand550
             }
         }
@@ -296,10 +309,41 @@ h1,h2,h3,h4,h5,h6 {
     width: 24px;
     height: 24px;
 }
+.ico-70 {
+    width: 70px;
+    height: 70px;
+}
 .ico-12-tablet{
     @media ($max1023) {
         width: 12px;
         height: 12px;
+    }
+}
+.ico-46-tablet{
+    @media ($max1023) {
+        width: 46px;
+        height: 46px;
+    }
+}
+.ico-28-mob {
+    @media ($max767) {
+        width: 28px;
+        height: 28px;
+    }
+}
+.head-with-filters {
+    padding: 44px 0;
+    @media ($min768) {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .chips {
+        @media ($max767){
+            margin-top: 16px;
+        }
     }
 }
 .first-section-from-header {
@@ -338,6 +382,7 @@ h1,h2,h3,h4,h5,h6 {
         
 }
 .item-response {
+    flex-shrink: 0;
     position: relative;
     &:before{
         content: '';

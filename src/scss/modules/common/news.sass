@@ -2,18 +2,6 @@
     padding-bottom: 100px
     @media ($max767)
         padding-bottom: 44px
-    &__head
-        padding: 44px 0
-        @media ($min768)
-            display: flex
-            align-items: center
-            gap: 30px
-            padding: 40px 0
-
-        .chips
-            @media ($max767)
-                margin-top: 16px
-
     &__body
 
 
@@ -118,34 +106,16 @@
 
 
 .other-news
-    overflow: hidden
-    &__head
-        display: flex
-        gap: 20px
-        margin-top: 40px
-
-    &__slider
-        margin-top: 40px
-        margin-right: -10px
-        margin-left: -10px
-        @media ($min768) and ($max1023)
-            margin-right: -4px
-            margin-left: -4px
-        .swiper
-            overflow: visible
-        .swiper-slide
-            width: 33.333%
-            padding-right: 10px
-            padding-left: 10px
-            @media ($min768) and ($max1023)
-                padding-right: 4px
-                padding-left: 4px
-            @media ($max1023)
-                width: 221px
-            @media ($max767)
-                width: 257px
+    .swiper-slide
+        width: 33.333%
+        @media ($max767)
+            width: auto
+    .card-other-news
+        @media ($max767)
+            width: 237px
 
 .card-other-news
+    display: block
     &__img
         display: block
         border-radius: 12px

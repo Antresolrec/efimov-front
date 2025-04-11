@@ -62,21 +62,35 @@
             padding: 0 10px
 
 .cards-services
+    padding-top: 80px
+    @media ($max767)
+        padding-top: 100px
+        margin-top: -40px
+    &:first-child
+        margin-top: -80px
+        @media ($max767)
+            margin-top: -100px
+    &:last-child
+        padding-bottom: 0
     &__row
-        display: flex
-        flex-wrap: wrap
+
         margin: -10px
         @media ($max1439)
             margin: -8px
         @media ($max1023)
             margin: -4px
+        @media ($min768)
+            display: flex
+            flex-wrap: wrap
     &__col
-        width: 50%
+        width: 100%
         padding: 10px
         @media ($max1439)
             padding: 8px
         @media ($max1023)
             padding: 4px
+        @media ($min768)
+            width: 50%
 
 .card-services
     display: flex
@@ -90,9 +104,12 @@
 
     @media ($max1439)
         min-height: 340px
+    @media ($max767)
+        min-height: 0
+        pp: 8px
 
     @media ($hover)
-        &:hover
+        &:hover:not(:active)
             background-color: $brand550
             .card-services
                 &__tags
@@ -107,6 +124,10 @@
         display: flex
         justify-content: space-between
         align-items: flex-start
+        gap: 8px
+    &__title
+        @media ($max767)
+            max-width: 170px
     &__tags
         flex: 1 1 auto
         display: flex

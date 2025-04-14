@@ -231,6 +231,10 @@
     &__wrapper
         display: flex
         margin-top: 40px
+        @media ($min1024)
+            max-width: 100%
+            padding-right: 0
+            padding-left: 0
     &__row
         flex-shrink: 0
         display: flex
@@ -277,8 +281,6 @@
     .swiper-slide
         width: auto
     .projects-slider__card
-        width: 420px
-        @media ($max1439)
-            width: 408px
+        width: 400px
         @media ($max767)
-            width: 240px
+            width: 220px

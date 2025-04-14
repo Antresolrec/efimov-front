@@ -22,6 +22,9 @@
         .checkbox__body
             background-color: $gray800
             border-color: $gray750
+        .uploader
+            &__file-delete
+                color: $white
     &__items
         margin-bottom: 20px
         @media ($max767)
@@ -454,6 +457,7 @@ select
         display: flex
         align-items: center
         height: 40px
+        color: $brand550
     &__file-ico
         margin-right: 8px
     &__file-name
@@ -464,6 +468,7 @@ select
         flex-shrink: 0
         margin-left: 4px
     &__file-delete
+        color: $black
         margin-left: 4px
         transition: transform $time03
         @media ($hover)

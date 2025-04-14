@@ -1,0 +1,27 @@
+.numbers
+
+    &__head
+
+    &__row
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        @media ($max767)
+            margin: -10px
+
+
+    &__col
+        width: 50%
+        @media ($max767)
+            padding: 10px
+        @media ($min768)
+            width: 30%
+        &:first-child,
+        &:last-child
+            @media ($min768)
+                width: 20%
+            
+
+
+    &__item
+

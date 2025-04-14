@@ -12,6 +12,7 @@ export default class Ticker {
 		}
 
 		this.selector = selector;
+		this.selector.instanceTicker = this;
 		this.container = this.selector.closest('.js-tickers');
 		this.items = this.selector.querySelectorAll('[data-item-ticker]');
 
@@ -20,7 +21,9 @@ export default class Ticker {
 		 */
 		this.speed = +window.getComputedStyle(this.selector).animationDuration.replace('s','') || 40;
 
-		this.init();
+		this.clone = null;
+
+		// this.init();
 	}
 
 	init() {
@@ -44,8 +47,14 @@ export default class Ticker {
 	}
 
 	makeClone() {
-		const clone = this.selector.cloneNode(true);
-		this.container.appendChild(clone);
+		this.clone = this.selector.cloneNode(true);
+		this.container.appendChild(this.clone);
+	}
+
+	destroy() {
+		this.clone.remove();
+		this.clone = null;
+		this.container.classList.remove(this.data.go);
 	}
 
 	checkItemsCount() {
@@ -90,6 +99,10 @@ export default class Ticker {
 
 	get isTickerProjects() {
 		return this.selector.classList.contains(this.data.name.projects);
+	}
+
+	get isGo() {
+		return this.container.classList.contains(this.data.go);
 	}
 }
 

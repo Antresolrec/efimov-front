@@ -4,14 +4,14 @@ import { initBodyLock } from './modules/bodyLock';
 import { initHeader } from './modules/header';
 import { initDecor } from './modules/decor';
 import { initCounter } from './modules/counter';
-import { initSelects } from './modules/select';
+import { initTicker } from './modules/ticker';
 import initSliders from './modules/sliders';
+import { initSelects } from './modules/select';
 import { initPhoneMasks } from './modules/inputMask';
 import { initCountTextareas } from './modules/textarea';
+import { initFileUploader } from './modules/fileUploader';
 import { initForm } from './modules/form-validator';
 import { initVideo } from './modules/video';
-import { initFileUploader } from './modules/fileUploader';
-import { initTicker } from './modules/ticker';
 import initPopups from './modules/popups';
 import { initStickySection } from './modules/stickySection';
 
@@ -21,8 +21,8 @@ function initModules() {
     initDecor();
     initCounter()
     initTicker();
-    initSelects();
     initSliders();
+    initSelects();
     initPhoneMasks();
     initCountTextareas();
     initFileUploader();

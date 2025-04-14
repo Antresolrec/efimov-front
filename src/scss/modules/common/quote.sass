@@ -1,0 +1,28 @@
+.quote
+    color: $black
+    background-color: $white
+    &__wrapper
+        width: 100%
+        max-width: 960px
+        margin-left: auto
+        @media ($max1439)
+            max-width: 765px
+        @media ($max1023)
+            max-width: 581px
+
+    &__text
+        margin-bottom: 82px
+        @media ($max1023)
+            margin-bottom: 32px
+        @media ($max767)
+            margin-bottom: 24pxs
+        p
+            margin-bottom: 16px
+            &:last-child
+                margin-bottom: 0
+
+
+    &__author
+        display: flex
+        align-items: center
+        gap: 20px

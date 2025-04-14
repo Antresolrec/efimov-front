@@ -1,0 +1,71 @@
+<%
+const header = require('./layouts/basic/header.ejs');
+const footer = require('./layouts/basic/footer.ejs');
+const tools = require('./layouts/components/tools.ejs');
+const otherProjects = require('./layouts/components/other-projects.ejs');
+%>
+<%- header() -%>
+
+    <main class="page">
+        <div class="text-lowercase first-section-from-header">
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="numbers text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="numbers__head mb-40">
+                    <h2 class="title fs-46 fs-24-mob">За время выполнения проекта:</h2>
+                </div>
+                <div class="numbers__row">
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="3000" data-start="300">536+</div>
+                            <p class="c-gray-450">кружек кофе выпито</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="3000" data-start="0">16</div>
+                            <p class="c-gray-450">созвонов проведено</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="3000" data-start="33547">43547</div>
+                            <p class="c-gray-450">строк кода</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="3000" data-start="0">5</div>
+                            <p class="c-gray-450">походов к&nbsp;психологу </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quote pv-100 pv-60-laptop pv-40-mo">
+            <div class="container">
+                <div class="quote__wrapper">
+                    <div class="quote__text fs-20">
+                        <p>Ребята приступили к&nbsp;работе сразу, без задержек&nbsp;&mdash; это приятно удивило! Быстро разобрались в&nbsp;моих пожеланиях, предложили несколько вариантов, и&nbsp;мы&nbsp;сразу нашли общий язык. Процесс организован четко: все этапы согласовываем, правки вносят оперативно.</p>
+                        <p>Пока всё идёт просто отлично&nbsp;&mdash; чувствую, что проект в&nbsp;надёжных руках!</p>
+                    </div>
+                    <div class="quote__author">
+                        <div class="ico ico-68">
+                            <img src="images/quote-avatar.png" alt="">
+                        </div>
+                        <div>
+                            <div class="fs-20 fw-700 mb-10">Максим Максимов</div>
+                            <div class="text-lowercase">директор « Астория»</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- tools() -%>
+        <%- otherProjects() -%>
+    </main>
+
+<%- footer() -%>

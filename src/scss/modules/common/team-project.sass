@@ -1,0 +1,60 @@
+.team-project
+    overflow: hidden 
+    sup
+        font-size: 12px
+        color: $brand550
+
+    &__row
+        position: relative
+        @media ($min768)
+            display: flex
+
+    &__decor
+        position: absolute
+        top: -20px
+        right: -20px
+        font-size: 128px
+        line-height: 0
+        color: $brand550
+        transform: rotate(16.062deg)
+        @media ($max1439)
+            top: 0
+            right: 0
+        @media ($max1023)
+            top: -20px
+            right: -20px
+        @media ($max767)
+            top: 40px
+            right: 0
+        span
+            @media ($hover)
+                &:hover
+                    color: $white
+
+    &__head
+        flex-shrink: 0
+        width: 20%
+        @media ($max1439)
+            width: 25%
+        @media ($max1023)
+            width: 140px
+        @media ($max767)
+            width: 100%
+
+
+    &__body
+        flex: 1 1 auto
+        width: 100%
+        max-width: 500px
+
+
+    &__cols
+        display: flex
+        flex-wrap: wrap
+        margin: -10px
+    &__col
+        width: 50%
+        padding: 10px
+        @media ($max767)
+            width: 100%
+

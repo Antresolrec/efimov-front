@@ -12,6 +12,24 @@ const otherProjects = require('./layouts/components/other-projects.ejs');
 
             </div>
         </div>
+        <div class="showreel pv-100 pv-60-laptop pv-40-mob">
+            <div class="showreel__decor js-decor">lets go</div>
+            <div class="container">
+                <div class="showreel__wrapper js-video-wrapper">
+                    <div class="showreel__item item-response">
+                        <img src="images/showreel-laptop.png" alt="">
+                        <div class="showreel__video-wrapper item-response">
+                            <button type="button" class="showreel__play item-response js-video-play">
+                                <img src="images/showreel-play.svg" alt="">
+                            </button>
+                            <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="showreel__video js-video _static">
+                                <source src="videos/banner.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="numbers text-lowercase pv-100 pv-60-laptop pv-40-mob">
             <div class="container">
                 <div class="numbers__head mb-40">
@@ -45,7 +63,7 @@ const otherProjects = require('./layouts/components/other-projects.ejs');
                 </div>
             </div>
         </div>
-        <div class="quote pv-100 pv-60-laptop pv-40-mo">
+        <div class="quote pv-100 pv-60-laptop pv-40-mob">
             <div class="container">
                 <div class="quote__wrapper">
                     <div class="quote__text fs-20">
@@ -64,8 +82,34 @@ const otherProjects = require('./layouts/components/other-projects.ejs');
                 </div>
             </div>
         </div>
+        <div class="team-project pv-100 pv-40-mob">
+            <div class="container">
+                <div class="team-project__row fs-16">
+                    <div class="team-project__decor js-decor">v</div>
+                    <div class="team-project__head">
+                        <h2 class="fs-16 c-gray-600 mb-32-mob">команда <sup>12</sup></h2>
+                    </div>
+                    <div class="team-project__body c-gray-600">
+                        <div class="team-project__cols">
+                            <div class="team-project__col">
+                                <div>разработчиков <sup>2</sup></div>
+                            </div>
+                            <div class="team-project__col">
+                                <div>дизайнеров <sup>1</sup></div>
+                            </div>
+                            <div class="team-project__col">
+                                <div>аналитиков <sup>5</sup></div>
+                            </div>
+                            <div class="team-project__col">
+                                <div>менеджеров <sup>4</sup></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <%- tools() -%>
         <%- otherProjects() -%>
-    </main>
+    </main> 
 
 <%- footer() -%>

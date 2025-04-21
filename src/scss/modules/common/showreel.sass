@@ -1,0 +1,89 @@
+.showreel
+    overflow: hidden
+    &__wrapper
+        max-width: 1151px
+        margin: 0 auto
+
+    &__decor
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        white-space: nowrap
+        font-size: 350px
+        color: $brand550
+        opacity: 0.6
+        @media ($max1439)
+            font-size: vw-s(350,1439)
+        span
+            @media ($hover)
+                &:hover
+                    color: $white
+
+
+    &__item
+        display: flex
+        justify-content: center
+        margin-top: -200px
+        @media ($max1439)
+            margin-top: -140px
+        @media ($max1023)
+            margin-top: -100px
+        @media ($max767)
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            margin-top: -50px
+            width: pct-s(400,328)
+        &:before
+            padding-bottom: pct-s(651,1151)
+            
+
+
+
+    &__bg
+
+
+    &__video-wrapper
+        overflow: hidden
+        position: absolute
+        top: 8px
+        border-radius: 20px 20px 0 0
+        width: pct-s(918,1151)
+        margin-left: 2px
+        &:before
+            padding-bottom: pct-s(516,918)
+            
+
+
+    &__play
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+        @media ($hover)
+            &:hover
+                img
+                    transform: scale(1.2)
+        img
+            position: static
+            width: 63px
+            height: 60px
+            pointer-events: none
+            transition: transform $time03
+            
+
+
+    &__video
+        z-index: 2
+        opacity: 0
+        pointer-events: none
+        transition: opacity $time03
+        &._playing
+            opacity: 1
+            pointer-events: auto

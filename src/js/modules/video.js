@@ -4,6 +4,7 @@ export default class Video {
             active: '_active',
             canPlay: '_can-play',
             playing: '_playing',
+            static: '_static',
         }
 
         this.offsetTop = -30;
@@ -19,11 +20,13 @@ export default class Video {
     init() {
         this.bindMethods();
         this.addListenerScroll();
+        this.addListenerTriggerClick();
         this.checkLoadAll();
     }
 
     bindMethods() {
         this.scrollHandler = this.scrollHandler.bind(this);
+        this.onTriggerClick = this.onTriggerClick.bind(this);
     }
 
     addListenerScroll() {
@@ -37,7 +40,7 @@ export default class Video {
     onScroll(e) {
         for (const el of this.selectors) {
             if (this.getPos(el).bottom - window.innerHeight < 0) {
-                if (el.classList.contains(this.names.canPlay) && !el.classList.contains(this.names.playing)) {
+                if (el.classList.contains(this.names.canPlay) && !el.classList.contains(this.names.playing) && !el.classList.contains(this.names.static)) {
                     this.playVideo(el);
                 }
             }
@@ -65,9 +68,31 @@ export default class Video {
         }
     }
 
+    addListenerTriggerClick() {
+        for (const el of this.selectors) {
+            const wrapper = el.closest('.js-video-wrapper');
+            if (wrapper) {
+                const btnPlay = wrapper.querySelector('.js-video-play');
+                if (btnPlay) {
+                    btnPlay.addEventListener('click', this.onTriggerClick);
+                }
+            }
+        }
+
+    }
+
     checkLoadAll() {
         for (const el of this.selectors) {
             this.checkLoad(el);
+        }
+    }
+
+    onTriggerClick(e) {
+        const { target } = e;
+        const wrapper = target.closest('.js-video-wrapper');
+        const el = wrapper.querySelector('.js-video');
+        if (el.classList.contains(this.names.canPlay) && !el.classList.contains(this.names.playing)) {
+            this.playVideo(el);
         }
     }
 

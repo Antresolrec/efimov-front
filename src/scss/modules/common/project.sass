@@ -1,0 +1,193 @@
+.team-project
+    overflow: hidden 
+
+    &__row
+        position: relative
+
+    &__decor
+        position: absolute
+        top: -20px
+        right: -20px
+        font-size: 128px
+        line-height: 0
+        color: $brand550
+        transform: rotate(16.062deg)
+        @media ($max1439)
+            top: 0
+            right: 0
+        @media ($max1023)
+            top: -20px
+            right: -20px
+        @media ($max767)
+            top: 40px
+            right: 0
+        span
+            @media ($hover)
+                &:hover
+                    color: $white
+
+
+    &__body
+        max-width: 500px
+
+
+    &__cols
+        display: flex
+        flex-wrap: wrap
+        margin: -10px
+    &__col
+        width: 50%
+        padding: 10px
+        @media ($max767)
+            width: 100%
+
+    sup
+        font-size: 12px
+        color: $brand550
+    
+    
+.result-project
+    &__text
+        color: $gray700
+        span
+            color: $white
+
+
+.stage-project
+
+    &__row
+        margin-bottom: 60px
+        &:last-child
+            margin-bottom: 0
+        @media ($max1023)
+            margin-bottom: 40px
+
+    &__body
+        max-width: 760px
+
+
+    &__text
+        p
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+        ul
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+            li
+                list-style: disc
+                margin-left: 20px
+                margin-bottom: 10px
+                &:last-child
+                    margin-bottom: 0
+
+
+.img-project
+    overflow: hidden
+    position: relative
+    &__wrapper
+        position: relative
+        z-index: 0
+        &:last-child
+            padding-top: 60px
+            @media ($max767)
+                padding-top: 24px
+        &:first-child
+            padding-top: 0
+
+    &__decor
+        position: absolute
+        z-index: -1
+        top: 0
+        right: 0
+        display: flex
+        flex-direction: column
+        @media ($max767)
+            position: static
+            text-align: right
+            margin-right: -20px
+        .js-decor
+            font-size: 96px
+            color: $brand550
+            @media ($max1439)
+                font-size: vw-s(96,1439)
+            @media ($max767)
+                font-size: 64px
+        span
+            @media ($hover)
+                &:hover
+                    color: $white
+        &._big
+            top: -150px
+            right: -50px
+            @media ($max1439)
+                top: -90px
+            .js-decor
+                transform: rotate(7.862deg)
+                color: $gray700
+                font-size: 250px
+                opacity: 0.6
+                @media ($max1439)
+                    font-size: vw-s(250,1439)
+        &._medium
+            top: 0
+            right: -50px
+            @media ($max1439)
+                right: 0
+            .js-decor
+                transform: rotate(3.544deg)
+                color: $gray700
+                font-size: 128px
+                opacity: 0.6
+                @media ($max1439)
+                    font-size: vw-s(128,1439)
+                @media ($max767)
+                    font-size: 64px
+        &._left
+            right: auto
+            left: 0
+            transform: translateY(-100%)
+            text-align: left
+            @media ($max1023)
+                transform: translateY(-50%)
+            @media ($max767)
+                transform: none
+                margin-right: 0
+            .js-decor
+                @media ($max1439)
+                    font-size: 96px
+                @media ($max767)
+                    font-size: 64px
+        ~ .img-project__item
+            pointer-events: none
+    &__decor-text
+        max-width: pct-s(760,1280)
+        margin-top: 10px
+        @media ($max767)
+            max-width: 100%
+            margin-bottom: 24px
+
+    &__circle
+        position: absolute
+        z-index: -1
+        right: -60px
+        bottom: 300px
+        width: pct-s(826,1280)
+        background: radial-gradient(50% 50% at 50% 50%, #0AB451 3%, rgba(10, 180, 81, 0.00) 100%)
+        @media ($max767)
+            width: pct-s(668,328)
+            right: auto
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+        &:before
+            padding-bottom: pct-s(644,826)
+            
+        &._small
+            @media ($max767)
+                width: pct-s(478,328)
+                background: radial-gradient(50% 50% at 50% 50%, rgba(10, 180, 81, 0.50) 0%, rgba(10, 180, 81, 0.00) 100%)
+
+
+    &__item

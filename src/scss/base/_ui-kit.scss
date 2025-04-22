@@ -73,6 +73,11 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 40px;
     }
 }
+.fs-48-mob{
+    @media ($max767) {
+        font-size: 48px;
+    }
+}
 .ff-second {
     font-family: $ffSecond;
     font-weight: 400;
@@ -161,6 +166,18 @@ h1,h2,h3,h4,h5,h6 {
     }
     @media ($max767) {
         padding-top: 0;
+    }
+}
+.pb-0-ever{
+    padding-bottom: 0;
+    @media ($max1439){
+        padding-bottom: 0;
+    }
+    @media ($max1023){
+        padding-bottom: 0;
+    }
+    @media ($max767) {
+        padding-bottom: 0;
     }
 }
 .mb-4{

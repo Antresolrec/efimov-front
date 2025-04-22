@@ -1,0 +1,295 @@
+<%
+const header = require('./layouts/basic/header.ejs');
+const footer = require('./layouts/basic/footer.ejs');
+const quote = require('./layouts/components/quote.ejs');
+const tools = require('./layouts/components/tools.ejs');
+const teamProject = require('./layouts/components/team-project.ejs');
+const otherProjects = require('./layouts/components/other-projects.ejs');
+%>
+<%- header() -%>
+    <main class="page">
+        <div class="intro text-lowercase first-section-from-header">
+            <div class="intro__wrapper">
+                <div class="intro__bg img-wh">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/project-detailed-02/intro-mob.jpg">
+                        <img src="images/project-detailed-02/intro.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="container">
+                    <div class="intro__row">
+                        <div class="intro__head">
+                            <h1 class="intro__title title fs-46 fs-24-mob">аб-энерго</h1>
+                            <p class="intro__subtitle fs-16">разработка и запуск информационного сайта</p>
+                        </div>
+                        <div class="intro__tags">
+                            <div class="intro__tag">разработка</div>
+                            <div class="intro__tag">энергетика</div>
+                            <div class="intro__tag">500 тыс - 1 млн ₽</div>
+                            <div class="intro__tag">за неделю</div>
+                        </div>
+                        <div class="intro__btns">
+                            <a href="#" class="btn btn--secondary">
+                                <span>сайт проекта</span>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0013 1.66846C8.08522 1.66846 1.66797 8.08571 1.66797 16.0018C1.66797 23.9179 8.08522 30.3351 16.0013 30.3351C23.9174 30.3351 30.3346 23.9179 30.3346 16.0018C30.3346 8.08571 23.9174 1.66846 16.0013 1.66846Z" fill="white"/>
+                                    <path d="M10.668 16.001H21.3346M21.3346 16.001L17.3346 12.001M21.3346 16.001L17.3346 20.001" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__info">
+                <div class="container">
+                    <div class="intro__info-row">
+                        <div class="intro__info-title ff-second fs-46 fs-24-mob"><span>Эффективная стратегия</span> продвижения и&nbsp;продуманный дизайн сайта, основанный на&nbsp;исследованиях, привлекли <span>больше премиальных клиентов</span> с&nbsp;высоким чеком</div>
+                        <div class="intro__list">
+                            <div>
+                                <div class="ff-second fs-64">+35%</div>
+                                <span>месячной выручки через сайт</span>
+                            </div>
+                            <div>
+                                <div class="ff-second fs-64">в 1,5</div>
+                                <span>раза вырос средний чек</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">задача</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Создание эффективного информационного ресурса для компании АБ-Энерго, который позволит повысить узнаваемость компании, предоставить исчерпывающую информацию о ее деятельности и продукции, а также упростить процесс коммуникации с целевой аудиторией</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">проблема</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Ограниченная информация о компании в открытом доступе, отсутствие эффективного инструмента для привлечения новых клиентов и партнеров, сложность в предоставлении оперативной информации о месторождении и продукции (фракциях угля)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showreel text-lowercase pv-100 pv-60-laptop pv-40-mob pt-0-ever">
+            <div class="showreel__decor js-decor">lets go</div>
+            <div class="container">
+                <div class="showreel__wrapper js-video-wrapper">
+                    <div class="showreel__item item-response">
+                        <img src="images/showreel-laptop.png" alt="">
+                        <div class="showreel__video-wrapper item-response">
+                            <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="showreel__video js-video _static">
+                                <source src="videos/banner.mp4" type='video/mp4' />
+                            </video>
+                            <button type="button" class="showreel__play item-response js-video-play">
+                                <img src="images/showreel-play.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="numbers text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="numbers__head mb-40">
+                    <h2 class="title fs-46 fs-24-mob">За время выполнения проекта:</h2>
+                </div>
+                <div class="numbers__row">
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">53+</div>
+                            <p class="c-gray-450">кружек кофе выпито</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">16</div>
+                            <p class="c-gray-450">созвонов проведено</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">47</div>
+                            <p class="c-gray-450">нажатых клавиш разработчиком</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">5</div>
+                            <p class="c-gray-450">походов к&nbsp;психологу </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row c-gray-400">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">этапы работы</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Наша работа началась с детальной проработки прототипов всех страниц будущего сайта, где мы тщательно продумали пользовательские сценарии и логику взаимодействия. После этого наша команда приступила к разработке современного дизайна, уделяя особое внимание фирменному стилю компании и удобству восприятия информации.</p>
+                            <p>Каждый этап сопровождался тесным взаимодействием с заказчиком - мы последовательно согласовывали концепцию, цветовые решения, типографику и финальные макеты, внося необходимые корректировки до полного соответствия требованиям и ожиданиям клиента. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="img-project__wrapper">
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-02/01-mob.png">
+                            <img src="images/project-detailed-02/01.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob"></h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Мы разработали структуру и дизайн информационного сайта, наполнили его актуальными и полезными материалами о компании, месторождении и продукции.</p>
+                            <p>Добавили удобные формы обратной связи для вопросов и заявок, чтобы клиенты могли легко с нами связаться.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="img-project__wrapper">
+                    <div class="img-project__decor _big hide-tablet">
+                        <div class="js-decor">wow</div>
+                    </div>
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-02/02-mob.png">
+                            <img src="images/project-detailed-02/02.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob"></h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Провели SEO-оптимизацию, чтобы сайт лучше ранжировался в поисковых системах, а также адаптировали его для комфортного просмотра на любых устройствах.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="img-project__wrapper">
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-02/03-mob.png">
+                            <img src="images/project-detailed-02/03.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob pb-0-ever">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">мобильная версия</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>мы уделили особое внимание адаптивности сайта, чтобы обеспечить одинаково комфортное взаимодействие для пользователей любых устройств. Наши специалисты тщательно проработали гибкую сетку макетов, которая корректно отображается на экранах от смартфонов до широкоформатных мониторов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="img-project__wrapper">
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-02/04-mob.png">
+                            <img src="images/project-detailed-02/04.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="img-project__wrapper">
+                    <div class="img-project__decor _left">
+                        <div class="js-decor">mobile</div>
+                        <p class="img-project__decor-text fs-16 fs-14-mob">Мы провели многоуровневое тестирование на различных устройствах и браузерах, чтобы гарантировать безупречную работу интерфейса независимо от того, пользуются ли посетители последней моделью смартфона, планшетом или устаревшим офисным компьютером</p>
+                    </div>
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-02/05-mob.png">
+                            <img src="images/project-detailed-02/05.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showreel _big text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="showreel__wrapper js-video-wrapper">
+                    <div class="showreel__item item-response">
+                        <img loading="lazy" src="images/showreel-laptop.png" alt="">
+                        <div class="showreel__video-wrapper item-response">
+                            <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="showreel__video js-video _static">
+                                <source src="videos/banner.mp4" type='video/mp4' />
+                            </video>
+                            <button type="button" class="showreel__play item-response js-video-play">
+                                <img src="images/showreel-play.svg" alt="">
+                            </button>
+                            <div class="showreel__preview">
+                                <img loading="lazy" src="images/project-detailed-02/showreel-preview.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result-project two-cols pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="fs-16 mb-8-mob text-lowercase">итог</h2>
+                    </div>
+                    <div class="two-cols__body">
+                        <div class="result-project__text ff-second fs-46 fs-24-tablet">Проект усилил <span> узнаваемость бренда и улучшил имидж компании</span>. Удобный интерфейс упростил коммуникацию с клиентами, повысив их доверие к нам. Эти изменения <span>укрепляют рыночные позиции и способствуют развитию бизнеса.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- quote() -%>
+        <%- teamProject() -%>
+        <%- tools() -%>
+        <%- otherProjects() -%>
+    </main> 
+
+<%- footer() -%>

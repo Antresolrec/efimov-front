@@ -10,6 +10,7 @@
         background-color: $black
         .header
             &__row
+                border-color: $gray800
                 @media ($min768)
                     padding-top: 4px
                     padding-bottom: 4px
@@ -54,9 +55,10 @@
         justify-content: space-between
         align-items: center
         padding: 14px 0
-        border-bottom: solid 1px $gray800
+        border-bottom: solid 1px transparent
         will-change: padding
-        transition: padding $time03
+        transition-duration: $time03
+        transition-property: padding, border-color
 
         @media ($max767)
             padding: 2px 0

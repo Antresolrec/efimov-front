@@ -1,0 +1,243 @@
+<%
+const header = require('./layouts/basic/header.ejs');
+const footer = require('./layouts/basic/footer.ejs');
+const quote = require('./layouts/components/quote.ejs');
+const tools = require('./layouts/components/tools.ejs');
+const teamProject = require('./layouts/components/team-project.ejs');
+const otherProjects = require('./layouts/components/other-projects.ejs');
+%>
+<%- header() -%>
+    <main class="page">
+        <div class="intro text-lowercase first-section-from-header">
+            <div class="intro__wrapper">
+                <div class="intro__bg img-wh">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/project-detailed-03/intro-mob.jpg">
+                        <img src="images/project-detailed-03/intro.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="container">
+                    <div class="intro__row">
+                        <div class="intro__head">
+                            <h1 class="intro__title title fs-46 fs-24-mob">aurus</h1>
+                            <p class="intro__subtitle fs-16">Разработали систему для тач-панели на стенде премиум-авто на ПМЭФ 2024 за 4 дня</p>
+                        </div>
+                        <div class="intro__tags">
+                            <div class="intro__tag">интерактивный стенд</div>
+                            <div class="intro__tag">премиум авто</div>
+                            <div class="intro__tag">500 тыс - 1 млн ₽</div>
+                            <div class="intro__tag">за 4 дня</div>
+                        </div>
+                        <div class="intro__btns">
+                            <a href="#" class="btn btn--secondary">
+                                <span>сайт проекта</span>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0013 1.66846C8.08522 1.66846 1.66797 8.08571 1.66797 16.0018C1.66797 23.9179 8.08522 30.3351 16.0013 30.3351C23.9174 30.3351 30.3346 23.9179 30.3346 16.0018C30.3346 8.08571 23.9174 1.66846 16.0013 1.66846Z" fill="white"/>
+                                    <path d="M10.668 16.001H21.3346M21.3346 16.001L17.3346 12.001M21.3346 16.001L17.3346 20.001" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__info">
+                <div class="container">
+                    <div class="intro__info-row">
+                        <div class="intro__info-title ff-second fs-46 fs-24-mob">Интерактивный стенд <span>Aurus на ПМЭФ-2024</span> успешно привлёк внимание гостей, подчеркнув <span>премиальность</span> бренда</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">о проекте</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Заказчик, участвующий в Петербургском международном экономическом форуме (ПМЭФ) 2024, обратился к нам с запросом о создании интерактивного стенда для презентации своей продукции на мероприятии. Уровень ответственности высочайший, так как данный стенд презентовали перед «первыми лицами» государств, бизнесменами, представителями ведущих корпораций.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">задача</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Требовалось разработать систему, которая могла бы быть запущена на тач-панели, установленной на стенде компании на форуме. И которая привлечет внимание участников форума, подчеркнет инновационный характер бренда AURUS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">особенности проекта</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Тач-панель имела нестандартные размеры верстки. </li>
+                                <li>Разработка интерактивной системы удаленно без доступа к реальному устройству.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showreel text-lowercase pv-100 pv-60-laptop pv-40-mob pt-0-ever">
+            <div class="showreel__decor js-decor">lets go</div>
+            <div class="container">
+                <div class="showreel__wrapper js-video-wrapper">
+                    <div class="showreel__item item-response">
+                        <img src="images/showreel-laptop.png" alt="">
+                        <div class="showreel__video-wrapper item-response">
+                            <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="showreel__video js-video _static">
+                                <source src="videos/banner.mp4" type='video/mp4' />
+                            </video>
+                            <button type="button" class="showreel__play item-response js-video-play">
+                                <img src="images/showreel-play.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="numbers text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="numbers__head mb-40">
+                    <h2 class="title fs-46 fs-24-mob">За время выполнения проекта:</h2>
+                </div>
+                <div class="numbers__row">
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">53+</div>
+                            <p class="c-gray-450">кружек кофе выпито</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">16</div>
+                            <p class="c-gray-450">созвонов проведено</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">47</div>
+                            <p class="c-gray-450">нажатых клавиш разработчиком</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">5</div>
+                            <p class="c-gray-450">походов к&nbsp;психологу </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row c-gray-400">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">этапы работы</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Разработали адаптивный интерфейс</li>
+                            </ul>
+                            <p>За ограниченный срок в 4 рабочих дня команда разработчиков разработала адаптивный интерфейс, который соответствовал нестандартным размерам тач-панели. Используя фотографии продукции заказчика, дизайнеры смогли создать визуально привлекательное и информативное содержание для стенда.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="img-project__wrapper">
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-03/grid-mob.png">
+                            <img src="images/project-detailed-03/grid.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="img-project__wrapper">
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-03/01-mob.png">
+                            <img src="images/project-detailed-03/01.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob"></h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Тестировали интерактивную систему без доступа к реальному устройству </li>
+                            </ul>
+                            <p>Исходя из невозможности тестирования интерактивной системы на реальном устройстве, мы придумали креативное и эффективное решение. Обратившись к магазину, занимающемуся тач-панелями, мы запустили наш проект онлайн и протестировали верстку.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="img-project__wrapper">
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-03/02-mob.png">
+                            <img src="images/project-detailed-03/02.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="img-project pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="img-project__wrapper">
+                    <div class="img-project__circle item-response _small"></div>
+                    <div class="img-project__decor _medium">
+                        <div class="js-decor">premium</div>
+                    </div>
+                    <div class="img-project__item img-wh">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/project-detailed-03/03-mob.png">
+                            <img src="images/project-detailed-03/03.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result-project two-cols pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="fs-16 mb-8-mob text-lowercase">итог</h2>
+                    </div>
+                    <div class="two-cols__body">
+                        <div class="result-project__text ff-second fs-46 fs-24-tablet">На итоговом событии ПМЭФ-2024 <span>интерактивный стенд AURUS был запущен вовремя и успешно на тач-панели заказчика</span>, привлекая внимание участников форума и предоставляя информацию о продукции компании в удобной и привлекательной форме. Наша работа подчеркнула премиальность и престиж бренда "AURUS". <span>Заказчик был доволен результатом и оценил профессионализм</span>, и оперативность нашей команды.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- quote() -%>
+        <%- teamProject() -%>
+        <%- tools() -%>
+        <%- otherProjects() -%>
+    </main> 
+
+<%- footer() -%>

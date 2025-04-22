@@ -1,13 +1,8 @@
 .team-project
     overflow: hidden 
-    sup
-        font-size: 12px
-        color: $brand550
 
     &__row
         position: relative
-        @media ($min768)
-            display: flex
 
     &__decor
         position: absolute
@@ -31,20 +26,8 @@
                 &:hover
                     color: $white
 
-    &__head
-        flex-shrink: 0
-        width: 20%
-        @media ($max1439)
-            width: 25%
-        @media ($max1023)
-            width: 140px
-        @media ($max767)
-            width: 100%
-
 
     &__body
-        flex: 1 1 auto
-        width: 100%
         max-width: 500px
 
 
@@ -58,3 +41,6 @@
         @media ($max767)
             width: 100%
 
+    sup
+        font-size: 12px
+        color: $brand550

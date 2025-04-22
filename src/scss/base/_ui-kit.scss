@@ -90,6 +90,9 @@ h1,h2,h3,h4,h5,h6 {
 .c-gray-300{
     color: $gray300;
 }
+.c-gray-400{
+    color: $gray400;
+}
 .c-gray-450 {
     color: $gray450;
 }
@@ -146,6 +149,18 @@ h1,h2,h3,h4,h5,h6 {
     @media ($max767) {
         padding-top: 40px;
         padding-bottom: 40px;
+    }
+}
+.pt-0-ever{
+    padding-top: 0;
+    @media ($max1439){
+        padding-top: 0;
+    }
+    @media ($max1023){
+        padding-top: 0;
+    }
+    @media ($max767) {
+        padding-top: 0;
     }
 }
 .mb-4{
@@ -398,6 +413,31 @@ a.logo {
 }
 .text-lowercase {
     text-transform: lowercase;
+}
+.two-cols {
+    &__row {
+        @media ($min768) {
+            display: flex;
+        }
+    }
+    &__head{
+        flex-shrink: 0;
+        width: 20%;
+        @media ($max1439){
+            width: 25%;
+        }
+        @media ($max1023) {
+            width: 140px;
+        }
+        @media ($max767) {
+            width: 100%;
+        }
+    }
+    &__body{
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
 }
 .js-decor {
     font-family: $ffThird;

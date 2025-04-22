@@ -1,30 +1,55 @@
 <%
 const header = require('./layouts/basic/header.ejs');
 const footer = require('./layouts/basic/footer.ejs');
+const quote = require('./layouts/components/quote.ejs');
 const tools = require('./layouts/components/tools.ejs');
 const otherProjects = require('./layouts/components/other-projects.ejs');
 %>
 <%- header() -%>
-
     <main class="page">
         <div class="text-lowercase first-section-from-header">
             <div class="container">
 
             </div>
         </div>
-        <div class="showreel pv-100 pv-60-laptop pv-40-mob">
+        <div class="start-project two-cols pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="start-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">задача</h2>
+                    </div>
+                    <div class="start-project__body two-cols__body">
+                        <div class="start-project__text">
+                            <p>разработать современный, удобный и эстетически привлекательный сайт, который соответствует обновленному позиционированию бренда</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="start-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">введение</h2>
+                    </div>
+                    <div class="start-project__body two-cols__body">
+                        <div class="start-project__text">
+                            <p>важно было учесть высокие требования аудитории к удобству, интуитивной навигации и оперативному взаимодействию с сервисом</p>
+                            <p>мы начали с исследования рынка и аудитории, чтобы определить ключевые потребности клиентов. на основе полученных данных создали интуитивно понятный интерфейс, упростили навигацию и внедрили функционал бронирования, который позволяет заранее планировать посещение</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showreel pv-100 pv-60-laptop pv-40-mob pt-0-ever">
             <div class="showreel__decor js-decor">lets go</div>
             <div class="container">
                 <div class="showreel__wrapper js-video-wrapper">
                     <div class="showreel__item item-response">
                         <img src="images/showreel-laptop.png" alt="">
                         <div class="showreel__video-wrapper item-response">
+                            <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="showreel__video js-video _static">
+                                <source src="videos/banner.mp4" type='video/mp4' />
+                            </video>
                             <button type="button" class="showreel__play item-response js-video-play">
                                 <img src="images/showreel-play.svg" alt="">
                             </button>
-                            <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="showreel__video js-video _static">
-                                <source src="videos/banner.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                            </video>
                         </div>
                     </div>
                 </div>
@@ -38,58 +63,88 @@ const otherProjects = require('./layouts/components/other-projects.ejs');
                 <div class="numbers__row">
                     <div class="numbers__col">
                         <div class="numbers__item text-center">
-                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="3000" data-start="300">536+</div>
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="300">536+</div>
                             <p class="c-gray-450">кружек кофе выпито</p>
                         </div>
                     </div>
                     <div class="numbers__col">
                         <div class="numbers__item text-center">
-                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="3000" data-start="0">16</div>
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">16</div>
                             <p class="c-gray-450">созвонов проведено</p>
                         </div>
                     </div>
                     <div class="numbers__col">
                         <div class="numbers__item text-center">
-                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="3000" data-start="33547">43547</div>
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="33547">43547</div>
                             <p class="c-gray-450">строк кода</p>
                         </div>
                     </div>
                     <div class="numbers__col">
                         <div class="numbers__item text-center">
-                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="3000" data-start="0">5</div>
+                            <div class="title fs-100 fs-64-tablet fs-48-mob mb-4 js-counter" data-duration="1250" data-start="0">5</div>
                             <p class="c-gray-450">походов к&nbsp;психологу </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="quote pv-100 pv-60-laptop pv-40-mob">
+        <div class="start-project two-cols pv-100 pv-60-laptop pv-40-mob">
             <div class="container">
-                <div class="quote__wrapper">
-                    <div class="quote__text fs-20">
-                        <p>Ребята приступили к&nbsp;работе сразу, без задержек&nbsp;&mdash; это приятно удивило! Быстро разобрались в&nbsp;моих пожеланиях, предложили несколько вариантов, и&nbsp;мы&nbsp;сразу нашли общий язык. Процесс организован четко: все этапы согласовываем, правки вносят оперативно.</p>
-                        <p>Пока всё идёт просто отлично&nbsp;&mdash; чувствую, что проект в&nbsp;надёжных руках!</p>
+                <div class="start-project__row two-cols__row c-gray-400">
+                    <div class="two-cols__head">
+                        <h2 class="mb-16-mob">этапы работы</h2>
                     </div>
-                    <div class="quote__author">
-                        <div class="ico ico-68">
-                            <img src="images/quote-avatar.png" alt="">
-                        </div>
-                        <div>
-                            <div class="fs-20 fw-700 mb-10">Максим Максимов</div>
-                            <div class="text-lowercase">директор « Астория»</div>
+                    <div class="start-project__body two-cols__body">
+                        <div class="start-project__text">
+                            <p>Мы начали работу с анализа рынка и аудитории, мы  тчательно Изучили поведение и предпочтения нашей Целевой Аудитории, проанализировали конкурентов и выделили ключевые тренды в дизайне, А после этого перешли к структуре. </p>
+                            <p>Продумали и создали прототипы, Разработали интуитивную навигацию и сделали UX-каркасы, чтобы проверить логику взаимодействия пользователей с сайтом</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="team-project pv-100 pv-40-mob">
+        <%- quote() -%>
+        <div class="showreel _big pv-100 pv-60-laptop pv-40-mob">
             <div class="container">
-                <div class="team-project__row fs-16">
+                <div class="showreel__wrapper js-video-wrapper">
+                    <div class="showreel__item item-response">
+                        <img loading="lazy" src="images/showreel-laptop.png" alt="">
+                        <div class="showreel__video-wrapper item-response">
+                            <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="showreel__video js-video _static">
+                                <source src="videos/banner.mp4" type='video/mp4' />
+                            </video>
+                            <button type="button" class="showreel__play item-response js-video-play">
+                                <img src="images/showreel-play.svg" alt="">
+                            </button>
+                            <div class="showreel__preview">
+                                <img loading="lazy" src="images/showreel-preview-01.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result-project two-cols pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="fs-16 mb-8-mob">итог</h2>
+                    </div>
+                    <div class="two-cols__body">
+                        <div class="result-project__text ff-second fs-46 fs-24-tablet">Такой подход помог нам создать <span>удобный и визуально привлекательный сайт</span>, который позволили привлечь новую аудиторию и <span>повысить вовлеченность</span> постоянных клиентов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- quote() -%>
+        <div class="team-project two-cols pv-100 pv-40-mob">
+            <div class="container">
+                <div class="team-project__row two-cols__row fs-16">
                     <div class="team-project__decor js-decor">v</div>
-                    <div class="team-project__head">
+                    <div class="two-cols__head">
                         <h2 class="fs-16 c-gray-600 mb-32-mob">команда <sup>12</sup></h2>
                     </div>
-                    <div class="team-project__body c-gray-600">
+                    <div class="team-project__body two-cols__body c-gray-600">
                         <div class="team-project__cols">
                             <div class="team-project__col">
                                 <div>разработчиков <sup>2</sup></div>

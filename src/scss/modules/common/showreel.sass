@@ -1,6 +1,11 @@
 .showreel
     overflow: hidden
+    &._big
+        .showreel
+            &__wrapper
+                max-width: 100%
     &__wrapper
+        width: 100%
         max-width: 1151px
         margin: 0 auto
 
@@ -20,20 +25,25 @@
                 &:hover
                     color: $white
 
-
+        +
+            *
+                .showreel
+                    &__item
+                        pointer-events: none
+                        margin-top: -200px
+                        @media ($max1439)
+                            margin-top: -140px
+                        @media ($max1023)
+                            margin-top: -100px
+                        @media ($max767)
+                            margin-top: -50px
     &__item
         display: flex
         justify-content: center
-        margin-top: -200px
-        @media ($max1439)
-            margin-top: -140px
-        @media ($max1023)
-            margin-top: -100px
         @media ($max767)
             position: relative
             left: 50%
             transform: translateX(-50%)
-            margin-top: -50px
             width: pct-s(400,328)
         &:before
             padding-bottom: pct-s(651,1151)
@@ -51,10 +61,17 @@
         border-radius: 20px 20px 0 0
         width: pct-s(918,1151)
         margin-left: 2px
+        pointer-events: auto
+        @media ($max1439)
+            top: vw-s(8,1439)
+            border-radius: vw-s(20,1439) vw-s(20,1439) 0 0
+            margin-left: vw-s(2,1439)
         &:before
             padding-bottom: pct-s(516,918)
             
 
+    &__preview
+        transition: opacity $time03
 
     &__play
         position: absolute
@@ -87,3 +104,7 @@
         &._playing
             opacity: 1
             pointer-events: auto
+            ~
+                .showreel
+                    &__preview
+                        opacity: 0

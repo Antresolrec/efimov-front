@@ -14,6 +14,7 @@ import { initForm } from './modules/form-validator';
 import { initVideo } from './modules/video';
 import initPopups from './modules/popups';
 import { initStickySection } from './modules/stickySection';
+import { initSwitch } from './modules/switch';
 
 function initModules() {
     initBodyLock();
@@ -30,6 +31,7 @@ function initModules() {
     initVideo();
     initPopups();
     initStickySection();
+    initSwitch();
 
     document.body.classList.add('_loaded');
 };

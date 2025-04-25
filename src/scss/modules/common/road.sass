@@ -1,0 +1,396 @@
+.road
+    overflow: hidden
+    &__head
+        @media ($min768)
+            margin-bottom: -21px
+
+    &__row
+        display: flex
+        align-items: center
+        min-height: 600px
+        @media ($max1439)
+            font-size: 14px
+            min-height: 475px
+        @media ($max767)
+            min-height: 330px
+        @media ($max767)
+            flex-direction: column
+            justify-content: center
+            min-height: 0
+
+    &__col
+        flex-shrink: 0
+        width: pct-s(130,1280)
+        @media ($max1439)
+            width: pct-s(145,1280)
+        @media ($max1023)
+            flex: 1 1 auto
+            width: auto
+        @media ($max767)
+            display: flex
+            &:before
+                content: ''
+                display: block
+                padding-bottom: 100%
+                
+        &:nth-child(1)
+            width: 50px
+            margin-left: 12px
+            margin-right: 77px
+            @media ($max1439)
+                width: 35px
+                margin-right: 24px
+            @media ($max1023)
+                margin-left: 4px
+                margin-right: 8px
+            @media ($max767)
+                width: 56px
+                margin-top: 4px
+                margin-right: 0
+                margin-bottom: 8px
+                margin-left: 0
+        &:nth-child(2)
+            width: pct-s(175,1280)
+            @media ($max1439)
+                width: pct-s(190,1280)
+            @media ($max1023)
+                width: pct-s(150,1280)
+            @media ($max767)
+                width: 122px
+            .road
+                &__info
+                    @media ($min768)
+                        margin-top: 12px
+                &__info-text
+                    @media ($max767)
+                        width: 110px
+                    @media ($min768)
+                        width: 240px
+        &:nth-child(3)
+            @media ($max1023)
+                width: auto
+            @media ($max767)
+                width: 153px
+            .road
+                &__info
+                    @media ($max767)
+                        top: 100%
+                        right: auto
+                        left: 50%
+                        flex-direction: row
+                        margin-left: 24px
+                    @media ($min768)
+                        top: auto
+                        bottom: 100%
+                        left: 100%
+                        flex-direction: column-reverse
+                        margin-bottom: 10px
+                    @media ($min1024)
+                        margin-bottom: 30px
+                &__info-line
+                    @media ($max767)
+                        width: 130px
+                &__info-text
+                    @media ($max767)
+                        flex-direction: row-reverse
+                        text-align: right
+                        width: 130px
+                        margin-left: 0
+        &:nth-child(4)
+            margin-right: 12px
+            width: pct-s(160,1280)
+            @media ($max1439)
+                width: pct-s(165,1280)
+            @media ($max1023)
+                width: auto
+                margin-right: 4px
+            @media ($max767)
+                width: 179px
+                margin-right: 0
+                margin-bottom: 4px
+            .road
+                &__info
+                    z-index: 1
+                    left: 100%
+                    margin-top: -13px
+                    margin-left: 12px
+                    @media ($max1023)
+                        margin-left: 4px
+                    @media ($max767)
+                        // flex-direction: row-reverse
+                        top: 100%
+                        left: 50%
+                        transform: translateX(-50%)
+                        margin-left: 0
+                        margin-top: 2px
+                    @media ($min1024)
+                        top: 50%
+                &__info-line
+                    height: 249px
+                    @media ($max1439)
+                        height: 199px
+                    @media ($max1023)
+                        height: 129px
+                    @media ($max767)
+                        width: 150px
+                        height: 1px
+                    &:before
+                        width: 27px
+                        height: 27px
+                        @media ($max1439)
+                            width: 20px
+                            height: 20px
+                        @media ($max1023)
+                            width: 7px
+                            height: 7px
+                        @media ($max767)
+                            width: 5px
+                            height: 5px
+                &__info-text
+                    @media ($max767)
+                        left: auto
+                        width: 100px
+                        margin-right: 50px
+                        
+        &:nth-child(5)
+            margin-left: 12px
+            @media ($max1023)
+                width: auto
+                margin-left: 4px
+            @media ($max767)
+                width: 113px
+                margin-left: 0
+                margin-top: 4px
+        &:nth-child(6)
+            width: pct-s(235,1280)
+            @media ($max1023)
+                width: auto
+            @media ($max767)
+                width: 149px
+            .road
+                &__info
+                    @media ($max767)
+                        flex-direction: row
+                        right: auto
+                        left: 100%
+                    @media ($min768)
+                        top: auto
+                        bottom: 100%
+                        flex-direction: column-reverse
+                        margin-bottom: 12px
+                &__info-line
+                    @media ($max767)
+                        width: 80px
+                    &:after
+                        @media ($min768)
+                            background-color: $white
+                &__info-text
+                    @media ($max767)
+                        text-align: right
+                        width: 80px
+                        margin-left: auto
+        &:nth-child(7)
+            width: pct-s(150,1280)
+            @media ($max1023)
+                width: auto
+            @media ($max767)
+                width: 130px
+            .road
+                &__info
+                    margin-top: 12px
+                &__info-line
+                    height: 210px
+                    @media ($max1439)
+                        height: 160px
+                    @media ($max1023)
+                        height: 90px
+                    @media ($max767)
+                        width: 90px
+                        height: 1px
+        &:nth-child(8)
+            width: 50px
+            margin-left: 77px
+            margin-right: 12px
+            @media ($max1439)
+                width: 35px
+                margin-left: 24px
+            @media ($max1023)
+                width: auto
+                margin-right: 4px
+                margin-left: 8px
+            @media ($max767)
+                width: 56px
+                margin-top: 8px
+                margin-right: 0
+                margin-bottom: 4px
+                margin-left: 0
+            .road
+                &__line
+                    flex-direction: row-reverse
+                    left: auto
+                    right: 100%
+                    margin-right: 12px
+                    margin-left: auto
+
+
+    &__item
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        @media ($max1023)
+            padding: 0 4px
+        @media ($max767)
+            width: 100%
+
+
+    &__circle
+        position: absolute
+        right: -12px
+        left: -12px
+        border-radius: 50%
+        border: solid 1px #FFFFFF33
+        pointer-events: none
+        user-select: none
+        @media ($max1023)
+            right: -4px
+            left: -4px
+
+
+    &__title
+        text-align: center
+        max-width: 130px
+
+
+    &__line
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        position: absolute
+        left: 100%
+        margin-left: 12px
+        width: 57px
+        height: 1px
+        background-color: #FFFFFF33
+        @media ($max1439)
+            display: none
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            width: 7px
+            height: 7px
+            border-radius: 50%
+            background-color: $brand550
+            
+
+
+    &__info
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: absolute
+        top: 100%
+        width: 1px
+        @media ($max767)
+            top: 50%
+            transform: translateY(-50%)
+            right: 100%
+            flex-direction: row-reverse
+
+
+    &__info-line
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        // position: absolute
+        width: 1px
+        height: 200px
+        border-right: dashed 1px rgb(255, 255, 255, 0.2)
+        @media ($max1439)
+            height: 150px
+        @media ($max1023)
+            height: 80px
+        @media ($max767)
+            flex-shrink: 0
+            flex-direction: row
+            width: 90px
+            height: 1px
+            border-top: dashed 1px rgb(255, 255, 255, 0.2)
+            border-right: none
+        &:before,
+        &:after
+            content: ''
+            display: block
+            width: 7px
+            height: 7px
+            border-radius: 50%
+            background-color: $brand550
+            @media ($max1023)
+                width: 5px
+                height: 5px
+
+
+    &__info-text
+        text-align: center
+        width: 180px
+        margin-top: 4px
+        margin-bottom: 4px
+        opacity: 0.5
+
+        @media ($max767)
+            display: flex
+            position: absolute
+            top: 0
+            left: 0
+            text-align: left
+            width: 90px
+            margin-left: -90px
+
+
+.text-road
+    margin-top: 80px
+    @media ($max767)
+        margin-top: 20px
+    &__wrapper
+        width: 100%
+        max-width: 760px
+        margin-left: auto
+
+    &__row
+        display: flex
+        justify-content: space-between
+        gap: 24px
+        @media ($max767)
+            flex-direction: column
+            gap: 44px
+
+
+    &__col
+        &:last-child
+            max-width: 240px
+            @media ($max1023)
+                max-width: 208px
+            @media ($max767)
+                max-width: 100%
+
+    &__item
+        margin-bottom: 40px
+        @media ($max767)
+            margin-bottom: 24px
+        &:last-child
+            margin-bottom: 0
+
+    ul
+        margin: 10px 0
+        li
+            list-style: disc
+            &::marker
+                font-size: 0.75em
+
+    p
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+

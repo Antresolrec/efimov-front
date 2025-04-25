@@ -40,7 +40,7 @@ export default class Switch {
                     el.checked = false;
                 }
             }
-        } else if (target.checked){
+        } else if (target.checked && this.inputAll){
             this.inputAll.checked = false;
         }
     }

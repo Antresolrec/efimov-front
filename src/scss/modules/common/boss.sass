@@ -1,10 +1,8 @@
 .boss
     overflow: hidden
-    padding-top: 130px
-    @media ($max1439)
-        padding-top: 107px
-    @media ($max767)
-        padding-top: 24px
+    padding-top: 140px
+    @media ($max1023)
+        padding-top: 40px
     &__decor
         position: absolute
         bottom: -12%
@@ -29,41 +27,55 @@
 
     &__text
         position: absolute
-        top: -30px
+        top: -100px
+        left: 0
         right: 0
         display: flex
-        gap: 22px
+        align-items: flex-start
+        justify-content: space-between
+        gap: 20px
         pointer-events: none
-
-        @media ($max1439)
-            flex-direction: column
-            top: -47px
         @media ($max1023)
-            align-items: flex-end
-        @media ($max767)
             position: static
-            gap: 16px
-            margin-bottom: 24px
+            flex-direction: column
+        @media ($max767)
+            margin-bottom: 16px
 
+    &__text-col
+        display: flex
+        align-items: flex-start
+        gap: 22px
+        @media ($max1439)
+            gap: 8px
+        @media ($max1023)
+            flex-direction: column
+            gap: 20px
         > *
             width: 100%
             max-width: 240px
-            @media ($max767)
-                max-width: 216px
-            &:first-child
-                @media ($max1439)
-                    max-width: 316px
+            @media ($max1439)
+                max-width: 186px
+            @media ($max1023)
+                max-width: 100%
+
 
         p
             z-index: 1
             pointer-events: auto
+            margin-bottom: 10px
+            @media ($max1023)
+                margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
 
     &__img-wrapper
         position: relative
         z-index: 1
         padding-right: 60px
         pointer-events: none
-        @media ($max767)
+        @media ($max1439)
+            padding-right: 140px
+        @media ($max1023)
             padding-right: 0
     &__img
         width: pct-s(592,1280)
@@ -100,11 +112,10 @@
 
 
     &__list-col
-        width: 26.666%
+        width: 25%
         padding-left: 50px
         @media ($max1439)
             padding-left: 24px
-            width: 25%
         @media ($max1023)
             padding-left: 16px
         @media ($max767)
@@ -113,13 +124,12 @@
             padding-top: 8px
         &:first-child
             padding-left: 0
-            @media ($min1440)
-                width: 20%
         &:nth-child(odd)
             @media ($max767)
                 padding-left: 0
 
         p
+            max-width: 220px
             @media ($max767)
                 max-width: 160px
                 color: $gray500

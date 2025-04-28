@@ -141,6 +141,12 @@ h1,h2,h3,h4,h5,h6 {
         padding-bottom: 40px;
     }
 }
+.pv-60-tablet{
+    @media ($max1023) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
 .pv-50-tablet{
     @media ($max1023) {
         padding-top: 50px;

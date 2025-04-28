@@ -12,11 +12,13 @@
         font-weight: 400
         text-transform: uppercase
         margin-bottom: 20px
-        @media ($max1439)
+        @media ($max767)
             font-size: 24px
-        @media ($max1439)
+        @media ($max767)
             br
                 display: none
+        + .js-decor
+            margin-top: -20px
     h2
         font-family: $ffSecond
         font-size: 24px
@@ -26,16 +28,56 @@
         font-size: 16px
         color: $gray650
 
+    ul
+        padding-left: 20px
+        @media ($max767)
+            padding-left: 24px
+        li
+            list-style: disc
+            margin-bottom: 12px 
+            &:last-child
+                margin-bottom: 0
+
     p
         margin-bottom: 24px
         &:last-child
             margin-bottom: 0
+
+    &--policy
+        h2
+            color: $brand550
+            margin-top: 60px
+            margin-bottom: 24px
+            @media ($max767)
+                margin-top: 40px
+            &:first-child
+                margin-top: 0
+            &:last-child
+                margin-bottom: 0
+            + h3
+                margin-top: -24px
+        h3
+            font-family: $ffSecond
+            font-size: 24px
+            font-weight: 400
+            text-transform: uppercase
+            color: $white
+            margin-top: 24px
+            margin-bottom: 24px
+            &:last-child
+                margin-bottom: 0
     &__head
         padding-top: 60px
         @media ($max1023)
             padding-top: 40px
         @media ($max767)
             padding-top: 12px
+
+    &__title
+        max-width: 730px
+        p
+            max-width: 500px
+            color: $gray500
 
     &__tags
         display: flex

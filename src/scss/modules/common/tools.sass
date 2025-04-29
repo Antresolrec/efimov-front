@@ -1,17 +1,27 @@
 .tools
+    overflow: hidden
+    &__wrapper
+        margin-bottom: 40px
+        &:last-child
+            margin-bottom: 0
+    &__body
+        overflow: visible
+        width: auto
+        min-width: 100%
+        margin: -4px
+        @media ($min1440)
+            margin: -10px
     &__row
-        display: flex
-        flex-wrap: wrap
-        margin: -10px
-        @media ($max1439)
-            margin: -4px
+        @media ($min768)
+            display: flex
+            flex-wrap: wrap
     &__col
-        width: 25%
-        padding: 10px
-        @media ($max1439)
-            padding: 4px
-        @media ($max767)
-            width: 33.333%
+        width: auto
+        padding: 4px
+        @media ($min768)
+            width: 25%
+        @media ($min1440)
+            padding: 10px
 
 .card-tools
     overflow: hidden
@@ -23,6 +33,7 @@
     border: solid 1px $gray800
     border-radius: 8px
     @media ($max767)
+        width: 152px
         padding: 8px
     &__logo
         width: 126px

@@ -81,7 +81,7 @@ export default class TickerSlider {
 }
 
 export function initTickerSlider() {
-	const selectors = document.querySelectorAll('.js-mobile-slider');
+	const selectors = document.querySelectorAll('.js-ticker-slider');
 
 	for (const el of selectors) {
 		new TickerSlider(el);

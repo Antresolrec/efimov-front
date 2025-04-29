@@ -2,52 +2,71 @@
     &__row
         display: flex
         flex-wrap: wrap
-        margin: -30px -10px
+        margin: -10px
         @media ($max1439)
-            margin-right: -4px
-            margin-left: -4px
+            margin: -4px
         @media ($max767)
-            margin-right: 0
-            margin-left: 0
+            margin: -10px 0
 
 
     &__col
         width: 50%
-        padding: 30px 10px
+        padding: 10px
         @media ($max1439)
-            padding-right: 4px
-            padding-left: 4px
+            padding: 4px
         @media ($max767)
             width: 100%
-            padding-right: 0
-            padding-left: 0
+            padding: 10px 0
 
 
 
 .card-choice
-
+    display: flex
+    flex-direction: column
+    height: 100%
+    min-height: 384px
+    padding: 20px
+    border: solid 1px $gray750
+    border-radius: 8px
+    @media ($max1439)
+        padding: 8px
+    @media ($max1023)
+        min-height: 450px
+    @media ($max767)
+        min-height: 0px
     &__head
         display: flex
+        justify-content: space-between
         gap: 20px
-        padding-bottom: 20px
-        margin-bottom: 20px
+        padding-bottom: 16px
+        margin-bottom: 16px
         border-bottom: solid 1px $gray800
         @media ($max1023)
             gap: 8px
-
+    &__info
+        display: flex
+        justify-content: space-between
+        gap: 8px
+        color: $gray550
+        margin-bottom: 20px
+        @media ($max1023)
+            flex-direction: column
+            justify-content: flex-start
+            margin-bottom: 16px
     &__body
+        flex: 1 1 auto
 
 
     &__tags
         display: flex
         flex-wrap: wrap
         gap: 8px
-        color: $gray500
+        color: $gray550
         margin-top: 20px
 
 
     &__tag
-        padding: 8px 16px
-        border: solid 1px $gray700
+        padding: 4px 16px
+        border: solid 1px $gray750
         border-radius: 10em
 

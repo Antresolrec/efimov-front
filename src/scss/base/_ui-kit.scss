@@ -31,6 +31,11 @@ h1,h2,h3,h4,h5,h6 {
 .fs-100 {
     font-size: 100px;
 }
+.fs-46-laptop {
+    @media ($max1439) {
+        font-size: 46px;
+    }
+}
 .fs-36-laptop {
     @media ($max1439) {
         font-size: 36px;
@@ -204,15 +209,26 @@ h1,h2,h3,h4,h5,h6 {
 .mb-16{
     margin-bottom: 16px;
 }
+.mb-20{
+    margin-bottom: 20px;
+}
 .mb-30{
     margin-bottom: 30px;
 }
 .mb-40{
     margin-bottom: 40px;
 }
+.mb-80{
+    margin-bottom: 80px;
+}
 .mb-32-laptop {
     @media ($max1439) {
         margin-bottom: 32px;
+    }
+}
+.mb-40-laptop {
+    @media ($max1439) {
+        margin-bottom: 40px;
     }
 }
 .mb-8-tablet{
@@ -374,13 +390,13 @@ h1,h2,h3,h4,h5,h6 {
     width: 24px;
     height: 24px;
 }
+.ico-48 {
+    width: 48px;
+    height: 48px;
+}
 .ico-68 {
     width: 68px;
     height: 68px;
-}
-.ico-70 {
-    width: 70px;
-    height: 70px;
 }
 .ico-12-tablet{
     @media ($max1023) {
@@ -443,6 +459,9 @@ a.logo {
 .text-lowercase {
     text-transform: lowercase;
 }
+.text-normal{
+    text-transform: none;
+}
 .two-cols {
     &__row {
         @media ($min768) {
@@ -468,29 +487,6 @@ a.logo {
     }
 
 }
-.js-decor {
-    font-family: $ffThird;
-    cursor: default;
-    span {
-        transition: color $time03;
-        &._active{
-            color: $brand550;
-        }
-        @media ($hover) {
-            &:hover {
-                color: $brand550;
-            }
-        }
-    }
-}
-.js-counter {
-    opacity: 0;
-    transition: opacity $time03;
-    &._go{
-        opacity: 1;
-    }
-        
-}
 .item-response {
     flex-shrink: 0;
     position: relative;
@@ -509,7 +505,6 @@ a.logo {
         object-fit: cover;
     }
 }
-
 .img-wh {
     img,svg {
         display: block;
@@ -540,5 +535,27 @@ a.logo {
 .hide-mob {
     @media ($max767) {
         display: none !important;
+    }
+}
+.js-decor {
+    font-family: $ffThird;
+    cursor: default;
+    span {
+        transition: color $time03;
+        &._active{
+            color: $brand550;
+        }
+        @media ($hover) {
+            &:hover {
+                color: $brand550;
+            }
+        }
+    }
+}
+.js-counter {
+    opacity: 0;
+    transition: opacity $time03;
+    &._go{
+        opacity: 1;
     }
 }

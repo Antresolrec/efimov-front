@@ -4,21 +4,33 @@
         position: relative
     &__decor
         position: absolute
-        top: 50%
+        top: 0
         right: 0
-        font-size: 400px
+        font-size: 316px
         color: $gray750
-        transform: rotate(10.945deg) translateY(-50%)
+        transform: rotate(10.945deg)
         @media ($max1439)
-            font-size: 250px
+            font-size: 200px
         @media ($max1023)
-            top: 0
             transform: rotate(10.945deg)
-            font-size: 128px
         @media ($max767)
             font-size: 96px
+        &._medium
+            font-size: 220px
+            @media ($max1439)
+                font-size: 180px
+            @media ($max1023)
+                font-size: 100px
+            @media ($max767)
+                font-size: 80
+        &._small
+            font-size: 160px
+            @media ($max1439)
+                font-size: 100px
+            @media ($max1023)
+                font-size: 64px
+                    
     &__wrapper
-        display: flex
         align-items: center
         min-height: 500px
         padding-top: 60px

@@ -1,0 +1,650 @@
+<%
+const header = require('./layouts/basic/header.ejs');
+const footer = require('./layouts/basic/footer.ejs');
+const pag = require('./layouts/components/pag.ejs');
+const clients = require('./layouts/components/clients.ejs');
+const partners = require('./layouts/components/partners.ejs');
+const otherProjects = require('./layouts/components/other-projects.ejs');
+%>
+<%- header() -%>
+
+    <main class="page">
+        <div class="head-service two-cols text-lowercase first-section-from-header">
+            <div class="container">
+                <div class="head-service__decor js-decor">web</div>
+                <div class="head-service__wrapper two-cols__row">
+                    <div class="two-cols__head"></div>
+                    <div class="head-service__body two-cols__body">
+                        <div class="title fs-46 fs-24-mob">Разработка web.сайтов</div>
+                        <div class="head-service__text fs-16 fs-14-mob">
+                            <p>Создаем современные, быстрые и удобные сайты, которые работают на результат. продумываем дизайн, UX и функционал, чтобы ваш бизнес выделялся онлайн</p>
+                        </div>
+                        <div class="head-service__btns">
+                            <button type="button" aria-label="Open popup" data-popup-trigger="popup-request"  class="btn btn--secondary btn--full">
+                                <span>обсудить проект</span>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0013 1.66797C8.08522 1.66797 1.66797 8.08522 1.66797 16.0013C1.66797 23.9174 8.08522 30.3346 16.0013 30.3346C23.9174 30.3346 30.3346 23.9174 30.3346 16.0013C30.3346 8.08522 23.9174 1.66797 16.0013 1.66797Z" fill="white"/>
+                                    <path d="M10.668 16.001H21.3346M21.3346 16.001L17.3346 12.001M21.3346 16.001L17.3346 20.001" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="choice two-cols text-lowercase pv-100 pv-60-laptop pv-40-tablet">
+            <div class="container">
+                <div class="two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="fs-16 fs-14-mob c-gray-600 mb-20-mob">какой выбрать?</h2>
+                    </div>
+                    <div class="two-cols__body">
+                        <div class="choice__row">
+                            <div class="choice__col">
+                                <div class="card-choice">
+                                    <div class="card-choice__head">
+                                        <div>
+                                            <h3 class="title fs-24 fs-20-tablet mb-4">Корпоративный сайт</h3>
+                                            <p class="c-gray-550">Ваше представительство в интернете</p>
+                                        </div>
+                                        <div class="ico ico-48 ico-46-tablet">
+                                            <img src="images/choice/01.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__body">
+                                        <div class="card-choice__info">
+                                            <div>средний чек: 1 млн ₽</div>
+                                            <div>цена от: 1 млн ₽   </div>
+                                        </div>
+                                        <div>
+                                            <p>Ключевой инструмент для создания имиджа и презентации бизнеса в интернете. сайты, отражающие уникальность бренда и информацию о компании, услугах и достижениях</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__tags">
+                                        <div class="card-choice__tag">Имиджевая платформа</div>
+                                        <div class="card-choice__tag">адаптивность</div>
+                                        <div class="card-choice__tag">seo-оптимизация</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choice__col">
+                                <div class="card-choice">
+                                    <div class="card-choice__head">
+                                        <div>
+                                            <h3 class="title fs-24 fs-20-tablet mb-4">B2C Интернет-магазин</h3>
+                                            <p class="c-gray-550">Продавайте свои товары онлайн в розницу</p>
+                                        </div>
+                                        <div class="ico ico-48 ico-46-tablet">
+                                            <img src="images/choice/02.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__body">
+                                        <div class="card-choice__info">
+                                            <div>средний чек: 1 млн ₽</div>
+                                            <div>цена от: 1 млн ₽   </div>
+                                        </div>
+                                        <div>
+                                            <p>функциональные и привлекательные магазины с высоким уровнем UX выведут ваши продажи на новый уровень, позволяя клиентам удобно покупать товары онлайн</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__tags">
+                                        <div class="card-choice__tag">Онлайн-шопинг</div>
+                                        <div class="card-choice__tag">Удобство оплаты и доставки</div>
+                                        <div class="card-choice__tag">Широкий ассортимент</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choice__col">
+                                <div class="card-choice">
+                                    <div class="card-choice__head">
+                                        <div>
+                                            <h3 class="title fs-24 fs-20-tablet mb-4">Информационный портал</h3>
+                                            <p class="c-gray-550">Центр знаний и новостей</p>
+                                        </div>
+                                        <div class="ico ico-48 ico-46-tablet">
+                                            <img src="images/choice/03.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__body">
+                                        <div class="card-choice__info">
+                                            <div>средний чек: 1 млн ₽</div>
+                                            <div>цена от: 1 млн ₽   </div>
+                                        </div>
+                                        <div>
+                                            <p>представляет собой платформу, где пользователи могут находить актуальную информацию по различным темам, с акцентом на удобство поиска и доступность информации</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__tags">
+                                        <div class="card-choice__tag">Многофункциональность</div>
+                                        <div class="card-choice__tag">Актуальный контент</div>
+                                        <div class="card-choice__tag">Широкая аудитория</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choice__col">
+                                <div class="card-choice">
+                                    <div class="card-choice__head">
+                                        <div>
+                                            <h3 class="title fs-24 fs-20-tablet mb-4">B2B Портал</h3>
+                                            <p class="c-gray-550">Эффективное взаимодействие между бизнесами</p>
+                                        </div>
+                                        <div class="ico ico-48 ico-46-tablet">
+                                            <img src="images/choice/04.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__body">
+                                        <div class="card-choice__info">
+                                            <div>средний чек: 1 млн ₽</div>
+                                            <div>цена от: 1 млн ₽   </div>
+                                        </div>
+                                        <div>
+                                            <p>платформа для оптовой торговли, которая соединяет производителей, поставщиков и оптовых покупателей. удобство работы для всех участников с акцентом на функциональность</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__tags">
+                                        <div class="card-choice__tag">Автоматизация заказов</div>
+                                        <div class="card-choice__tag">Масштабируемость</div>
+                                        <div class="card-choice__tag">Упрощение взаимодействия</div>
+                                        <div>опт</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choice__col">
+                                <div class="card-choice">
+                                    <div class="card-choice__head">
+                                        <div>
+                                            <h3 class="title fs-24 fs-20-tablet mb-4">Landing Page</h3>
+                                            <p class="c-gray-550">Привлечение клиентов на конкретные предложения</p>
+                                        </div>
+                                        <div class="ico ico-48 ico-46-tablet">
+                                            <img src="images/choice/05.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__body">
+                                        <div class="card-choice__info">
+                                            <div>средний чек: 1 млн ₽</div>
+                                            <div>цена от: 1 млн ₽   </div>
+                                        </div>
+                                        <div>
+                                            <p>одностраничный сайт, который помогает быстро привлекать клиентов и увеличивать продажи. Идеален для рекламных кампаний, акций и презентации товаров или услуг</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-choice__tags">
+                                        <div class="card-choice__tag">Высокая конверсия</div>
+                                        <div class="card-choice__tag">Фокус на одной цели</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- clients() -%>
+        <div class="partners partners--detailed text-lowercase pv-100 pv-60-laptop pv-24-mob">
+            <div class="container">
+                <div class="partners__wrapper">
+                    <div class="partners__title fs-16 fs-14-mob c-gray-600">
+                        <div>партнеры</div>
+                    </div>
+                    <div>
+                        <div class="title text-normal fs-64 fs-46-laptop fs-24-mob mb-80 mb-40-laptop mb-20-tablet">Подберем лучших разработчиков из списка <span class="c-brand-550">45 проверенных агентств</span></div>
+                        <div class="partners__row">
+                            <div class="partners__col _bg">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/01.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/02.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col _bg-second">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/03.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col _bg">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/04.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/05.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/06.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col _bg">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/07.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/08.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/09.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col _bg-second">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/10.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col _bg-second">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/11.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__col">
+                                <div class="card-partners">
+                                    <div class="card-partners__img item-response">
+                                        <img loading="lazy" src="images/partners/12.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="partners__banner">
+                            <div class="partners__banner-decor js-decor">BEST FRIENDS</div>
+                            <div class="partners__banner-text">
+                                <div class="title fs-24">+132 компании</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="road text-lowercase pv-100 pv-60-laptop pv-40-tablet ">
+            <div class="container">
+                <div class="road__head">
+                    <div class="fs-16 fs-14-mob c-gray-600 mb-20-mob">Как мы работаем</div>
+                </div>
+                <div class="road__row">
+                    <div class="road__col _brand">
+                        <div class="road__item">
+                            <div class="road__circle item-response"></div>
+                            <div class="road__title">старт</div>
+                            <div class="road__line"></div>
+                        </div>
+                    </div>
+                    <div class="road__col">
+                        <div class="road__item">
+                            <div class="road__circle item-response"></div>
+                            <div class="road__title">анализ и сбор требований</div>
+                            <div class="road__info">
+                                <div class="road__info-line"></div>
+                                <div class="road__info-text">написание технического задания</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="road__col">
+                        <div class="road__item">
+                            <div class="road__circle item-response"></div>
+                            <div class="road__title">Проектирование и дизайн (ux\ui)</div>
+                            <div class="road__info">
+                                <div class="road__info-line"></div>
+                                <div class="road__info-text">написание технического задания</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="road__col">
+                        <div class="road__item">
+                            <div class="road__circle item-response"></div>
+                            <div class="road__title">Разработка (Front-end, Back-end, интеграции с внешними системами)
+                            </div>
+                            <div class="road__info">
+                                <div class="road__info-line"></div>
+                                <div class="road__info-text">написание технического задания</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="road__col">
+                        <div class="road__item">
+                            <div class="road__circle item-response"></div>
+                            <div class="road__title"> Тестирование(QA)</div>
+                        </div>
+                    </div>
+                    <div class="road__col">
+                        <div class="road__item">
+                            <div class="road__circle item-response"></div>
+                            <div class="road__title"> Запуск и сопровождение</div>
+                            <div class="road__info">
+                                <div class="road__info-line"></div>
+                                <div class="road__info-text">написание технического задания</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="road__col _brand">
+                        <div class="road__item">
+                            <div class="road__circle item-response"></div>
+                            <div class="road__title">финиш</div>
+                            <div class="road__line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-road">
+                    <div class="text-road__wrapper">
+                        <div class="text-road__row fs-16 fs-14-mob">
+                            <div class="text-road__col">
+                                <div class="text-road__item">
+                                    <p>Создание веб-сайта — это как строительство цифрового дома: сначала рождается идея, затем дизайнеры рисуют его облик, наполняя красками и удобством. Программисты оживляют макет, вплетая в него интерактив и логику, словно проводя электричество и воду в новое здание.</p>
+                                </div>
+                            </div>
+                            <div class="text-road__col">
+                                <div class="text-road__item">
+                                    <p>А когда всё готово, сайт отправляется в открытый интернет-океан, где его встречают первые посетители, клики и впечатления.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tools two-cols text-lowercase pv-100 pv-60-laptop pv-40-tablet">
+            <div class="container">
+                <div class="two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="fs-16 fs-14-mob c-gray-600 mb-20-mob">инструменты и технологии</h2>
+                    </div>
+                    <div>
+                        <div class="tools__wrapper js-mobile-slider">
+                            <h3 class="fs-16 fs-14-mob c-gray-600 mb-20 mb-8-mob">frontend</h3>
+                            <div class="tools__body two-cols__body swiper">
+                                <div class="tools__row swiper-wrapper">
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/12.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>html5</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/13.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>css3</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/07.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>javascript</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/01.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>react.js</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/14.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>vue.js</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tools__wrapper js-mobile-slider">
+                            <h3 class="fs-16 fs-14-mob c-gray-600 mb-20 mb-8-mob">backend</h3>
+                            <div class="tools__body two-cols__body swiper">
+                                <div class="tools__row swiper-wrapper">
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/10.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>php</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/15.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>python</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/02.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>node.js</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/16.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>.net</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/17.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>java</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tools__wrapper js-mobile-slider">
+                            <h3 class="fs-16 fs-14-mob c-gray-600 mb-20 mb-8-mob">cms</h3>
+                            <div class="tools__body two-cols__body swiper">
+                                <div class="tools__row swiper-wrapper">
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/18.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>1С-Битрикс</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tools__wrapper js-mobile-slider">
+                            <h3 class="fs-16 fs-14-mob c-gray-600 mb-20 mb-8-mob">Базы данных</h3>
+                            <div class="tools__body two-cols__body swiper">
+                                <div class="tools__row swiper-wrapper">
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/19.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>MySQL</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/20.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>PostgreSQL</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/21.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>Redis</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tools__wrapper js-mobile-slider">
+                            <h3 class="fs-16 fs-14-mob c-gray-600 mb-20 mb-8-mob">DevOps и хостинг</h3>
+                            <div class="tools__body two-cols__body swiper">
+                                <div class="tools__row swiper-wrapper">
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/22.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>Docker</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/23.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>Kubernetes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/24.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>Nginx</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/25.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>Apache</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/26.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>AWS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/27.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>Yandex.Cloud</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tools__wrapper js-mobile-slider">
+                            <h3 class="fs-16 fs-14-mob c-gray-600 mb-20 mb-8-mob">Инструменты контроля версий</h3>
+                            <div class="tools__body two-cols__body swiper">
+                                <div class="tools__row swiper-wrapper">
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/28.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>Git</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tools__col swiper-slide">
+                                        <div class="card-tools">
+                                            <div class="card-tools__logo item-response">
+                                                <img src="images/tools/29.svg" alt="">
+                                            </div>
+                                            <div class="card-tools__body fs-14">
+                                                <p>GitLab</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- otherProjects() -%>
+    </main>
+
+<%- footer() -%> 

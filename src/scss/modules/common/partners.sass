@@ -1,13 +1,45 @@
 .partners__row:before,
 .partners__title,
 .partners__col
+    flex-shrink: 0
     width: 20%
     @media ($max767)
         width: 33.333%
     
 .partners
+    &--detailed
+        .partners
+            &__title
+                @media ($max1023)
+                    margin-bottom: 0
+                    
+            &__row
+                &:before
+                    display: none
+            &__col
+                width: 25%
+                @media ($max1023)
+                    width: 33.333%
+                @media ($max767)
+                    width: 50%
+
+            &__banner-decor
+                font-size: 108px
+                @media ($max1439)
+                    font-size: vw-s(108,1024)
+                @media ($max767)
+                    font-size: 48px
+    &__wrapper
+        display: flex
+        @media ($max1023)
+            display: block
     &__title
-        margin-bottom: -21px
+        align-self: flex-start
+        margin-bottom: -30px
+        > *
+            margin-bottom: 20px
+            @media ($min1024)
+                margin-top: 10px
     &__row
         display: flex
         flex-wrap: wrap

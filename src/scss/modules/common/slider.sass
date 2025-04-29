@@ -1,7 +1,49 @@
-// .js-ticker-slider
-//     .swiper-wrapper
-//         transition-timing-function: linear !important
-    
+.swiper
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    overflow: hidden
+    list-style: none
+    padding: 0
+    z-index: 1
+    display: block
+
+    &-vertical > &-wrapper
+        flex-direction: column
+
+    &-wrapper
+        position: relative
+        width: 100%
+        height: 100%
+        z-index: 1
+        display: flex
+        transition-property: transform
+        transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial)
+        box-sizing: content-box
+
+.swiper-android .swiper-slide,
+.swiper-ios .swiper-slide,
+.swiper-wrapper
+    transform: translate3d(0px, 0, 0)
+
+.swiper-horizontal
+    touch-action: pan-y
+
+.swiper-vertical
+    touch-action: pan-x
+
+.swiper-slide
+    flex-shrink: 0
+    width: 100%
+    // height: 100%;
+    position: relative
+    transition-property: transform
+    display: block
+
+    .swiper-backface-hidden &
+        transform: translateZ(0)
+        backface-visibility: hidden
+
 .nav-slider
     display: flex
     gap: 12px
@@ -14,11 +56,10 @@
         height: 32px
         transition: color $time03
 
-        @media ($hover) 
+        @media ($hover)
             &:hover:not(:active):not(:disabled)
                 color: $brand550
-            
-        
+
         &:active:not(:disabled)
             transition-duration: $time01
             color: $brand900

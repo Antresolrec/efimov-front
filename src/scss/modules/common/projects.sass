@@ -15,7 +15,7 @@
         @media ($max1023)
             margin-right: -4px
             margin-left: -4px
-        @media ($max1439)
+        @media ($max767)
             display: block
             margin-right: 0
             margin-left: 0
@@ -280,9 +280,93 @@
 
 
 .other-projects
+    overflow: hidden
     .swiper-slide
         width: auto
     .projects-slider__card
         width: 400px
         @media ($max767)
             width: 220px
+    &__row
+
+    &__col
+        margin-bottom: 40px
+        &:last-child
+            margin-bottom: 0
+
+
+.card-other-projects
+    @media ($min768)
+        display: flex
+        align-items: flex-start
+    &__img
+        display: block
+        overflow: hidden
+        width: pct-s(686,1024)
+        border-radius: 12px
+        @media ($max1439)
+            width: pct-s(350,588)
+        @media ($max767)
+            width: 100%
+        &:before
+            padding-bottom: pct-s(417,686)
+        @media ($hover)
+            &:hover
+                img
+                    transform: scale(1.1)
+        img
+            transition: transform $time03
+
+
+    &__body
+        position: relative
+        margin-left: 40px
+        margin-bottom: 115px
+        @media ($max1439)
+            margin-left: 20px
+        @media ($max1023)
+            margin-left: 16px
+        @media ($max767)
+            margin-top: 16px
+            margin-bottom: 0
+            margin-left: 0
+
+        p
+            @media ($max767)
+                padding-right: 100px
+
+
+    &__decor
+        position: absolute
+        top: 100%
+        right: 0
+        display: flex
+        font-size: 100px
+        color: $gray750
+        transform: rotate(-13deg)
+        margin-top: 30px
+        @media ($max1439)
+            font-size: 64px
+            margin-right: -20px
+        @media ($max1023)
+            margin-top: 16px
+            margin-right: 0
+        @media ($max767)
+            z-index: -1
+            top: auto
+            bottom: 0
+            font-size: 48px
+            margin-right: -20px
+        .js-decor
+            &:last-child
+                transform: scaleX(-1) rotate(-26deg)
+                margin-top: -20px
+                margin-left: 20px
+                @media ($max1439)
+                    margin-left: 10px
+            &._small
+                font-size: 64px
+                @media ($max1023)
+                    font-size: 40px
+                @media ($max767)
+                    font-size: 32px

@@ -1,9 +1,28 @@
 .quote
-    color: $black
-    background-color: $white
+    &._white-bg
+        color: $black
+        background-color: $white
 
     &__body
+        position: relative
         max-width: 960px
+    &__ico
+        position: absolute
+        top: -28px
+        right: 100%
+        width: 95px
+        height: 95px
+        margin-right: 20px
+        @media ($max1023)
+            width: 75px
+            height: 75px
+            margin-right: 0
+        @media ($max767)
+            top: -50px
+            right: auto
+            left: -6px
+            width: 64px
+            height: 64px
     &__text
         margin-bottom: 82px
         @media ($max1023)

@@ -1,0 +1,448 @@
+<%
+const header = require('./layouts/basic/header.ejs');
+const footer = require('./layouts/basic/footer.ejs');
+const quote = require('./layouts/components/quote.ejs');
+const quoteBlack = require('./layouts/components/quote-black.ejs');
+const tools = require('./layouts/components/tools.ejs');
+const teamProject = require('./layouts/components/team-project.ejs');
+const otherProjects = require('./layouts/components/other-projects.ejs');
+const otherProjectsOfThisProject = require('./layouts/components/other-projects-of-this-project.ejs');
+%>
+<%- header() -%>
+    <main class="page">
+        <div class="intro text-lowercase first-section-from-header">
+            <div class="intro__wrapper">
+                <div class="intro__bg img-wh">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/project-detailed-05/intro-mob.jpg">
+                        <img src="images/project-detailed-05/intro.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="container">
+                    <div class="intro__row">
+                        <div class="intro__head">
+                            <h1 class="intro__title title fs-46 fs-24-mob">аб-трейд</h1>
+                            <p class="intro__subtitle fs-16">Тендерная площадка нового поколения</p>
+                        </div>
+                        <div class="intro__tags">
+                            <div class="intro__tag">аналитика</div>
+                            <div class="intro__tag">e-commerce</div>
+                            <div class="intro__tag">55 000 000 ₽</div>
+                            <div class="intro__tag">за 4 месяца</div>
+                        </div>
+                        <div class="intro__btns">
+                            <a href="#" class="btn btn--secondary">
+                                <span>сайт проекта</span>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0013 1.66846C8.08522 1.66846 1.66797 8.08571 1.66797 16.0018C1.66797 23.9179 8.08522 30.3351 16.0013 30.3351C23.9174 30.3351 30.3346 23.9179 30.3346 16.0018C30.3346 8.08571 23.9174 1.66846 16.0013 1.66846Z" fill="white"/>
+                                    <path d="M10.668 16.001H21.3346M21.3346 16.001L17.3346 12.001M21.3346 16.001L17.3346 20.001" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__info">
+                <div class="container">
+                    <div class="intro__info-row">
+                        <div class="intro__info-title ff-second fs-46 fs-24-mob">Создана онлайн часть бизнеса, диверсифицирующая риски компании «Кабель Эксперт»</div>
+                        <div class="intro__list">
+                            <div>
+                                <div class="ff-second fs-64">2.5</div>
+                                <span>года и онлайн-бизнес построен с нуля</span>
+                            </div>
+                            <div>
+                                <div class="ff-second fs-64">5</div>
+                                <span>разработчиков вошли в команду, созданную внутри компании заказчика</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Клиент</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>"Кабель Эксперт", ведущий производитель энергокабелей</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">задача</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Создать онлайн-бизнес с нуля: современную и удобную тендерную площадку, соответствующую требованиям законодательства и потребностям пользователей</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Что мы сделали</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Выявили 	потребности ролевых моделей пользователей 	и разработали привлекательный интерфейс.</li>
+                                <li>Создали 	мобильное приложение для доступа к 	платформе.</li>
+                                <li>Интегрировали 	SRM-системы для эффективных закупок.</li>
+                                <li>Усовершенствовали 	систему уведомлений.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="numbers text-lowercase pv-100 pv-60-laptop pv-40-mob pt-0-ever _right">
+            <div class="container">
+                <div class="numbers__row">
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-40-mob mb-4 js-counter" data-duration="1250" data-start="0">84</div>
+                            <p class="c-gray-450">Перезапусков сервера</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-40-mob mb-4 js-counter" data-duration="1250" data-start="0">9</div>
+                            <p class="c-gray-450">Ночных деплоев</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-40-mob mb-4 js-counter" data-duration="1250" data-start="0">42</div>
+                            <p class="c-gray-450">Спонтанных митингов «на пять минут»</p>
+                        </div>
+                    </div>
+                    <div class="numbers__col">
+                        <div class="numbers__item text-center">
+                            <div class="title fs-100 fs-64-tablet fs-40-mob mb-4 js-counter" data-duration="1250" data-start="0">48</div>
+                            <p class="c-gray-450">Съеденных печенек</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Почему нельзя было воспользоваться готовым решением</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>У большинства существующих платформ устаревший дизайн, ограниченный функционал и мало возможностей для кастомизации. Так, компания решила разработать собственную систему, чтобы закрыть все потребности клиентов и сотрудников.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showreel text-lowercase">
+            <div class="container">
+                <div class="showreel__wrapper js-video-wrapper">
+                    <div class="showreel__item item-response">
+                        <img src="images/showreel-laptop.png" alt="">
+                        <div class="showreel__video-wrapper item-response">
+                            <video loop muted="muted" controls playsinline webkit-playinginline preload="metadata" class="showreel__video js-video _static">
+                                <source src="videos/banner.mp4" type='video/mp4' />
+                            </video>
+                            <button type="button" class="showreel__play item-response js-video-play">
+                                <img src="images/showreel-play.svg" alt="">
+                            </button>
+                            <div class="showreel__preview">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="images/project-detailed-05/01-mob.jpg">
+                                    <img src="images/project-detailed-05/01.jpg" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Какие сложности возникли при реализации проекта?</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Соответствие 	федеральным законам и требованиям 	безопасности коммерческих и государственных 	закупок.</li>
+                                <li>Ограниченные 	ресурсы заказчика на старте проекта.</li>
+                                <li>Необходимость 	формирования IT-компетенций в команде 	заказчика.</li>
+                                <li>Сжатые 	сроки реализации.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Проектирование пользовательского потока</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Мы разработали четкий сценарий взаимодействия пользователя с системой. Это помогло нам продумать логику навигации, расположение функций и обеспечить интуитивно понятную работу с ЛКК. Продумали путь клиента от входа в систему до завершения сделки.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project">
+            <div class="img-project__wrapper">
+                <div class="img-project__item img-wh">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/project-detailed-05/02-mob.jpg">
+                        <img src="images/project-detailed-05/02.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Исследовательский этап</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Глубокая аналитика рынка и потребностей пользователей заняла 1,5 года и стала основой стратегии разработки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Проектирование прототипа</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Создали интерактивный прототип, который показал основные сценарии работы платформы. Сделали упор на удобство и интуитивность веб-платформы и мобильного приложения. Это сократило время и затраты на разработку.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Создание дизайна интерфейса</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Разработали современный, интуитивно понятный интерфейс с адаптивной вёрсткой для удобства работы на разных устройствах.</p>
+                            <p>Тестировали на фокус-группах цветовые схемы, шрифты и элементы интерфейса. Так мы добились единообразного визуального стиля.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Техническая реализация</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Разработка велась по гибкой методологии с двухнедельными спринтами. Уже в процессе решили перейти от монолитной архитектуры на PHP (Vue.js) к микросервисной на Python.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- quoteBlack() -%>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Выход на рынок</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Запуск MVP с поэтапным подключением пользователей и сбором обратной связи для оптимизации платформы. После успешного тестирования MVP запустили платформу и мобильное приложение, доступное для iOS и Android.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob"> Функционал</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Личный 	кабинет клиентов площадки — закупщиков:</p>
+                            <ul>
+                                <li>Полный 	функционал SRM-системы: статистика 	закупок, средние суммы, ключевые 	контрагенты, документы по безопасности, 	договоры. </li>
+                                <li>Возможность 	создавать закупки через структурированные 	брифы: это снижает вероятность ошибок. </li>
+                                <li>Шаблоны 	для быстрого создания заявок. </li>
+                                <li>Интегрированная 	система управления закупками с 	несколькими тендерными площадками. 	Пользователи могут подтягивать данные 	с других платформ и не пользоваться 	множеством личных кабинетов.  </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- quoteBlack() -%>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Личный 	кабинет клиентов площадки — закупщиков:</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Личный 	кабинет поставщиков:</li>
+                                <li>Предназначен 	для компаний, желающих участвовать в 	торгах 	и 	подачи 	предложений.</li>
+                                <li>Возможность 	контролировать активность своего 	участия и откликов на тендеры.</li>
+                                <li>Позволяет 	отслеживать результаты участия в торгах 	и управлять профилем компании.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Одновременные роли</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Пользователь может быть и клиентом, и поставщиком с отдельными авторизациями и личными кабинетами.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Личный 	кабинет менеджеров 	площадки</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Содержит 	инструменты для мониторинга закупочного 	процесса и оперативного решения 	вопросов.</li>
+                                <li>Позволяет 	контролировать статус закупок, 	анализировать данные и вести техподдержку.</li>
+                                <li>Дает 	доступ к аналитике и статистике по 	закупкам для принятия управленческих 	решений.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="img-project">
+            <div class="img-project__wrapper">
+                <div class="img-project__item img-wh">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/project-detailed-05/03-mob.svg">
+                        <source media="(max-width: 1023px)" srcset="images/project-detailed-05/03-tablet.svg">
+                        <source media="(max-width: 1439px)" srcset="images/project-detailed-05/03-laptop.svg">
+                        <img src="images/project-detailed-05/03.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <div class="img-project">
+            <div class="img-project__wrapper">
+                <div class="img-project__item img-wh">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/project-detailed-05/04-mob.jpg">
+                        <img src="images/project-detailed-05/04.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <%- quoteBlack() -%>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Определение позиционирования</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Сформулировали концепцию «ФЛЭТ» как удобного и информативного агрегатора недвижимости от ГК «Эталон», сфокусированного на прозрачности и доверительных отношениях с клиентами.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Разработка UX/UI концепции</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <p>Создали концепцию интерфейса, ориентированную на простоту использования, удобную навигацию и персонализацию.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Для успешной реализации проекта мы привлекли</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Выделенную команду из агентства «Extyl», включающую разработчиков, аналитиков и менеджеров проекта.</li>
+                                <li>UX/UI дизайнера, который обеспечивал соответствие платформы потребностям пользователей и удобству интерфейса.</li>
+                                <li>Консультанта по федеральным закупкам, гарантировавшего соблюдение всех юридических норм.</li>
+                                <li>Аналитиков со стороны заказчика, которые активно участвовали в тестировании и помогали нам лучше понять их потребности.</li>
+                                <li>Аккаунт-директора и консультанта по организации бизнес-процессов управления IT-командой для стратегического руководства и координации проекта.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stage-project two-cols text-lowercase pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="stage-project__row two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="c-gray-550 mb-16-mob">Благодаря чему удалось достичь желаемого результата?</h2>
+                    </div>
+                    <div class="stage-project__body two-cols__body">
+                        <div class="stage-project__text">
+                            <ul>
+                                <li>Глубокое погружение в бизнес-процессы заказчика и учет потребностей всех участников процесса закупок.</li>
+                                <li>Поддержка заказчика на всех этапах — от идеи до запуска и сопровождения.</li>
+                                <li>помощь в формировании компетенций внутри компании, а не просто техническая реализация.</li>
+                                <li>Соблюдение сроков и синхронизация с in-house командой.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-project img-project--1920">
+            <div class="img-project__wrapper">
+                <div class="img-project__item img-wh">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/project-detailed-05/05-mob.jpg">
+                        <img src="images/project-detailed-05/05.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <div class="result-project two-cols pv-100 pv-60-laptop pv-40-mob">
+            <div class="container">
+                <div class="two-cols__row">
+                    <div class="two-cols__head">
+                        <h2 class="fs-16 c-gray-550 mb-8-mob text-lowercase">итог</h2>
+                    </div>
+                    <div class="two-cols__body">
+                        <div class="result-project__text ff-second fs-46 fs-24-tablet">За 2.5 года <span>построен онлайн-бизнес с нуля.</span> Сформирована <span>команда из 5 разработчиков</span> внутри компании заказчика. А так же создана онлайн часть бизнеса, <span>диверсифицирующая риски компании</span> «Кабель Эксперт».</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- quote() -%>
+        <%- teamProject() -%>
+        <%- tools() -%>
+        <%- otherProjectsOfThisProject() -%>
+        <%- otherProjects() -%>
+    </main> 
+
+<%- footer() -%>

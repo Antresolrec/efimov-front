@@ -51,4 +51,11 @@ body {
 		padding-right: 16px;
 		padding-left: 16px;
 	}
+
+	&._mob-full-width {
+		@media ($max767) {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
 }

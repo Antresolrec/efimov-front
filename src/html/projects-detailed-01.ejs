@@ -5,6 +5,7 @@ const quote = require('./layouts/components/quote.ejs');
 const tools = require('./layouts/components/tools.ejs');
 const teamProject = require('./layouts/components/team-project.ejs');
 const otherProjects = require('./layouts/components/other-projects.ejs');
+const otherProjectsOfThisProject = require('./layouts/components/other-projects-of-this-project.ejs');
 %>
 <%- header() -%>
     <main class="page">
@@ -307,6 +308,7 @@ const otherProjects = require('./layouts/components/other-projects.ejs');
         <%- quote() -%>
         <%- teamProject() -%>
         <%- tools() -%>
+        <%- otherProjectsOfThisProject() -%>
         <%- otherProjects() -%>
     </main> 
 

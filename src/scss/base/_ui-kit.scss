@@ -236,6 +236,11 @@ h1,h2,h3,h4,h5,h6 {
         margin-bottom: 8px;
     }
 }
+.mb-16-tablet{
+    @media ($max1023) {
+        margin-bottom: 16px;
+    }
+}
 .mb-20-tablet{
     @media ($max1023) {
         margin-bottom: 20px;
@@ -467,6 +472,12 @@ a.logo {
         @media ($min768) {
             display: flex;
         }
+        &._above-tablet{
+            display: block;
+            @media ($min1024) {
+                display: flex;
+            }
+        }
     }
     &__head{
         flex-shrink: 0;
@@ -479,6 +490,12 @@ a.logo {
         }
         @media ($max767) {
             width: 100%;
+        }
+        h2 {
+            @media ($min768) {
+                word-break: break-word;
+                margin-right: 20px;
+            }
         }
     }
     &__body{

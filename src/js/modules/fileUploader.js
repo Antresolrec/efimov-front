@@ -25,6 +25,7 @@ export default class FileUploader {
 	static clearList(input) {
 		const container = input.closest('.js-file-uploader');
 		const filesContainer = container.querySelector('.uploader__files');
+		container.classList.remove('_loaded');
 		filesContainer.innerHTML = '';
 		input.value = '';
 		input.filesArray = [];

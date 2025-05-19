@@ -1,0 +1,40 @@
+.notice
+    position: fixed
+    z-index: 11
+    top: 20px
+    right: 20px
+    margin-top: 72px
+    pointer-events: none
+    @media ($max767) 
+        right: 16px
+        left: 16px
+        margin-top: 53px
+    &__item
+        display: flex
+        gap: 12px
+        max-width: 360px
+        background-color: $black
+        padding: 16px
+        border-radius: 16px
+        margin-top: 12px
+        pointer-events: auto
+        transition: transform 0.2s
+        transform: translateX(120%)
+        @media ($max767)
+            max-width: 100%
+        &._show
+            transition: transform 0.3s
+            transform: none
+        &:first-child
+            margin-top: 0
+
+        svg
+            flex-shrink: 0
+            align-self: flex-start
+            width: 24px
+            height: 24px
+    &__text
+        div
+            margin-top: 4px
+            &:first-child
+                margin-top: 0

@@ -76,6 +76,11 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 24px;
     }
 }
+.fs-36-mob{
+    @media ($max767) {
+        font-size: 36px;
+    }
+}
 .fs-40-mob{
     @media ($max767) {
         font-size: 40px;
@@ -280,6 +285,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 .btn {
+    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -309,6 +315,44 @@ h1,h2,h3,h4,h5,h6 {
         flex-shrink: 0;
         width: 32px;
         height: 32px;
+        transition: opacity $time03;
+    }
+
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 7px;
+        width: 28px;
+        height: 28px;
+        background-color: $white;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity $time03;
+
+        &:after{
+            content: '';
+            display: block;
+            width: 22px;
+            height: 22px;
+            border: solid 2px;
+            border-color: transparent $black $black $black;
+            border-radius: 50%;
+            animation: btnLoading 0.5s linear infinite;
+        }
+    }
+
+    &._sending {
+        background-color: $brand900;
+        svg {
+            opacity: 0;
+        }
+
+        i {
+            opacity: 1;
+        }
+
     }
 
     &--primary {
@@ -574,5 +618,14 @@ a.logo {
     transition: opacity $time03;
     &._go{
         opacity: 1;
+    }
+}
+
+@keyframes btnLoading {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

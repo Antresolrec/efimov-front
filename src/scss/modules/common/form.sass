@@ -1,5 +1,11 @@
 // Форма
 .form
+    &._sending
+        pointer-events: none
+    &._succes
+        ~ .succes-form
+            opacity: 1
+            pointer-events: auto
     &:not(._error)
         .form
             &__error
@@ -55,6 +61,34 @@
         gap: 8px
         color: $red500
 
+        .js-form-error-text
+            &:empty
+                &:before
+                    content: attr(data-text-default)
+                
+.succes-form
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    background-color: $white
+    color: $black
+    padding: 40px
+    border-radius: 22px
+    opacity: 0
+    pointer-events: none
+    transition: opacity $time03
+    @media ($max1023)
+        padding-right: 24px
+        padding-left: 24px
+    &__title
+        flex: 1 1 auto
+        display: flex
+        align-items: center
 // Поле ввода
 .js-input
     &:not(._error)

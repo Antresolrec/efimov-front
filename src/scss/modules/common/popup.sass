@@ -21,6 +21,9 @@ body
         &:not(._open-popup)
             .popup__bg
                 display: none
+    &:not(._open-popup)
+        .form._succes ~ .succes-form
+            pointer-events: none
     &._open-popup
         opacity: 1
         pointer-events: auto

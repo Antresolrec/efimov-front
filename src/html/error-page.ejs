@@ -1,0 +1,37 @@
+<%
+const header = require('./layouts/basic/header.ejs');
+const footer = require('./layouts/basic/footer.ejs');
+const clients = require('./layouts/components/clients.ejs');
+const partners = require('./layouts/components/partners.ejs');
+%>
+<%- header() -%>
+
+    <main class="page">
+        <div class="error-page text-lowercase first-section-from-header">
+            <div class="container">
+                <div class="error-page__row">
+                    <div class="error-page__number">
+                        <div class="error-page__number-text title">404</div>
+                        <div class="error-page__number-bg item-response">
+                            <img src="images/bg-error-page.png" alt="">
+                        </div>
+                    </div>
+                    <div class="error-page__title title fs-46 fs-24-tablet">
+                        <p>страница не&nbsp;работает из-за бэкенда или фронтенда.</p>
+                        <p>скоро выяснят, кто виноват</p>
+                    </div>
+                    <div class="error-page__btns">
+                        <a href="#" class="error-page__btn btn btn--secondary btn--full">
+                            <span>На главную</span>
+                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.501 30.335C24.4171 30.335 30.835 23.9171 30.835 16.001C30.8348 8.08504 24.417 1.66797 16.501 1.66797C8.58515 1.66814 2.16814 8.08515 2.16797 16.001C2.16797 23.917 8.58504 30.3348 16.501 30.335Z" fill="white"/>
+                                <path d="M11.168 16.001H21.8346M21.8346 16.001L17.8346 12.001M21.8346 16.001L17.8346 20.001" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<%- footer() -%>

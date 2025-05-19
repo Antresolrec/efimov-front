@@ -16,6 +16,7 @@ import { initVideo } from './modules/video';
 import initPopups from './modules/popups';
 import { initStickySection } from './modules/stickySection';
 import { initSwitch } from './modules/switch';
+import { initNotice } from './modules/notification';
 
 function initModules() {
     initPreloader();
@@ -34,6 +35,7 @@ function initModules() {
     initPopups();
     initStickySection();
     initSwitch();
+    initNotice();
 
     document.body.classList.add('_loaded');
 };

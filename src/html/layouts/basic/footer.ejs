@@ -6,7 +6,7 @@
                     <p>Наши менеджеры оперативно свяжутся с&nbsp;вами, чтобы обсудить детали и&nbsp;ответить на&nbsp;все ваши вопросы</p>
                 </div>
                 <div class="footer__body fs-16 fs-14-mob">
-                    <form action="#" method="POST" class="form js-form">
+                    <form id="form-footer" action="#" method="POST" enctype="multipart/form-data" class="form js-form">
                         <div class="form__body">
                             <div class="form__items">
                                 <div class="form__item">
@@ -171,7 +171,7 @@
                                                 class="uploader__input" 
                                                 data-required="file" 
                                                 type="file" 
-                                                id="file-uploader" 
+                                                name="file-uploader[]"
                                                 accept="image/png, image/jpeg, image/gif, image/tiff, .tif, .pdf, .doc, docx" 
                                                 data-max-count="1" 
                                                 data-max-size-mb="10"
@@ -212,13 +212,14 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0013 2.16797C8.08522 2.16797 1.66797 8.58522 1.66797 16.5013C1.66797 24.4174 8.08522 30.8346 16.0013 30.8346C23.9174 30.8346 30.3346 24.4174 30.3346 16.5013C30.3346 8.58522 23.9174 2.16797 16.0013 2.16797Z" fill="white"/>
                                     <path d="M10.668 16.501H21.3346M21.3346 16.501L17.3346 12.501M21.3346 16.501L17.3346 20.501" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
+                                <i></i>
                             </button>
                             <div class="form__error">
                                 <div class="form__error-item">
                                     <div class="ico ico-20">
                                         <img src="images/form-error-triangle.svg" alt="">
                                     </div>
-                                    <div>Не заполнены обязательные поля</div>
+                                    <div class="js-form-error-text" data-text-default="Не заполнены обязательные поля"></div>
                                 </div>
                             </div>
                         </div>
@@ -252,6 +253,55 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Пример работы с данными формы
+        const formFooter = document.querySelector('#form-footer');
+        formFooter.addEventListener('submit', (e) => {
+            if (formFooter.instanceForm.validationForm()) {
+                e.preventDefault();
+
+                formFooter.instanceForm.setSendingState();
+
+                const formData = new FormData(formFooter);
+
+                // собираем из массива все файлы и кладём каждый в формдату с уникальным name
+                const input = formFooter.querySelector('input[type="file"]');
+                if (input) {
+                    const name = input.getAttribute('name').replace('[]', '');
+                    input.filesArray.forEach((file, index) => {
+                        formData.append(`${name}[${index}]`, file);
+                    })
+                }
+
+                // setTimeout для примера медленного интернета. при программировании не нужно оборачивать в setTimeout
+                setTimeout(() => {
+
+                    fetch('https://jsonplaceholder.typicode.com/posts/', {
+                    method: 'POST',
+                    body: formData,
+                    })
+                    .then(function (response) {
+                        if (response.ok) {
+                            const resp = response.json();
+                            window.notice.show('succes', 'Заявка отправлена', 'Менеджеры скоро с вами свяжутся');
+                            formFooter.instanceForm.resetForm();
+                            formFooter.instanceForm.setSuccesState();
+                        } else {
+                            window.notice.show('error', 'Ошибка на стороне сайта', 'обновите страницу или попробуйте позже');
+                            formFooter.instanceForm.setErrorState('', true);
+                        }
+                    })
+                    .catch (function (error) {
+                        console.log('Request failed', error);
+                        window.notice.show('error', 'Сервер не отвечает', 'Попробуйте позже, Если проблема сохраняется, сообщите нам');
+                        formFooter.instanceForm.setErrorState('', true);
+                    });
+
+                }, 3000);
+            }
+        })
+    </script>
 </div>
 <% const popup = require('./popup.ejs'); %>
 <%- popup() -%>

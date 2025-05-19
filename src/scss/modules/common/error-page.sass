@@ -1,0 +1,41 @@
+.error-page
+    overflow: hidden
+    min-height: 100vh
+    display: flex
+    &__row
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        height: 100%
+        padding-bottom: 60px
+
+    &__number
+        position: relative
+        z-index: -1
+
+    &__number-text
+        font-size: 280px
+        transform: rotate(7.73deg)
+        @media ($max1023)
+            font-size: 260px
+    &__number-bg
+        position: absolute
+        top: 10%
+        left: 50%
+        transform: translateX(-50%)
+        width: pct-s(364,430)
+        &:before
+            padding-bottom: pct-s(541,364)
+    &__title
+        max-width: 1067px
+        margin-top: 20px
+    &__btns
+        width: 100%
+        margin-top: 100px
+        @media ($max1023)
+            margin-top: 80px
+    &__btn
+        max-width: 400px
+

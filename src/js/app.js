@@ -1,5 +1,6 @@
 import '../scss/app.scss';
 
+import { initPreloader } from './modules/preloader';
 import { initBodyLock } from './modules/bodyLock';
 import { initHeader } from './modules/header';
 import { initDecor } from './modules/decor';
@@ -17,6 +18,7 @@ import { initStickySection } from './modules/stickySection';
 import { initSwitch } from './modules/switch';
 
 function initModules() {
+    initPreloader();
     initBodyLock();
     initHeader();
     initDecor();

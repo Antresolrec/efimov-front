@@ -14,6 +14,163 @@
 	<meta property="og:url" content="">
 </head>
 <body>
+
+<!-- Прелоадер начало -->
+<style>
+	body._lock-for-preloader{
+		overflow: hidden;
+		pointer-events: none;
+		touch-action: none;
+	}
+	.preloader{
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-color: #0A0A0A;
+		padding: 100px 0;
+		transition: opacity 1s;
+	}
+	.preloader._hide{
+		opacity: 0;
+	}
+	.preloader__img {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 1000px;
+	}
+	.preloader__img canvas{
+		width: 100%;
+		height: 100%;
+	}
+	.preloader__img-spray {
+		position: relative;
+		display: inline-block;
+		margin-top: 55px;
+	}
+	.preloader__img-circle {
+		display: inline-block;
+		animation: circleRotate 2.5s linear infinite;
+	}
+	.preloader__img-circle img {
+		width: 81px;
+		height: 89px;
+	}
+	.preloader__img-spray {
+		position: absolute;
+		animation: sprayRotate 1.5s linear infinite;
+	}
+	.preloader__img-spray img:first-child{
+		position: absolute;
+		z-index: -1;
+		top: -25px;
+		left: -3px;
+		width: 43px;
+		height: 43px;
+	}
+	.preloader__count {
+		position: absolute;
+		bottom: 40px;
+		font-family: 'Impact', sans-serif;
+		font-size: 46px;
+	}
+	@keyframes circleRotate {
+		from {
+			transform: rotate(0);
+		}
+		to {
+			transform: rotate(-360deg);
+		}
+	}
+	@keyframes sprayRotate{ 
+		0% {
+			transform: translate(0,0);
+		}
+		15% {
+			transform: translate(-30px,10px);
+		}
+		30% {
+			transform: translate(-30px,30px);
+		}
+		45% {
+			transform: translate(-10px,55px);
+		}
+		60% {
+			transform: translate(20px,60px);
+		}
+		75% {
+			transform: translate(30px,30px);
+		}
+		90% {
+			transform: translate(20px,10px);
+		}
+	}
+</style>
+<div class="preloader js-preloader">
+	<div class="preloader__img">
+		<div class="preloader__img-circle">
+			<img src="images/preloader-1.png" alt="">
+		</div>
+		<div class="preloader__img-spray">
+			<img src="images/preloader-2.png" alt="">
+			<img src="images/preloader-3.svg" alt="">
+		</div>
+	</div>
+	<div class="preloader__count">
+		<span class="js-preloader-count">01</span>
+		<span class="js-preloader-count-total" style="display: none;">100</span>
+		%
+	</div>
+</div>
+<script>
+	setTimeout(() => {
+		const paddingRight = window.innerWidth - document.body.offsetWidth + 'px';
+
+		document.body.style.paddingRight = paddingRight;
+		document.querySelector('.js-header').style.paddingRight = paddingRight;
+
+		document.body.classList.add('_lock-for-preloader');
+	}, 1);
+
+	const counterSelector = document.querySelector('.js-preloader-count');
+	let index = 2;
+
+	function increase(index) {
+		if (index < 91 && index !== 31 && index !== 61) {
+			setTimeout(() => {
+				if (index < 10) {
+					counterSelector.innerHTML = '0' + index;
+				} else {
+					counterSelector.innerHTML = index;
+				}
+				index++;
+
+				increase(index);
+			}, 30);
+		}
+
+		if (index === 31 || index === 61) {
+			setTimeout(() => {
+				counterSelector.innerHTML = index;
+				index++;
+
+				increase(index);
+			}, 400);
+		}
+	}
+
+	increase(index);
+</script>
+<!-- Прелоадер конец -->
+
 <div class="wrapper">
 	<header class="header text-lowercase js-header js-fixed-element">
 		<div class="container">

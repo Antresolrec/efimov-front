@@ -15,6 +15,105 @@
 	<meta property="og:url" content="">
 <link rel="icon" href="favicon.ico"><link href="css/app.css" rel="stylesheet"></head>
 <body>
+
+<!-- Прелоадер начало -->
+<style>
+	body._lock-for-preloader{
+		overflow: hidden;
+		touch-action: none;
+	}
+	.preloader{
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-color: #0A0A0A;
+		padding: 100px 0;
+		transition: opacity 1s;
+	}
+	.preloader._hide{
+		opacity: 0;
+	}
+	.preloader__img {
+		width: 1000px;
+	}
+	.preloader__img canvas{
+		width: 100%;
+		height: 100%;
+	}
+	.preloader__count {
+		position: absolute;
+		bottom: 40px;
+		font-family: 'Impact', sans-serif;
+		font-size: 46px;
+	}
+</style>
+<div class="preloader js-preloader">
+	<div class="preloader__img">
+		<canvas class="js-lottie-item" data-src="images/loader.lottie"></canvas>
+	</div>
+	<div class="preloader__count">
+		<span class="js-preloader-count">0</span>
+		<span class="js-preloader-count-total" style="display: none;">100</span>
+		%
+	</div>
+</div>
+<script type="module">
+	import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+	const lottieItem = document.querySelector(".js-lottie-item");
+
+	new DotLottie({
+	  autoplay: true,
+	  loop: true,
+	  canvas: lottieItem,
+	  src: lottieItem.dataset.src
+	});
+
+	const header = document.querySelector('.js-header');
+
+	setTimeout(() => {
+		const paddingRight = window.innerWidth - document.body.offsetWidth + 'px';
+
+		document.body.style.paddingRight = paddingRight;
+		header.style.paddingRight = paddingRight;
+
+		document.body.classList.add('_lock-for-preloader');
+	}, 1);
+
+	const counterSelector = document.querySelector('.js-preloader-count');
+	let index = 1;
+
+	function increase(index) {
+		if (index < 91 && index !== 31 && index !== 61) {
+			setTimeout(() => {
+				counterSelector.innerHTML = index;
+				index++;
+
+				increase(index);
+			}, 30);
+		}
+
+		if (index === 31 || index === 61) {
+			setTimeout(() => {
+				counterSelector.innerHTML = index;
+				index++;
+
+				increase(index);
+			}, 400);
+		}
+	}
+
+	increase(index);
+</script>
+<!-- Прелоадер конец -->
+
 <div class="wrapper">
 	<header class="header text-lowercase js-header js-fixed-element">
 		<div class="container">

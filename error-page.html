@@ -134,9 +134,13 @@
 <script>
 	setTimeout(() => {
 		const paddingRight = window.innerWidth - document.body.offsetWidth + 'px';
+		const fixedElements = document.querySelectorAll('.js-fixed-element');
 
 		document.body.style.paddingRight = paddingRight;
-		document.querySelector('.js-header').style.paddingRight = paddingRight;
+
+		for (const el of fixedElements) {
+			el.style.paddingRight = paddingRight;
+		}
 
 		document.body.classList.add('_lock-for-preloader');
 	}, 1);
@@ -558,6 +562,7 @@
     </script>
 </div>
 
+
 <div data-popup="popup-request" class="popup popup-request js-popup">
     <div data-close class="popup__surface"></div>
     <div class="popup__container container">
@@ -890,5 +895,30 @@
 
         }
     })
-</script><script defer src="js/app.js"></script></body>
+</script><!-- data-name - название куки -->
+<!-- data-days-expires - сколько будет дней храниться -->
+<div class="cookie-banner js-cookie js-fixed-element" data-name="cookie-site" data-days-expires="1">
+    <div class="cookie-banner__row">
+        <div class="cookie-banner__text fw-500">
+            <div class="cookie-banner__ico">
+                <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.6094 0.614258C27.8583 0.614258 31.8446 1.75373 35.2773 3.74414C35.6352 3.952 35.7573 4.41041 35.5498 4.76855C35.342 5.12689 34.8827 5.24879 34.5244 5.04102C34.0299 4.75431 33.5219 4.48916 33.0039 4.24121C32.381 4.92064 32 5.82584 32 6.82031C32.0002 8.13186 32.6618 9.2889 33.6689 9.97656C32.671 11.102 32 12.2545 32 13.1865C32.0003 15.999 34.2803 18.2792 37.0928 18.2793C37.165 18.2793 37.2371 18.2764 37.3086 18.2734C37.8314 19.7599 39.2479 20.8262 40.9131 20.8262C41.7005 20.8261 42.4321 20.5871 43.04 20.1787C43.4901 20.58 44.082 20.8261 44.7324 20.8262C44.8944 20.8262 45.0526 20.8095 45.2061 20.7803C45.1753 20.5707 45.1431 20.3619 45.1064 20.1543L45.0049 19.6221L44.9941 19.5459C44.9566 19.1676 45.2104 18.8146 45.5908 18.7373C45.9715 18.6602 46.3435 18.8867 46.4561 19.25L46.4756 19.3242L46.583 19.8936C46.8188 21.2272 46.9414 22.5996 46.9414 24C46.9414 36.9138 36.4971 47.3857 23.6094 47.3857C10.7218 47.3856 0.277389 36.9138 0.277344 24C0.277344 11.0862 10.7218 0.614389 23.6094 0.614258ZM21.5312 34.6406C20.1249 34.6406 18.9844 35.7802 18.9844 37.1865C18.9846 38.5927 20.125 39.7334 21.5312 39.7334C22.9373 39.7332 24.0769 38.5926 24.0771 37.1865C24.0771 35.7803 22.9374 34.6408 21.5312 34.6406ZM12.6162 24.4541C10.507 24.4543 8.79711 26.1642 8.79688 28.2734C8.79714 30.3827 10.507 32.0935 12.6162 32.0938C14.7256 32.0938 16.4363 30.3828 16.4365 28.2734C16.4363 26.164 14.7257 24.4541 12.6162 24.4541ZM27.8984 24.4541C27.1952 24.4541 26.625 25.0243 26.625 25.7275C26.6254 26.4304 27.1955 27.001 27.8984 27.001C28.6013 27.0009 29.1715 26.4304 29.1719 25.7275C29.1719 25.0244 28.6016 24.4542 27.8984 24.4541ZM15.1631 11.7217C13.0537 11.7219 11.3438 13.4316 11.3438 15.541C11.344 17.6502 13.0539 19.3601 15.1631 19.3604C17.2725 19.3604 18.9831 17.6504 18.9834 15.541C18.9834 13.4314 17.2727 11.7217 15.1631 11.7217Z" fill="#0A0A0A"/>
+                </svg>
+            </div>
+            <div>
+                <p>Мы собираем куки</p>
+                <p>Без них никак</p>
+            </div>
+        </div>
+        <div class="cookie-banner__btns">
+            <button type="button" class="cookie-banner__accept btn btn--secondary btn--small btn--full-mob js-cookie-accept">
+                <span>Принять</span>
+                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.501 30.335C24.4171 30.335 30.835 23.9171 30.835 16.001C30.8348 8.08504 24.417 1.66797 16.501 1.66797C8.58515 1.66814 2.16814 8.08515 2.16797 16.001C2.16797 23.917 8.58504 30.3348 16.501 30.335Z" fill="white"/>
+                    <path d="M11.168 16.001H21.8346M21.8346 16.001L17.8346 12.001M21.8346 16.001L17.8346 20.001" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div><script defer src="js/app.js"></script></body>
 </html>

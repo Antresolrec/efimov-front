@@ -290,6 +290,7 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-transform: lowercase;
     gap: 8px;
     height: 44px;
     font-size: 16px;
@@ -410,10 +411,18 @@ h1,h2,h3,h4,h5,h6 {
     }
     &--full {
         width: 100%;
+        padding-left: 45px;
+        &.btn--small {
+            padding-left: 37px;
+        }
     }
     &--full-mob {
         @media ($max767) {
             width: 100%;
+            padding-left: 45px;
+            &.btn--small {
+                padding-left: 37px;
+            }
         }
     }
 }

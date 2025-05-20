@@ -22,6 +22,7 @@
         flex-shrink: 0
         flex-grow: 1
         width: pct-s(130,1280)
+        transition: all $time03
         @media ($max1439)
             width: pct-s(145,1280)
         @media ($max1023)
@@ -33,7 +34,6 @@
                 content: ''
                 display: block
                 padding-bottom: 100%
-
         &._brand
             .road
                 &__circle
@@ -59,6 +59,13 @@
                 margin-right: 0
                 margin-bottom: 8px
                 margin-left: 0
+            @media ($min768)
+                .road
+                    &__title
+                        transition-delay: 0.2s
+                    &__line
+                        transition-delay: 0.4s
+
         &:nth-child(2)
             width: pct-s(175,1280)
             @media ($max1439)
@@ -67,6 +74,16 @@
                 width: pct-s(150,1280)
             @media ($max767)
                 width: 122px
+            @media ($min768)
+                .road
+                    &__circle
+                        transition-delay: 0.6s
+                    &__title
+                        transition-delay: 0.8s
+                    &__info-line
+                        transition-delay: 1s
+                    &__info-text
+                        transition-delay: 1.2s
             .road
                 &__info
                     @media ($min768)
@@ -81,6 +98,16 @@
                 width: auto
             @media ($max767)
                 width: 153px
+            @media ($min768)
+                .road
+                    &__circle
+                        transition-delay: 1s
+                    &__title
+                        transition-delay: 1.2s
+                    &__info-line
+                        transition-delay: 1.4s
+                    &__info-text
+                        transition-delay: 1.6s
             .road
                 &__info
                     @media ($max767)
@@ -118,6 +145,16 @@
                 width: 179px
                 margin-right: 0
                 margin-bottom: 4px
+            @media ($min768)
+                .road
+                    &__circle
+                        transition-delay: 1.4s
+                    &__title
+                        transition-delay: 1.6s
+                    &__info-line
+                        transition-delay: 1.8s
+                    &__info-text
+                        transition-delay: 2s
             .road
                 &__info
                     z-index: 1
@@ -171,12 +208,32 @@
                 width: 113px
                 margin-left: 0
                 margin-top: 4px
+            @media ($min768)
+                .road
+                    &__circle
+                        transition-delay: 1.8s
+                    &__title
+                        transition-delay: 2s
+                    &__info-line
+                        transition-delay: 2.2s
+                    &__info-text
+                        transition-delay: 2.4s
         &:nth-child(6)
             width: pct-s(235,1280)
             @media ($max1023)
                 width: auto
             @media ($max767)
                 width: 149px
+            @media ($min768)
+                .road
+                    &__circle
+                        transition-delay: 2.2s
+                    &__title
+                        transition-delay: 2.4s
+                    &__info-line
+                        transition-delay: 2.6s
+                    &__info-text
+                        transition-delay: 2.8s
             .road
                 &__info
                     @media ($max767)
@@ -205,6 +262,16 @@
                 width: auto
             @media ($max767)
                 width: 130px
+            @media ($min768)
+                .road
+                    &__circle
+                        transition-delay: 2.4s
+                    &__title
+                        transition-delay: 2.6s
+                    &__info-line
+                        transition-delay: 2.8s
+                    &__info-text
+                        transition-delay: 3s
             .road
                 &__info
                     margin-top: 12px
@@ -236,6 +303,14 @@
                 margin-right: 0
                 margin-bottom: 4px
                 margin-left: 0
+            @media ($min768)
+                .road
+                    &__circle
+                        transition-delay: 3s
+                    &__title
+                        transition-delay: 3.2s
+                    &__line
+                        transition-delay: 2.8s
             .road
                 &__line
                     flex-direction: row-reverse
@@ -244,7 +319,23 @@
                     margin-right: 12px
                     margin-left: auto
 
-
+        &._active
+            .road
+                &__circle
+                    opacity: 1
+                    transform: none
+                &__title
+                    opacity: 1
+                    transform: none
+                &__line
+                    opacity: 1
+                    transform: none
+                &__info-line
+                    opacity: 1
+                    transform: none
+                &__info-text
+                    opacity: 1
+                    transform: none
     &__item
         position: relative
         display: flex
@@ -264,14 +355,24 @@
         border: solid 1px #FFFFFF33
         pointer-events: none
         user-select: none
+        opacity: 0
+        transform: scale(0)
+        transition: opacity 0.15s, transform 0.2s
         @media ($max1023)
             right: -4px
             left: -4px
+        @media ($max767)
+            transition-delay: 0.2s
 
 
     &__title
         text-align: center
+        opacity: 0
+        transform: translateX(-25%) rotate(-5deg)
+        transition: all $time03
         // max-width: 130px
+        @media ($max767)
+            transition-delay: 0.4s
 
 
     &__line
@@ -284,6 +385,10 @@
         width: 57px
         height: 1px
         background-color: #FFFFFF33
+        transition: all $time03
+        opacity: 0
+        transform: scaleX(0)
+        transform-origin: left
         @media ($max1439)
             display: none
         &:after
@@ -320,6 +425,9 @@
         width: 1px
         height: 200px
         border-right: dashed 1px rgb(255, 255, 255, 0.2)
+        transition: all $time03
+        transform: scaleY(0)
+        transform-origin: top
         @media ($max1439)
             height: 150px
         @media ($max1023)
@@ -331,6 +439,9 @@
             height: 1px
             border-top: dashed 1px rgb(255, 255, 255, 0.2)
             border-right: none
+            transform: scaleX(0)
+            transform-origin: left
+            transition-delay: 0.6s
         &:before,
         &:after
             content: ''
@@ -351,6 +462,9 @@
         margin-bottom: 4px
         opacity: 0.5
         word-break: break-word
+        opacity: 0
+        transform: translateX(-25%)
+        transition: all $time03
 
         @media ($max767)
             display: flex
@@ -360,6 +474,7 @@
             text-align: left
             width: 90px
             margin-left: -90px
+            transition-delay: 0.8s
 
 
 .text-road

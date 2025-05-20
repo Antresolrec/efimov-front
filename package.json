@@ -48,6 +48,7 @@
 		"imask": "^7.6.0",
 		"lightningcss": "^1.29.3",
 		"slim-select": "^2.4.5",
-		"swiper": "^11.1.15"
+		"swiper": "^11.1.15",
+		"js-cookie": "^3.0.5"
 	}
 }

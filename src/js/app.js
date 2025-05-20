@@ -17,10 +17,13 @@ import initPopups from './modules/popups';
 import { initStickySection } from './modules/stickySection';
 import { initSwitch } from './modules/switch';
 import { initNotice } from './modules/notification';
+import { initRoad } from './modules/road';
+import { initCookie } from './modules/cookie';
 
 function initModules() {
     initPreloader();
     initBodyLock();
+    initCookie();
     initHeader();
     initDecor();
     initCounter()
@@ -36,6 +39,7 @@ function initModules() {
     initStickySection();
     initSwitch();
     initNotice();
+    initRoad();
 
     document.body.classList.add('_loaded');
 };

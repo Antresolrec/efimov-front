@@ -351,9 +351,13 @@ select
         &.ss-main
             background-color: $gray800
             border-color: $gray800
+            &.ss-open-below,
+            &.ss-open-above
+                border-color: $gray500
         &.ss-content
             .ss-list
                 background-color: $gray800
+                border-color: $gray500
 
 .ss
     &-main
@@ -451,6 +455,7 @@ select
         color: $gray650
         background-color: $gray100
         border-radius: 22px
+        border: solid 1px $gray500
 
     &-option
         position: relative

@@ -302,7 +302,7 @@ h1,h2,h3,h4,h5,h6 {
         transition: background-color $time01;
 
         svg{
-            transform: translateX(2px)
+            transform: translateX(3px)
         }
     }
 
@@ -315,7 +315,7 @@ h1,h2,h3,h4,h5,h6 {
         flex-shrink: 0;
         width: 32px;
         height: 32px;
-        transition: opacity $time03;
+        transition: opacity $time03, transform $time03;
     }
 
     i {
@@ -341,6 +341,15 @@ h1,h2,h3,h4,h5,h6 {
             border-radius: 50%;
             animation: btnLoading 0.5s linear infinite;
         }
+    }
+
+    @media ($hover) {
+        &:hover {
+            svg {
+                transform: translateX(3px);
+            }
+        }
+
     }
 
     &._sending {

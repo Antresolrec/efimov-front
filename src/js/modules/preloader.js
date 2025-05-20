@@ -7,7 +7,7 @@ export default class Preloader {
 		this.countCur = this.loader.querySelector('.js-preloader-count');
 		this.countTotal = this.loader.querySelector('.js-preloader-count-total');
 
-		this.header = document.querySelector('.js-header');
+		this.fixedElements = document.querySelectorAll('.js-fixed-element');
 
 		this.delayCheckLoad = 500;
 		this.animTransition = 1000;
@@ -16,22 +16,14 @@ export default class Preloader {
 	}
 
 	init() {
-		this.onInit();
+		this.hide();
 	}
 
-	onInit() {
-		this.hideLoaderStatic();
-	}
-
-	hideLoader() {
-		this.loader.classList.add('_hide');
-		this.countCur.style.display = 'none';
-		this.countTotal.style.display = '';
-	}
-
-	hideLoaderStatic() {
+	hide() {
 		setTimeout(() => {
-			this.hideLoader();
+			this.loader.classList.add('_hide');
+			this.countCur.style.display = 'none';
+			this.countTotal.style.display = '';
 			setTimeout(() => {
 				this.unlockBody();
 			}, this.animTransition);
@@ -41,7 +33,9 @@ export default class Preloader {
 	unlockBody() {
 		document.body.classList.remove('_lock-for-preloader');
 		document.body.style.paddingRight = '';
-		this.header.style.paddingRight = '';
+		for (const el of this.fixedElements) {
+			el.style.paddingRight = '';
+		}
 		this.loader.style.display = 'none';
 	}
 }

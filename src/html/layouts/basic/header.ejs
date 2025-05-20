@@ -133,9 +133,13 @@
 <script>
 	setTimeout(() => {
 		const paddingRight = window.innerWidth - document.body.offsetWidth + 'px';
+		const fixedElements = document.querySelectorAll('.js-fixed-element');
 
 		document.body.style.paddingRight = paddingRight;
-		document.querySelector('.js-header').style.paddingRight = paddingRight;
+
+		for (const el of fixedElements) {
+			el.style.paddingRight = paddingRight;
+		}
 
 		document.body.classList.add('_lock-for-preloader');
 	}, 1);

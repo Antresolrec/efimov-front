@@ -26,7 +26,7 @@ export default class Notice {
         const item = document.createElement('DIV');
         item.classList.add('notice__item');
 
-        let icon;
+        let icon = '';
 
         if (type === 'succes') {
             icon = `

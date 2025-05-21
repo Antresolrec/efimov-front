@@ -66,6 +66,15 @@
             margin-bottom: 24px
             &:last-child
                 margin-bottom: 0
+        ul
+            &:not([data-dots])
+                padding-left: 0
+                > li
+                    list-style: none
+            ul
+                &[data-dots]
+                    margin: 12px
+                    margin-right: 0
     &__head
         padding-top: 60px
         @media ($max1023)

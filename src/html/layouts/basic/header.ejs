@@ -114,7 +114,7 @@
 		}
 	}
 </style>
-<div class="preloader js-preloader">
+<div class="preloader js-preloader" style="display: none;">
 	<div class="preloader__img">
 		<div class="preloader__img-circle">
 			<img src="images/preloader-1.png" alt="">
@@ -131,47 +131,52 @@
 	</div>
 </div>
 <script>
-	setTimeout(() => {
-		const paddingRight = window.innerWidth - document.body.offsetWidth + 'px';
-		const fixedElements = document.querySelectorAll('.js-fixed-element');
-
-		document.body.style.paddingRight = paddingRight;
-
-		for (const el of fixedElements) {
-			el.style.paddingRight = paddingRight;
-		}
-
-		document.body.classList.add('_lock-for-preloader');
-	}, 1);
-
-	const counterSelector = document.querySelector('.js-preloader-count');
-	let index = 2;
-
-	function increase(index) {
+	function increase(counter, index) {
 		if (index < 91 && index !== 31 && index !== 61) {
 			setTimeout(() => {
 				if (index < 10) {
-					counterSelector.innerHTML = '0' + index;
+					counter.innerHTML = '0' + index;
 				} else {
-					counterSelector.innerHTML = index;
+					counter.innerHTML = index;
 				}
 				index++;
 
-				increase(index);
+				increase(counter, index);
 			}, 30);
 		}
 
 		if (index === 31 || index === 61) {
 			setTimeout(() => {
-				counterSelector.innerHTML = index;
+				counter.innerHTML = index;
 				index++;
 
-				increase(index);
+				increase(counter, index);
 			}, 400);
 		}
 	}
 
-	increase(index);
+	function startLoad() {
+		const padding = window.innerWidth - document.body.offsetWidth + 'px';
+		
+		document.querySelector('.js-preloader').style.display = '';
+
+		document.body.style.paddingRight = padding;
+
+		for (const el of document.querySelectorAll('.js-fixed-element')) {
+			el.style.paddingRight = padding;
+		}
+
+		document.body.classList.add('_lock-for-preloader');
+
+		increase(document.querySelector('.js-preloader-count'), 2);
+	}
+
+	setTimeout(() => {
+		if (!document.body.classList.contains('_loaded')) {
+			startLoad();
+		}
+	}, 300);
+
 </script>
 <!-- Прелоадер конец -->
 

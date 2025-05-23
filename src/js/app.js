@@ -44,4 +44,4 @@ function initModules() {
     document.body.classList.add('_loaded');
 };
 
-document.addEventListener('DOMContentLoaded', initModules);
+window.addEventListener('load', initModules);

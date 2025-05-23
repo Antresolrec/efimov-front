@@ -16,6 +16,9 @@ export default class CookieSite {
 		
 		this.cookieEnabled = navigator.cookieEnabled;
 
+		this.delayLoad = 300;
+		this.delayShow = 1500;
+
 		this.init();
 	}
 
@@ -42,13 +45,16 @@ export default class CookieSite {
 	checkInitCookie() {
 		if (this.canShowCookie) {
 			this.addListenerBtnAcceptClick();
-			if (this.preloader) {
-				setTimeout(() => {
+			setTimeout(() => {
+				if (this.preloader && this.preloader.style.display === '') {
+					setTimeout(() => {
+						this.container.classList.add(this.showClass);
+					}, this.delayShow);
+				} else {
 					this.container.classList.add(this.showClass);
-				}, 1500);
-			} else {
-				this.container.classList.add(this.showClass);
-			}
+				}
+			}, this.delayLoad);
+
 		}
 	}
 

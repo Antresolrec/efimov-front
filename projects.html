@@ -156,22 +156,19 @@
 		}
 	}
 	function startLoad() {
-		const loader = document.querySelector('.js-preloader');
-		const fe = document.querySelectorAll('.js-fixed-element');
-		const pr = window.innerWidth - document.body.offsetWidth + 'px';
-		const counter = document.querySelector('.js-preloader-count');
+		const padding = window.innerWidth - document.body.offsetWidth + 'px';
+		
+		document.querySelector('.js-preloader').style.display = '';
 
-		loader.style.display = '';
+		document.body.style.paddingRight = padding;
 
-		document.body.style.paddingRight = pr;
-
-		for (const el of fe) {
-			el.style.paddingRight = pr;
+		for (const el of document.querySelectorAll('.js-fixed-element')) {
+			el.style.paddingRight = padding;
 		}
 
 		document.body.classList.add('_lock-for-preloader');
 
-		increase(counter, 2);
+		increase(document.querySelector('.js-preloader-count'), 2);
 	}
 
 	setTimeout(() => {
